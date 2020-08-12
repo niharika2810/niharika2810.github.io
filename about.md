@@ -6,29 +6,19 @@ permalink: /about/
 
 Hey Hi!!
 
-# @niharika2810
-About Niharika Arora
-
 [Niharika Arora](https://www.linkedin.com/in/niharika-arora-4874967a/) is currently working as a Senior Software Engineer at [1mg](https://www.1mg.com/).<br/>
 She started her career as an Android Developer with company like [myPAT](https://mypat.in/) Delhi and [Cube26](https://www.linkedin.com/company/cube26/).<br/>
 She is  an active technical blogger and started her journey as a speaker from [Android Developers group,Delhi](https://www.meetup.com/GDGNewDelhi/).She had completed her graduation from [JCBOSE YMCAUST,Faridabad](https://jcboseust.ac.in/).<br/>
 She is  an interactive person ,a good listener and can convey her thoughts clearly.  A big time  fitness freak and an avid  partygoer who love to dance adds a wow  factor in her persona  ,she can handle the questions well and is a Solution seeker which creates  a healthy environment in her  workplace .<br/>
 Recently, she was invited by [Truepush](https://www.truepush.com/) for a **PODCAST** telling  "[The story behind the inception of India's Contact Tracing app](https://www.truepush.com/blog/podcast-ep-9-the-story-behind-the-inception-of-indias-aarogya-setu-app/?fbclid=IwAR3AQK1TDyyUEZHHghHFHwR6hp7M0tFUdagfPi0dBtZMpWFeV3178c5zP6I)".<br/>
 She has also been recognized by [IndiaMentor](https://www.linkedin.com/company/indiamentor.com/) for her contributions towards the [community](https://www.linkedin.com/posts/niharika-arora-4874967a_hardwork-rewards-sharingknowledge-activity-6696836835148132352-cAwq).
-<br/><br/>
-<a href="https://github.com/niharika2810?tab=repositories">
- <img align="center" src="https://github-readme-stats.vercel.app/api?username=niharika2810&&show_icons=true&title_color=ffffff&icon_color=87ceeb&text_color=daf7dc&bg_color=002366&show_icons=true&theme=dracula&line_height=27" alt="Niharika's github stats"/>
-</a>
-<a href="https://github.com/niharika2810?tab=repositories">
-  <img align="right" src="https://github-readme-stats.vercel.app/api/top-langs/?username=niharika2810&theme=dark&hide_langs_below=1&bg_color=002366&icon_color=87ceeb&text_color=daf7dc&title_color=ffffff" />
-</a>
 
 ### Latest
  - Developed [AarogyaSetu app](https://github.com/nic-delhi/AarogyaSetu_Android/graphs/contributors) and served the country in this tough times.
  Aarogya Setu is a mobile application developed by the Government of India to connect essential health services with the people of India in our combined fight against COVID-19. The App is aimed at augmenting the initiatives of the Government of India, particularly the Department of Health, in proactively reaching out to and informing the users of the app regarding risks, best practices and relevant advisories pertaining to the containment of COVID-19.
  - Invited for Interview on AarogyaSetu with Pawan Kumar(GDE) on [MtechViral Youtube Live Streaming](https://www.youtube.com/watch?v=EaW-27DRRwQ) for Android Stream Day(8-9th August 2020).
   - Webinar on [Understanding the core of AarogyaSetu App: Bluetooth](https://www.youtube.com/watch?v=K4SLf3y6zmE&feature=youtu.be)[(PPT link)](https://speakerdeck.com/niharika28/understanding-the-core-of-aarogyasetu-app-bluetooth-low-energy-ble) on July 11th,2020 at [Android Developers Group,Delhi meetup](https://www.meetup.com/adg-delhi/events/271755904/?rv=ea1_v2&_xtd=gatlbWFpbF9jbGlja9oAJDNlZmNhMjRmLWNhZDgtNGRhNi1iZTRkLTliYTc2YjhkODJjMg)
-   - Article on [Android Development | Best Practices](https://proandroiddev.com/android-development-best-practices-7278e9cdbbe9), posted in [ProAndroidDev Digest  #24](https://proandroiddev.com/proandroiddev-digest-24-52d8e2c517a3)
+   - Article on [Android Development-Best Practices](https://proandroiddev.com/android-development-best-practices-7278e9cdbbe9), posted in [ProAndroidDev Digest  #24](https://proandroiddev.com/proandroiddev-digest-24-52d8e2c517a3)
   - Article on [How I resolved BadTokenException for Toast#handleShow()?](https://proandroiddev.com/how-i-resolved-windowmanager-badtokenexception-for-toast-handleshow-2308203ebb91).
   - Article on [Understanding the core of Aarogya Setu App: Bluetooth](https://medium.com/aarogyasetu/understanding-the-core-of-aarogya-setu-bluetooth-c09de3143fd2) explaining the bluetooth implementation for AarogyaSetu App
  - Article on [Pitfalls in WebView Implementation](https://medium.com/1mgofficial/pitfalls-in-android-webview-implementation-b6524f9f38bb)
@@ -54,28 +44,6 @@ She has also been recognized by [IndiaMentor](https://www.linkedin.com/company/i
  - Research on different ViewGroups for better layout performance using **Systrace** and other tools, created one [sample application](https://github.com/niharika2810/LayoutPerformance-Analysis-App) for demonstrating the results
  - Contributed to [Zxing Library](https://github.com/journeyapps/zxing-android-embedded/pulls) for creating Custom Scanner having preview rectangle with borders.
 
-
-### Social Links
- <a href="https://twitter.com/Niharik36712833">
-  <img align="left" alt="Niharika's Twitter" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/twitter.svg" />
-</a>
-<a href="https://www.linkedin.com/in/niharika-arora-4874967a/">
-  <img align="left" alt="Niharika's Linkdein" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />
-</a>
-<a href="https://medium.com/@nik.arora8059">
-  <img align="left" alt="Niharika's Medium" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/medium.svg" />
-</a>
-<a href="https://github.com/niharika2810">
-  <img align="left" alt="Niharika's Github" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/github.svg" />
-</a>
-<a href="https://www.instagram.com/nik.arora59/">
-  <img align="left" alt="Niharika's Instagram" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/instagram.svg" />
-</a>
-<a href="https://www.facebook.com/nik.arora59">
-  <img align="left" alt="Niharika's Facebook" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/facebook.svg" />
-</a>
-
-<br/><br/>
 ### Community Experience
  - Webinar on [Understanding the core of AarogyaSetu App: Bluetooh](https://www.youtube.com/watch?v=K4SLf3y6zmE&feature=youtu.be) on July 11th,2020 at [Android Developers Group,Delhi meetup](https://www.meetup.com/adg-delhi/events/271755904/?rv=ea1_v2&_xtd=gatlbWFpbF9jbGlja9oAJDNlZmNhMjRmLWNhZDgtNGRhNi1iZTRkLTliYTc2YjhkODJjMg)
  - Speaker at [Android Developers Group,Delhi meetup](https://www.meetup.com/adg-delhi/events/268419995/): *Unit Testing in Android * on *Feb 22, 2020*, [(PPT Link)](https://speakerdeck.com/niharika28/unit-testing-in-android) & [(Youtube Link)](https://www.youtube.com/watch?v=0K4S3vkulGc&t=1s)
@@ -88,7 +56,7 @@ She has also been recognized by [IndiaMentor](https://www.linkedin.com/company/i
 ### Technical Writing Experience 
 
 She likes to share her findings and experiments with the community and here's a list of the articles written by her:
- - July, 2020 : [Android Development | Best Practices](https://proandroiddev.com/android-development-best-practices-7278e9cdbbe9)
+ - July, 2020 : [Android Development - Best Practices](https://proandroiddev.com/android-development-best-practices-7278e9cdbbe9)
  - June, 2020 : [How I resolved WindowManager.BadTokenException for Toast#handleShow()?](https://proandroiddev.com/how-i-resolved-windowmanager-badtokenexception-for-toast-handleshow-2308203ebb91)
  - June, 2020 : [Understanding the core of Aarogya Setu App: Bluetooth](https://medium.com/aarogyasetu/understanding-the-core-of-aarogya-setu-bluetooth-c09de3143fd2)
  - June, 2020 : [Pitfalls in Android WebView Implementation](https://medium.com/1mgofficial/pitfalls-in-android-webview-implementation-b6524f9f38bb)
@@ -120,14 +88,6 @@ She has the following open-source demo projects :
  - [MVP-Dagger-Retrofit Sample](https://github.com/niharika2810/MVP-Dagger-Retrofit-Sample-App) - A Sample Application demonstrating implementation of MVP architecture using Dagger as dependency injection framework and Retrofit for network call.
  - [Layout Performance Analysis](https://github.com/niharika2810/LayoutPerformance-Analysis-App) - A Demo Application with different XMLs developed using different viewgroups for same UI screens to measure layout performance.Please go through the [Medium Blog](https://medium.com/1mgofficial/constraintlayout-vs-other-layouts-a-battle-towards-performance-part-1-14d8116e876e) for the results.
  - [SectionedRecyclerView](https://github.com/niharika2810/SectionedRecyclerView-Sample) - A Sample project explaining how to create sections in Recyclerview with Pixel perfect UI, given a sample input.
-
-<a href="https://github.com/niharika2810/ToastHandler">
-  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=niharika2810&repo=ToastHandler&theme=dark&bg_color=002366&icon_color=87ceeb&text_color=daf7dc&title_color=ffffff" />
-</a>
-<a href="https://github.com/niharika2810/LayoutPerformance-Analysis-App">
- <img align="right" src="https://github-readme-stats.vercel.app/api/pin/?username=niharika2810&repo=LayoutPerformance-Analysis-App&theme=dark&bg_color=002366&icon_color=87ceeb&text_color=daf7dc&title_color=ffffff" />
-</a>
-<br/> <br/>
 
 Checkout the other repositories too :-)
 
