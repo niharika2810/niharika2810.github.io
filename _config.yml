@@ -8,6 +8,9 @@ name: Niharika Arora
 # Short bio or description (displayed in the header)
 description: Android Engineer @ 1mg | Blogger | Speaker | Open Source Contributor | Gold Medalist
 
+# URL of your avatar or profile pic (you could use your GitHub profile pic)
+avatar: https://raw.githubusercontent.com/barryclark/jekyll-now/master/images/profile_pic.png
+
 # Includes an icon in the footer for each username you enter
 footer-links:
   dribbble:
