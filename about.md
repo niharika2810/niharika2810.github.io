@@ -12,7 +12,6 @@ She is  an active technical blogger and started her journey as a speaker from [A
 She is  an interactive person ,a good listener and can convey her thoughts clearly.  A big time  fitness freak and an avid  partygoer who love to dance adds a wow  factor in her persona  ,she can handle the questions well and is a Solution seeker which creates  a healthy environment in her  workplace .<br/>
 Recently, she was invited by [Truepush](https://www.truepush.com/) for a **PODCAST** telling  "[The story behind the inception of India's Contact Tracing app](https://www.truepush.com/blog/podcast-ep-9-the-story-behind-the-inception-of-indias-aarogya-setu-app/?fbclid=IwAR3AQK1TDyyUEZHHghHFHwR6hp7M0tFUdagfPi0dBtZMpWFeV3178c5zP6I)".<br/>
 She has also been recognized by [IndiaMentor](https://www.linkedin.com/company/indiamentor.com/) for her contributions towards the [community](https://www.linkedin.com/posts/niharika-arora-4874967a_hardwork-rewards-sharingknowledge-activity-6696836835148132352-cAwq).
-<br/><br/>
 
 ### Latest
  - Developed [AarogyaSetu app](https://github.com/nic-delhi/AarogyaSetu_Android/graphs/contributors) and served the country in this tough times.
@@ -89,8 +88,6 @@ She has the following open-source demo projects :
  - [MVP-Dagger-Retrofit Sample](https://github.com/niharika2810/MVP-Dagger-Retrofit-Sample-App) - A Sample Application demonstrating implementation of MVP architecture using Dagger as dependency injection framework and Retrofit for network call.
  - [Layout Performance Analysis](https://github.com/niharika2810/LayoutPerformance-Analysis-App) - A Demo Application with different XMLs developed using different viewgroups for same UI screens to measure layout performance.Please go through the [Medium Blog](https://medium.com/1mgofficial/constraintlayout-vs-other-layouts-a-battle-towards-performance-part-1-14d8116e876e) for the results.
  - [SectionedRecyclerView](https://github.com/niharika2810/SectionedRecyclerView-Sample) - A Sample project explaining how to create sections in Recyclerview with Pixel perfect UI, given a sample input.
-
-<br/> <br/>
 
 Checkout the other repositories too :-)
 
