@@ -6,9 +6,6 @@ permalink: /about/
 
 Hey Hi!!
 
-# @niharika2810
-About Niharika Arora
-
 [Niharika Arora](https://www.linkedin.com/in/niharika-arora-4874967a/) is currently working as a Senior Software Engineer at [1mg](https://www.1mg.com/).<br/>
 She started her career as an Android Developer with company like [myPAT](https://mypat.in/) Delhi and [Cube26](https://www.linkedin.com/company/cube26/).<br/>
 She is  an active technical blogger and started her journey as a speaker from [Android Developers group,Delhi](https://www.meetup.com/GDGNewDelhi/).She had completed her graduation from [JCBOSE YMCAUST,Faridabad](https://jcboseust.ac.in/).<br/>
@@ -21,7 +18,7 @@ She has also been recognized by [IndiaMentor](https://www.linkedin.com/company/i
 </a>
 <a href="https://github.com/niharika2810?tab=repositories">
   <img align="right" src="https://github-readme-stats.vercel.app/api/top-langs/?username=niharika2810&theme=dark&hide_langs_below=1&bg_color=002366&icon_color=87ceeb&text_color=daf7dc&title_color=ffffff" />
-</a>
+</a> <br/> <br/>
 
 ### Latest
  - Developed [AarogyaSetu app](https://github.com/nic-delhi/AarogyaSetu_Android/graphs/contributors) and served the country in this tough times.
