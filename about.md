@@ -17,4 +17,4 @@ I have also been [recognized](https://www.linkedin.com/posts/niharika-arora-4874
 
 ### Contact me
 
-You can reach out to me on twitter at [@Niharika36712833](https://twitter.com/Niharik36712833) or via LinkedIn at [niharika-arora-4874967a](https://www.linkedin.com/in/niharika-arora-4874967a/)
+You can reach out to me on twitter at [@Niharika36712833](https://twitter.com/Niharik36712833) or via LinkedIn at [niharika-arora-4874967a](https://www.linkedin.com/in/niharika-arora-4874967a/).
