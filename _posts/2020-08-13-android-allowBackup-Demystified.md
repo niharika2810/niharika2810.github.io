@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Android's Attribute android:allowBackup Demystified
+title: android:allowBackup Attribute Demystified
 ---
 ![AllowBackUp](/images/allow_backup.jpg)
 
