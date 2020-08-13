@@ -45,7 +45,8 @@ buildTypes
             applicationIdSuffix ".debug"
         }
 }
-```<br/>
+```
+
 Here is the simplest example:
 When you run your app in debug mode, your application package name will be packagename.debug and if you run your app in release mode, your application package name will be packagename.
 
@@ -67,8 +68,8 @@ android
             ..
         }
     }
-}```
-<br/>
+}
+```
 
 ### Build Variants
 Combines your build types and product flavors. Sync your project after you update your build.gradle. Then you will see all your build variants.
@@ -95,7 +96,8 @@ android.useAndroidX=true
 android.enableJetifier=true
 kapt.incremental.apt=true
 kapt.use.worker.api=true
-```<br/>
+```
+
 Showing you a sample of enhancements I did. You can read more about speeding up [here](https://developer.android.com/studio/build/optimize-your-build).
 
 7) Keep a check on structural problems in your App code through [Lint](https://developer.android.com/studio/write/lint).<br/><br/>
@@ -103,11 +105,9 @@ The lint tool helps find poorly structured code that can impact the reliability 
 The command for MAC:
 ```
 ./gradlew lint
-```
 For Windows:
 ```
 gradlew lint
-```
 
 8) Log everything in DEBUG mode only.<br/><br/>
 We use logs to display useful information, errors, workflows or even to debug something.
@@ -161,7 +161,8 @@ signingConfigs
         keyAlias "thekey"
         keyPassword "password789"
     }
-}```
+}
+```
 
 Instead, make a gradle.properties file :
 <br/>
