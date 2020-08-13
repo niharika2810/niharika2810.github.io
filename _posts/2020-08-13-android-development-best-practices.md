@@ -139,7 +139,7 @@ Do we really need to hit backend for the <b>validations</b> like Is users email 
 13) Don’t create references to activities that will prevent them from being <b>garbage collected</b> when they are done.<br/><br/>
 Consider a very simple scenario — you need to register a local broadcast receiver in your activity. If you don’t unregister the broadcast receiver, then it still holds a reference to the activity, even if you close the activity.
 
-How to <b>solve<.b> this?<br/> Always remember to call unregister receiver in onStop() of the activity.
+How to <b>solve</b> this?<br/> Always remember to call unregister receiver in onStop() of the activity.
 
 Like this, Find more scenarios and fix them.
 
@@ -198,11 +198,11 @@ To intercept any request, we mostly use a proxy tool. The proxy tool installs it
 
 17) Use [SafetyNet Attestation API](https://developer.android.com/training/safetynet/attestation) to help determine whether your servers are interacting with your genuine app running on a genuine Android device.<br/><br/>
 The API verifies the following:
-*) Whether the device is rooted or not.<br/>
-*) Whether the device is monitored.<br/>
-*) Whether the device has recognized hardware parameters.<br/>
-*) Whether the software is Android compatible.<br/>
-*) Whether the device is free form malicious apps.<br/>
+1) Whether the device is rooted or not.<br/>
+2) Whether the device is monitored.<br/>
+3) Whether the device has recognized hardware parameters.<br/>
+4) Whether the software is Android compatible.<br/>
+5) Whether the device is free form malicious apps.<br/>
 But before implementing it, please check the [Dos and Don’ts](https://developer.android.com/training/safetynet/attestation-checklist).
 
 18) Use [EncryptedSharedPreferences](https://developer.android.com/reference/androidx/security/crypto/EncryptedSharedPreferences) instead of SharedPreferences for storing sensitive information like your auth tokens etc.<br/><br/>
@@ -224,10 +224,10 @@ reCAPTCHA is a free service that uses an advanced risk analysis engine to protec
 
 22) Write [Unit tests](https://developer.android.com/training/testing/unit-testing) for your feature.<br/><br/>
 Listing out some benefits:
-*) Unit tests help to fix bugs early in the development cycle and save costs.<br/>
-*) It helps the developers to understand the code base and enables them to make changes quickly<br/>
-*) Good unit tests serve as project documentation.<br/>
-*) You become more confident about the stuff you are writing.<br/>
+1) Unit tests help to fix bugs early in the development cycle and save costs.<br/>
+2) It helps the developers to understand the code base and enables them to make changes quickly<br/>
+3) Good unit tests serve as project documentation.<br/>
+4) You become more confident about the stuff you are writing.<br/>
 There are many more [benefits](https://www.seguetech.com/the-benefits-of-unit-testing/).:-)
 
 23) Make <b>security decisions</b> on the server-side whenever possible.<br/><br/>
