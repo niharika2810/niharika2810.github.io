@@ -34,6 +34,7 @@ Supporting multiple resolutions are a sometimes nightmare to developers. Includi
 ####  Build Type
    Decides how our code will be compiled. For instance, If we want to sign our .apk with debug key, we put our debug configuration into debug build type. If we want to have obfuscated code when it is compiled and ready to release, we put that configuration on our release build type. If we want to log our HTTP request in debug mode but we want to disable it on release mode, we put that configuration on build types or call build types in library dependencies.
 <br/>
+```
 buildTypes
 {
         release {
@@ -44,7 +45,7 @@ buildTypes
             applicationIdSuffix ".debug"
         }
 }
-
+```<br/>
 Here is the simplest example:
 When you run your app in debug mode, your application package name will be packagename.debug and if you run your app in release mode, your application package name will be packagename.
 
@@ -52,6 +53,7 @@ When you run your app in debug mode, your application package name will be packa
 Let’s say we have are developing your app for your customer users. Everything is going fine for customer app. Then your product owner said that you need to develop that app for admin users. Admin user app should have all functionalities that customer app has. But also admin user can have access to statistics page and admin user should see the app in different colours and resources. And also your admin app’s analytics should not be mixed with customer app.What will you do? The answer is Product Flavor. Same app, different behaviour.
 Edit your Gradle file:
 <br/>
+```
 android
  {
     ...
@@ -65,7 +67,8 @@ android
             ..
         }
     }
-}
+}```
+<br/>
 
 ### Build Variants
 Combines your build types and product flavors. Sync your project after you update your build.gradle. Then you will see all your build variants.
@@ -81,6 +84,7 @@ ADB provides you with more details than your Android Studio Logcat. Just try it 
 Long build times have always been a problem in the developer’s life.
 
 <br/>
+```
 org.gradle.daemon=true
 org.gradle.parallel=true
 org.gradle.configureondemand=true
@@ -91,17 +95,19 @@ android.useAndroidX=true
 android.enableJetifier=true
 kapt.incremental.apt=true
 kapt.use.worker.api=true
-
+```<br/>
 Showing you a sample of enhancements I did. You can read more about speeding up [here](https://developer.android.com/studio/build/optimize-your-build).
 
 7) Keep a check on structural problems in your App code through [Lint](https://developer.android.com/studio/write/lint).<br/><br/>
 The lint tool helps find poorly structured code that can impact the reliability and efficiency of your Android apps.
 The command for MAC:
-```java
+```
 ./gradlew lint
+```
 For Windows:
-```java
+```
 gradlew lint
+```
 
 8) Log everything in DEBUG mode only.<br/><br/>
 We use logs to display useful information, errors, workflows or even to debug something.
@@ -145,6 +151,7 @@ If multiple apps can respond to the intent and the user might want to use a diff
 Don’t do this. This would appear in the version control system.
 
 <br/>
+```
 signingConfigs
  {
     release {
@@ -154,15 +161,18 @@ signingConfigs
         keyAlias "thekey"
         keyPassword "password789"
     }
-}
+}```
 
 Instead, make a gradle.properties file :
 <br/>
+```
 KEYSTORE_PASSWORD=password123
 KEY_PASSWORD=password789
+```
 
 That file is automatically imported by Gradle, so you can use it in build.gradle as such:
 <br/>
+```
 signingConfigs
 {
     release
@@ -179,6 +189,7 @@ signingConfigs
         }
     }
 }
+```
 
 16) Implement SSL certificate pinning to prevent [Man-in-the-middle Attack (MITM)](https://ieeexplore.ieee.org/document/4768661/?part=1).<br/><br/>
 To intercept any request, we mostly use a proxy tool. The proxy tool installs its own certificate on the device and application trust that certificate as a valid certificate and allow proxy tool to intercept application traffic. This way we can help hackers to tamper or know our data stuff.
