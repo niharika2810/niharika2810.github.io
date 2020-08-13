@@ -47,12 +47,12 @@ buildTypes
 }
 ```
 
-Here is the simplest example:
+Here is the simplest example:<br/>
 When you run your app in debug mode, your application package name will be packagename.debug and if you run your app in release mode, your application package name will be packagename.
 
 ### Product Flavor<br/>
 Let’s say we have are developing your app for your customer users. Everything is going fine for customer app. Then your product owner said that you need to develop that app for admin users. Admin user app should have all functionalities that customer app has. But also admin user can have access to statistics page and admin user should see the app in different colours and resources. And also your admin app’s analytics should not be mixed with customer app.What will you do? The answer is Product Flavor. Same app, different behaviour.
-Edit your Gradle file:
+<br/>Edit your Gradle file:
 <br/>
 ```
 android
@@ -119,7 +119,7 @@ We use logs to display useful information, errors, workflows or even to debug so
 9) Never add whole <b>third party library</b> if it’s possible for you to extract specific methods or small no. of classes for your functionality.<br/>
 <br/>Just add those classes to your project and modify them accordingly.
 
-10) Detect and Fix memory leaks in Android App time to time. <br/><br/>
+10) Detect and Fix <b>memory leaks</b> in Android App time to time. <br/><br/>
 “A small leak will sink a great ship.” — Benjamin Franklin
 <br/>Use memory tools like [Leak canary](https://square.github.io/leakcanary/) to detect the cause for the memory leak.
 
