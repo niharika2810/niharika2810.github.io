@@ -2,7 +2,7 @@
 layout: post
 title: Android's Attribute android:allowBackup Demystified
 ---
-![AllowBackUp](/images/allow_backup.jpeg)
+![AllowBackUp](/images/allow_backup.jpg)
 
 ## Introduction
 
