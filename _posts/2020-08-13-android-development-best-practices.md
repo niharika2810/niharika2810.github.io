@@ -223,7 +223,7 @@ To protect against these vulnerabilities, [Google Play services](https://develop
 reCAPTCHA is a free service that uses an advanced risk analysis engine to protect your app from spam and other abusive actions. If the service suspects that the user interacting with your app might be a bot instead of a human, it serves a CAPTCHA that a human must solve before your app can continue executing.
 
 22) Write [Unit tests](https://developer.android.com/training/testing/unit-testing) for your feature.<br/><br/>
-Listing out some benefits:
+Listing out some benefits:<br/>
 1) Unit tests help to fix bugs early in the development cycle and save costs.<br/>
 2) It helps the developers to understand the code base and enables them to make changes quickly<br/>
 3) Good unit tests serve as project documentation.<br/>
