@@ -105,9 +105,11 @@ The lint tool helps find poorly structured code that can impact the reliability 
 The command for MAC:
 ```
 ./gradlew lint
+```
 For Windows:
 ```
 gradlew lint
+```
 
 8) Log everything in DEBUG mode only.<br/><br/>
 We use logs to display useful information, errors, workflows or even to debug something.
