@@ -234,8 +234,9 @@ There are many more [benefits](https://www.seguetech.com/the-benefits-of-unit-te
 Don’t trust your application’s client-side. Hacker can easily tamper or hack your application’s codebase and can manipulate your code. So, it's better to have checks on the backend side whenever possible.
 
 24) Learn how to use [Proguard](https://developer.android.com/studio/build/shrink-code) to the maximum for code Obfuscation and Optimization.<br/><br/>
-It is quite easy to reverse engineer Android applications, so if you want to prevent this from happening, you should use ProGuard for its main function: obfuscation, a process of creating source code in a form that is hard for a human to understand(changing the name of classes and members)
-ProGuard has also two other important functions: shrinking which eliminates unused code and is obviously highly useful and also optimization. Optimization operates with Java bytecode, though, and since Android runs on Dalvik bytecode which is converted from Java bytecode, some optimizations won’t work so well. So you should be careful there.
+It is quite easy to reverse engineer Android applications, so if you want to prevent this from happening, you should use ProGuard for its main function: obfuscation, a process of creating source code in a form that is hard for a human to understand(changing the name of classes and members).<br/>
+ProGuard has also two other important functions: shrinking which eliminates unused code and is obviously highly useful and also optimization.
+ <br/>Optimization operates with Java bytecode, though, and since Android runs on Dalvik bytecode which is converted from Java bytecode, some optimizations won’t work so well. So you should be careful there.
 
 25) Use [Network security configuration](https://developer.android.com/training/articles/security-config) to improve your app’s network security.<br/><br/>
 Security is more about layers of protection than a single iron wall. The Android Network Security Configuration feature provides a simple layer to protect apps from unintentionally transmitting sensitive data in unencrypted cleartext.<br/>
