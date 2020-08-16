@@ -90,3 +90,5 @@ exclude:
   - README.md
   - CNAME
 
+
+theme: jekyll-theme-time-machine
