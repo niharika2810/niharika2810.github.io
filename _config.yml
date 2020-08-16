@@ -70,10 +70,12 @@ kramdown:
 sass:
   style: :expanded # You might prefer to minify using :compressed
 
-remote_theme: mmistakes/minimal-mistakes@4.20.1
+remote_theme: benbalter/retlab
 
 plugins:
   - jekyll-include-cache
+  -  jekyll-remote-theme
+
   # Use the following plug-ins
 gems:
   - jekyll-include-cache
