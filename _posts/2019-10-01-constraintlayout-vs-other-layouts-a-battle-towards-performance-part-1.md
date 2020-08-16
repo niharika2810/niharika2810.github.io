@@ -1,6 +1,6 @@
 ---
 layout: post
-title: A Battle towards Performance: Constraint Layout vs Other Layouts(Part -1)
+title: Constraint Layout vs Other Layouts(Part -1)
 ---
 ![AllowBackUp](/images/allow_backup.jpg)
 
