@@ -70,12 +70,10 @@ kramdown:
 sass:
   style: :expanded # You might prefer to minify using :compressed
 
-theme: jekyll-theme-architect
-
 plugins:
   - jekyll-remote-theme
 
- remote-theme: ngzhio/jekyll-theme-hamilton
+remote-theme: ngzhio/jekyll-theme-hamilton
 
 
 # Use the following plug-ins
