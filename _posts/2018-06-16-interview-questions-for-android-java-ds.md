@@ -12,13 +12,13 @@ I always try that whatever I learn, I should share it with people and everyone s
 I won’t be writing so much story stuff otherwise you will get bored 😉. Let’s get to the point for which you opened this blog.
 
 Through these 3 years, I had a bunch of interviews, some went smooth, some didn’t, but every time I look back and see what I missed. Usually, the purpose of interviews is to land a job, but it’s also a great way to sense your level of understanding of tools and development cycle.
-Here I am sharing some of my experience with you. Hope this helps you up in your last minute of preparation for the interviews. I won’t be providing answers/links here as more you do research, deeper you will have the knowledge for it.
+Here I am sharing some of my experience with you. Hope this helps you up in your last minute of preparation for the interviews.
 
 Note*: I am not giving up the answers here as If i provide you the answers, what will you do? :-)
 
 Also, you will restrict yourself to those answers only. Try and learn more deeply abut the concepts. For any particular questions, You can ask anytime.
 
-## DS
+## Questions based on DS
 
 1) <a href="https://www.geeksforgeeks.org/find-minimum-element-in-a-sorted-and-rotated-array/">https://www.geeksforgeeks.org/find-minimum-element-in-a-sorted-and-rotated-array/</a>
 
@@ -80,7 +80,8 @@ Also, you will restrict yourself to those answers only. Try and learn more deepl
 
 30) [https://www.geeksforgeeks.org/sorted-linked-list-to-balanced-bst/](https://www.geeksforgeeks.org/sorted-linked-list-to-balanced-bst/)
 
-## Java
+
+## Questions based on Java
 
 * Interfaces vs Abstract Classes.Why Interfaces if abstract classes are already there.
 
@@ -150,7 +151,8 @@ Also, you will restrict yourself to those answers only. Try and learn more deepl
 
 * Order of call of constructors during Inheritance.
 
-## Android
+
+## Questions based on Android
 
 (Also they ask for code not just theory things. Keep this in mind.)
 
@@ -342,7 +344,8 @@ Also, you will restrict yourself to those answers only. Try and learn more deepl
 
 >You will be given assignments as your first/last round. They just want to know how you follow the standards. Some ask for UI thing, other ask for architectural patterns. Just check your methods and play well with the logic.That’s all.
 
-## System Design
+
+## System Design Questions
 
 * Design Whatsapp/Chat application/Facebook messenger.
 
