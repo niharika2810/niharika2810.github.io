@@ -1,10 +1,10 @@
 ---
 layout: post
 title: Memory Management in Android
-
 ---
+![ddms](/images/ddms.jpeg)
 
-## Android Memory Management
+## Introduction
 
 Android uses paging and mmap instead of providing swap space, which means any memory your application touches cannot be paged out unless you release all references.
 
