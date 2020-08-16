@@ -70,6 +70,7 @@ kramdown:
 sass:
   style: :expanded # You might prefer to minify using :compressed
 
+theme: minima
 
 plugins:
   - jekyll-remote-theme

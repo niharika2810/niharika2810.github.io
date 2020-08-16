@@ -2,7 +2,7 @@
 layout: post
 title: A Battle towards Performance: Constraint Layout vs Other Layouts(Part -2)
 ---
-![Demo](/images/demo_page.png)
+![AllowBackUp](/images/allow_backup.jpg)
 
 ## Introduction
 

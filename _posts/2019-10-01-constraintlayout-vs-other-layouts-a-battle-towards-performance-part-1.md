@@ -2,7 +2,7 @@
 layout: post
 title: A Battle towards Performance: Constraint Layout vs Other Layouts(Part -1)
 ---
-![Rendering](/images/rendering.png)
+![AllowBackUp](/images/allow_backup.jpg)
 
 Imagine, you’ve just joined a new job and you need to shop for a whole new wardrobe that goes with your workplace culture and outlook (formals in most cases).
 You walk into an apparel store, head straight to the formals section, and you notice that some of the items hanging there are quite impractical and uncomfortable.
