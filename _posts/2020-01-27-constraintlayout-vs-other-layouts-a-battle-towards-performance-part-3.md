@@ -1,8 +1,10 @@
 ---
 layout: post
 title: A Battle towards Performance: Constraint Layout vs Other Layouts(Part -3)
-
 ---
+![result1](/images/result_1.png)
+
+## Introduction
 Now we already know [various tools](https://medium.com/1mgofficial/constraintlayout-vs-other-layouts-a-battle-towards-performance-part-2-21d6b5a6054c) that can be used for measuring the performance of layouts with different ViewGroups we have in Android.
 
 Here, we are sharing the result for different layouts testing performed on Coolpad and Android 6.0 Marshmallow.

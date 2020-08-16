@@ -72,7 +72,7 @@ Default Scheduler returned by AndroidSchedulers.mainThread() is an instance of <
 
 However, we want to override the default <b>AndroidSchedulers.mainThread()</b> scheduler and return an instance which does not have these Android dependencies and can be safely instantiated.
 
-Solution -
+### Solution -
 
 Use <b>RxAndroid’s RxAndroidPlugins</b> class which provides some hooks for overriding RxAndroid’s schedulers.
 

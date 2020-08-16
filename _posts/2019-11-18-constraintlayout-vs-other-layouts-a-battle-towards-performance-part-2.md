@@ -1,24 +1,24 @@
 ---
 layout: post
 title: A Battle towards Performance: Constraint Layout vs Other Layouts(Part -2)
-
 ---
+![Demo](/images/demo_page.png)
+
+## Introduction
 
 In the last article, I showed off my love for fashion which lead me to correlate it with the topic at hand i.e, [how UI is created and what will be the impact of view lifecycle methods in the context of various layouts](https://medium.com/@nik.arora8059/constraintlayout-vs-other-layouts-a-battle-towards-performance-part-1-14d8116e876e).
 
 In this blog, I will be discussing various tools I used to measure performance-
 
-### [GPU overdraw](https://developer.android.com/topic/performance/rendering/inspect-gpu-rendering#debug_overdraw)
+1) [GPU overdraw](https://developer.android.com/topic/performance/rendering/inspect-gpu-rendering#debug_overdraw)
 
-### [Systrace](https://developer.android.com/topic/performance/tracing)
+2) [Systrace](https://developer.android.com/topic/performance/tracing)
 
 But before going into performance metrics, one should know the 16 ms/frame logic.
 
 ### Human eyes and 16 ms per refresh
 
-The human brain receives and processes visual information continuously.
-
-This allows us some cool tricks.
+The human brain receives and processes visual information continuously.This allows us some cool tricks.
 
 For example, when still images are displayed to follow each other fast enough, we perceive them as motion.
 
@@ -41,10 +41,10 @@ Flip books are just at the edge of what humans perceive as motion.
 Overdraw as the name suggests is a term used to describe how many times a pixel on the screen has been redrawn in a single frame.
 
 Imagine painting a room and re-painting it all over again; this results in wasting time and energy to paint the room the first time.
-
 With overdraw in Android, we waste GPU time by coloring the pixels on the screen that end up being colored again by something else later.
 
 Fortunately, we can detect re-painting in android by selecting “Show overdraw areas” in “Debug GPU overdraw” under “Developer options” in phone settings.
+
 
 ![Demo](/images/demo_page.png)
 
@@ -74,6 +74,7 @@ The tool combines data from the Android kernel such as the CPU scheduler, disk a
 
 The tool uses this data to generate an HTML report that shows an overall picture of an Android-powered device’s system processes for a given period of time.
 
+
 ![Systrace](/images/systrace_output.png)
 
 ### What you should do
@@ -97,6 +98,7 @@ python systrace.py [options] [categories]
 For Android 9 or higher, we already have the System Tracing app which works exactly the same way command-line utility works.
 
 <b>[Developer Options](https://developer.android.com/studio/debug/dev-options#enable) -> Debugging -> System Tracing ->Record trace -> Do some Actions in your app -> Stop Trace -> Share Trace (.perfetto-trace)-> [Open on Perfetto UI](https://ui.perfetto.dev/#!/)</b>
+
 
 ![Perfetto](/images/perfetto_sample.png)
 
@@ -130,7 +132,8 @@ On devices running <b>Android 5.0 (API level 21) or higher</b>, this work is spl
 
 To get into more detail on how systrace works, Please go through this [link](https://developer.android.com/studio/profile/systrace.html).
 
-In the next blog, I have shared the results I got after testing similar screens with different layouts.
+In the [next](/_posts/2019-11-18-constraintlayout-vs-other-layouts-a-battle-towards-performance-part-3.md) blog, I have shared the results I got after testing similar screens with different layouts.
+
 
 
 

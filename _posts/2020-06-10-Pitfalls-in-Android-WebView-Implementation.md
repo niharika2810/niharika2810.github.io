@@ -38,7 +38,7 @@ This vulnerability allows WebView to be exploited. When the vulnerability was re
 
 Google fixed the Jelly Bean WebView issue with Android 4.4 KitKat patch.
 
- 1) The WebView shipped with [Android 4.4](https://www.androidcentral.com/android-kitkat) (KitKat) is based on the same code as Chrome(which uses Google’s Blink engine) for Android version 30. This WebView does not have full feature parity with Chrome for Android and is given the version number 30.0.0.0.
+ * The WebView shipped with [Android 4.4](https://www.androidcentral.com/android-kitkat) (KitKat) is based on the same code as Chrome(which uses Google’s Blink engine) for Android version 30. This WebView does not have full feature parity with Chrome for Android and is given the version number 30.0.0.0.
 
 The updated WebView shipped with Android 4.4.3 has the version number <b>33.0.0.0</b>.
 
@@ -47,7 +47,7 @@ Then came a design issue in <b>Android KitKat</b> that left the OS exposed to ne
 
 >In all versions of Android(KitKat and below), WebView has been bundled with Android firmware. From a security standpoint, that wasn’t good, because if a new flaw was found in WebView, the only way a fix would reach end-users was through the unwieldy process of delivering it from Google to OEMs and carriers and finally, if ever, to the end-user.
 
- 2) Then In [Android 5.0](https://www.androidcentral.com/lollipop), WebView was broken out as a separate app, presumably to allow timely updates through Google Play without requiring firmware updates to be issued. So, Now one can update WebView from Google Play.
+ * Then In [Android 5.0](https://www.androidcentral.com/lollipop), WebView was broken out as a separate app, presumably to allow timely updates through Google Play without requiring firmware updates to be issued. So, Now one can update WebView from Google Play.
 
 ### 2) WebView on Android 7 and above doesn’t render the page
 

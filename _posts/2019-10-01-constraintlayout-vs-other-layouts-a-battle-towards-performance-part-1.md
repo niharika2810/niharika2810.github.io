@@ -1,17 +1,16 @@
 ---
 layout: post
 title: A Battle towards Performance: Constraint Layout vs Other Layouts(Part -1)
-
 ---
 ![Rendering](/images/rendering.png)
 
 Imagine, you’ve just joined a new job and you need to shop for a whole new wardrobe that goes with your workplace culture and outlook (formals in most cases).
-
 You walk into an apparel store, head straight to the formals section, and you notice that some of the items hanging there are quite impractical and uncomfortable.
-
 Now, would you rather just buy the items listed there because the store tells you to or would you rather walk around the other sections and see what’s best for you?
 
-<b>Choosing a layout</b> for your app and website is also a similar process. But before we head to that, it’s important that we understand how our UI is created. If you look at the <b>image</b> below, it shows you the <b>steps</b> that go into creating a UI.
+<b>Choosing a layout</b> for your app and website is also a similar process. But before we head to that, it’s important that we understand how our UI is created.
+
+If you look at the <b>image</b> below, it shows you the <b>steps</b> that go into creating a UI.
 
 1) The CPU takes the high-level object(<i>button, textView, etc…</i>) and turns it into a <b>display list</b> — a set of commands for drawing it.
 
@@ -34,13 +33,9 @@ So, creating this display list through <b>CPU and GPU</b> uploading might be exp
 ### Manage complexity: Layouts matter
 
 Android [Layouts](https://developer.android.com/guide/topics/ui/declaring-layout.html) allow you to nest UI objects in the view hierarchy.
-
 This nesting can also impose a layout cost.
-
 When your app processes an object for layout, the app performs the same process on all children of the layout as well.
-
 For a complicated layout, sometimes a cost only arises the first time the system computes the layout.
-
 For instance, when your app recycles a complex list item in a [RecyclerView](https://developer.android.com/reference/androidx/recyclerview/widget/RecyclerView.html) object, the system needs to lay out all of the objects. In another example, trivial changes can propagate up the chain towards the parent until they reach an object that doesn’t affect the size of the parent.
 
 ### Double taxation
@@ -90,4 +85,4 @@ You should be wary of situations where one of the following conditions applies t
 
  3) There are many instances of it populating the screen, similar to children in a [ListView](https://developer.android.com/reference/android/widget/ListView.html) object.
 
-I hope you enjoyed this blog and learned something! In my [next](https://medium.com/@nik.arora8059/constraintlayout-vs-other-layouts-a-battle-towards-performance-part-2-21d6b5a6054c) blog, I have covered the tools I used for measuring various layout performances.
+I hope you enjoyed this blog and learned something! In my [next]((/_posts/2019-11-18-constraintlayout-vs-other-layouts-a-battle-towards-performance-part-2.md)) blog, I have covered the tools I used for measuring various layout performances.

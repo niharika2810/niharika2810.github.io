@@ -6,11 +6,9 @@ title: Understanding the core of Aarogya Setu-Bluetooth
 
 ## Introduction
 
->[Aarogya Setu](https://play.google.com/store/apps/details?id=nic.goi.aarogyasetu&hl=en_IN) is a mobile application developed by the Government of India to connect essential health services with the people of India in our combined fight against COVID-19.
+>[Aarogya Setu](https://play.google.com/store/apps/details?id=nic.goi.aarogyasetu&hl=en_IN) is a mobile application developed by the Government of India to connect essential health services with the people of India in our combined fight against COVID-19.Do visit this [link](https://aarogyasetu.gov.in/) for more details.
 
-Do visit this [link](https://aarogyasetu.gov.in/) for more details.
-
-<b>AarogyaSetu</b>started with an idea of automatic contact tracing. Proximity logging within an app addresses a key limitation of manual contact tracing: it is dependent on a person’s memory and is therefore limited to the contacts that a person is acquainted with and remembers having met.
+<b>AarogyaSetu</b> started with an idea of automatic contact tracing. Proximity logging within an app addresses a key limitation of manual contact tracing: it is dependent on a person’s memory and is therefore limited to the contacts that a person is acquainted with and remembers having met.
 
 For contact tracing, we had two options to go with: <b>Bluetooth or GPS</b>.
 
@@ -74,7 +72,7 @@ This is the data to be advertised as well as the scan response data for active s
 
 1) <b>setIncludeDeviceName</b>: We are setting an 8 bytes(+2 bytes header) unique id as Bluetooth name for distinguishing a packet during the scan. So, we have made this flag true.
 
-2)<b>addServiceUuid</b>: Setting a 16 bytes(+2 bytes header) UUID that is used for identifying our packets when they are advertised.
+2) <b>addServiceUuid</b>: Setting a 16 bytes(+2 bytes header) UUID that is used for identifying our packets when they are advertised.
 
 So now, we know how all 31 bytes are getting consumed. For more clarification on byte structure, please check this [class](https://android.googlesource.com/platform/frameworks/base/+/master/core/java/android/bluetooth/le/BluetoothLeAdvertiser.java).
 
@@ -148,11 +146,12 @@ There are vulnerabilities in Bluetooth technology that have to be patched at the
 
 We have tried to make the most out of the Bluetooth and we are constantly improving.
 
-Check out my [talk]() on Understanding the BLE in integration in AarogyaSetu:
+Check out my [talk](https://youtu.be/K4SLf3y6zmE) on Understanding the BLE in integration in AarogyaSetu:
 
-https://youtu.be/K4SLf3y6zmE
+[![Talk Link]](https://youtu.be/K4SLf3y6zmE)
 
-Here is the link for slides [here](https://speakerdeck.com/niharika28/understanding-the-core-of-aarogyasetu-app-bluetooth-low-energy-ble).
+
+This is the link for [slides](https://speakerdeck.com/niharika28/understanding-the-core-of-aarogyasetu-app-bluetooth-low-energy-ble).
 
 Also, You can check the [source code](https://github.com/nic-delhi/AarogyaSetu_Android).
 

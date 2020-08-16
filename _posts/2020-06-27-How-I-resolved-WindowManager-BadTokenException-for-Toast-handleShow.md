@@ -9,7 +9,6 @@ title: How I resolved WindowManager.BadTokenException for Toast#handleShow()?
 “Every problem is a gift — without problems, we would not grow.” ― Anthony Robbins
 
 When we have to display information for a short span of time in Android, we use [Toast](https://developer.android.com/guide/topics/ui/notifiers/toasts).
-
 Here are some key features:
 
 1) It provides simple feedback about an operation in a small popup.
@@ -18,7 +17,9 @@ Here are some key features:
 
 3)It only fills the amount of space required for the message and the current activity remains visible and interactive.
 
-Recently, I started getting a major number of crashes for <b>Toast#handleShow()</b> on Crashlytics. Here are the logs:
+Recently, I started getting a major number of crashes for <b>Toast#handleShow()</b> on Crashlytics.
+
+Here are the logs:
 
 ```
 Fatal Exception: android.view.WindowManager$BadTokenException
@@ -34,6 +35,7 @@ android.app.ActivityThread.main (ActivityThread.java:6377)
 java.lang.reflect.Method.invoke (Method.java)
 com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run (ZygoteInit.java:904)
 ```
+
 
 Before the analysis, it's important for you to know about <b>WindowManager.BadTokenException</b>.
 
@@ -53,7 +55,7 @@ WindowManagerService (WMS) is a system service that manages the windows on Andro
 
 >When an application starts up for the first time, the <b>ActivityManagerService</b> creates a special kind of window token called an application window token, which uniquely identifies the application’s top-level container window. The activity manager gives this token to both the (*application) and the window manager, and it sends the token to the window manager each time it wants to add a new window to the screen. This ensures secure interaction between the application and the window manager (by making it impossible to add windows on top of other applications), and also makes it easy for the activity manager to make direct requests to the window manager.
 
-And the code that throws “BadTokenException”
+And the code that throws “BadTokenException” :
 
 <b>Return WindowManagerGlobal.ADD_BAD_APP_TOKEN</b>
 
@@ -70,6 +72,7 @@ From API 25, Android added a new param <b>IBinder windowToken</b> for Toast#hand
 Let me show you the code:
 
 ![ApiDifference](/images/api_difference.png)
+
 
 As you can see here, they try-catch the <b>mWM.addView(mView, mParams)</b>
 

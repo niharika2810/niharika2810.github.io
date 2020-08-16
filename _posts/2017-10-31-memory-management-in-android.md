@@ -10,7 +10,7 @@ Android uses paging and mmap instead of providing swap space, which means any me
 
 The Dalvik* Virtual Machine’s heap size for application processes is limited. Applications start up with 2 MB, and the maximum allocation, marked as “largeHeap,” is limited to 36 MB (depending on the specific device configuration).
 
-Examples of large heap applications are Photo/Video Editor, Camera, Gallery, and Home Screen.
+Examples of large heap applications are <b>Photo/Video Editor, Camera, Gallery, and Home Screen</b>.
 
 Android stores background application processes in a LRU cache.
 
@@ -58,7 +58,7 @@ Android is a worldwide mobile platform and millions of Android developers are de
 
 1) Be careful about using a design pattern with “abstraction”. Although from the point of view of design pattern, abstraction can help to build more flexible software architect. In mobile world, abstraction may involve side effect for its extra code to be executed, which will cost more time and memory. Unless abstraction can provide your application a significant benefit, you would be better not to use it.
 
-2)Avoid using “enum”. Enum will double memory allocation than ordinary static constant, so do not use it.
+2) Avoid using “enum”. Enum will double memory allocation than ordinary static constant, so do not use it.
 
 3) Try to use the optimized SparseArray, SparseBooleanArray, and LongSparseArray containers instead of HashMap. HashMap allocates an entry object during every mapping which is a memory inefficient action, also the low performance behavior — “autoboxing/unboxing” is spread all over the usage. Instead, SparseArray-like containers map keys into plain array. But please remember that these optimized containers are not suitable for large numbers of items, when executing add/remove/search actions, they are slower than Hashmap if your data set is over thousands of records.
 
@@ -82,7 +82,7 @@ Use memory carefully with above tips can bring benefit for your application incr
 
 1) Remember to close the cursor after querying the database. If you want to keep the cursor open long-term, you must use it carefully and close it as soon as the database task finished.
 
-2)Remember to call unregisterReceiver() after calling registerReceiver().
+2) Remember to call unregisterReceiver() after calling registerReceiver().
 
 3) Avoid Context leakage. If you declare a static member variable “Drawable” in your Activity, and then call view.setBackground(drawable) in onCreate(), after screen rotate, a new Activity instance will be created and the old Activity instance can never be de-allocated because drawable has set the view as callback and view has a reference to Activity (Context). A leaked Activity instance means a significant amount of memory, which will cause OOM easily.
 
@@ -93,9 +93,9 @@ Use memory carefully with above tips can bring benefit for your application incr
 
 5) Be careful about using Threads. Threads in Java are garbage collection roots; that is, the Dalvik Virtual Machine (DVM) keeps hard references to all active threads in the runtime system, and as a result, threads that are left running will never be eligible for garbage collection. Java threads will persist until either they are explicitly closed or the entire process is killed by the Android system. Instead, the Android application framework provides many classes designed to make background threading easier for developers:
 
-    * Use Loader instead of a thread for performing short-lived asynchronous background queries in conjunction with the Activity lifecycle.
-    * Use Service and report the results back to the Activity using a BroadcastReceiver.
-    * Use AsyncTask for short-lived operations.
+   * Use Loader instead of a thread for performing short-lived asynchronous background queries in conjunction with the Activity lifecycle.
+   * Use Service and report the results back to the Activity using a BroadcastReceiver.
+   * Use AsyncTask for short-lived operations.
 
 ## Android Profiling Tools
 
@@ -137,7 +137,7 @@ A Heap Dump is a snapshot of an application’s heap, which is stored in a binar
 
 ## Note :
 
-I would say developing an android application is easy but optimization and memory management requires time and work.Developer should focus on these parameters.
+I would say developing an android application is easy but optimization and memory management requires time and work. Developer should focus on these parameters.
 
 
 
