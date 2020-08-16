@@ -70,10 +70,13 @@ kramdown:
 sass:
   style: :expanded # You might prefer to minify using :compressed
 
-theme: minimal-mistakes-jekyll
+remote_theme: mmistakes/minimal-mistakes@4.20.1
 
-# Use the following plug-ins
+plugins:
+  - jekyll-include-cache
+  # Use the following plug-ins
 gems:
+  - jekyll-include-cache
   - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
   - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
 
