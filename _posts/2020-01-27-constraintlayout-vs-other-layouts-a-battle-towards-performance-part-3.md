@@ -7,7 +7,7 @@ Now we already know [various tools](https://medium.com/1mgofficial/constraintlay
 
 Here, we are sharing the result for different layouts testing performed on Coolpad and Android 6.0 Marshmallow.
 
-We also created a [Github project](https://github.com/niharika2810/LayoutPerformance-Analysis-App) for your reference. You can check out the code for various layouts there.
+I also created a [Github project](https://github.com/niharika2810/LayoutPerformance-Analysis-App) for your reference. You can check out the code for various layouts there.
 
 ### Disclaimer:
 
@@ -49,15 +49,15 @@ The complete analysis of the various layouts tells us -
 
 ### References -
 
-1) https://medium.com/comparethemarket/three-key-lessons-when-migrating-to-constraintlayout-dff38c31a47
+1) <a href="https://medium.com/comparethemarket/three-key-lessons-when-migrating-to-constraintlayout-dff38c31a47">Three-key-lessons-when-migrating-to-constraintlayout</a>
 
-2) https://github.com/googlesamples/android-constraint-layout-performance
+2) <a href="https://github.com/googlesamples/android-constraint-layout-performance">Android-constraint-layout-performance</a>
 
-3) https://stuff.mit.edu/afs/sipb/project/android/docs/tools/debugging/systrace.html
+3) <a href="https://stuff.mit.edu/afs/sipb/project/android/docs/tools/debugging/systrace.html">Systrace</a>
 
-4) https://medium.com/rosberryapps/make-your-custom-view-60fps-in-android-4587bbffa557
+4) <a href="https://medium.com/rosberryapps/make-your-custom-view-60fps-in-android-4587bbffa557">Make-your-custom-view-60fps-in-android</a>
 
-5) https://medium.com/mindorks/android-app-performance-optimization-cdccb422e38e
+5) <a href="https://medium.com/mindorks/android-app-performance-optimization-cdccb422e38e">Android-app-performance-optimization</a>
 
 
 

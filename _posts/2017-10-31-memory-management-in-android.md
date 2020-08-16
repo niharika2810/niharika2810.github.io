@@ -2,7 +2,7 @@
 layout: post
 title: Memory Management in Android
 
- ---
+---
 
 ## Android Memory Management
 
