@@ -2,7 +2,7 @@
 layout: post
 title: Constraint Layout vs Other Layouts(Part -2)
 ---
-![AllowBackUp](/images/allow_backup.jpg)
+![FlipBook](/images/flip_book.gif)
 
 ## Introduction
 
