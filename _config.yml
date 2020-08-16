@@ -70,11 +70,13 @@ kramdown:
 sass:
   style: :expanded # You might prefer to minify using :compressed
 
-remote_theme: benbalter/retlab
+theme: minima
 
 plugins:
   - jekyll-include-cache
   -  jekyll-remote-theme
+  - jekyll-feed
+
 
   # Use the following plug-ins
 gems:
@@ -91,4 +93,3 @@ exclude:
   - CNAME
 
 
-theme: jekyll-theme-time-machine
