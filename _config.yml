@@ -30,7 +30,7 @@ footer-links:
 
 # Enter your Disqus shortname (not your username) to enable commenting on posts
 # You can find your shortname on the Settings page of your Disqus account
-disqus:
+disqus: Niharika
 
 # Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
 google_analytics: UA-175380819-1
@@ -44,6 +44,8 @@ url: https://niharika2810.github.io
 # and NOT your User repository (http://yourusername.github.io)
 # then add in the baseurl here, like this: "/repository-name"
 baseurl: ""
+
+skin: solarized
 
 #
 # !! You don't need to change any of the configuration flags below !!
@@ -69,6 +71,12 @@ sass:
   style: :expanded # You might prefer to minify using :compressed
 
 theme: minima
+
+plugins:
+  - jekyll-remote-theme
+
+ remote-theme: ngzhio/jekyll-theme-hamilton
+
 
 # Use the following plug-ins
 gems:
