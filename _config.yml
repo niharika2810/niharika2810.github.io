@@ -70,6 +70,8 @@ kramdown:
 sass:
   style: :expanded # You might prefer to minify using :compressed
 
+theme: minimal-mistakes-jekyll
+
 # Use the following plug-ins
 gems:
   - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
@@ -83,4 +85,3 @@ exclude:
   - README.md
   - CNAME
 
-theme: jekyll-theme-architect
