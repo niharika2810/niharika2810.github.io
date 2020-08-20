@@ -32,9 +32,11 @@ She has also been recognized by [IndiaMentor](https://www.linkedin.com/company/i
  - Developed [AarogyaSetu app](https://play.google.com/store/apps/details?id=nic.goi.aarogyasetu&hl=en_IN) in less than 15 days.(Optimizations and feature enhacements are still on)<br/>
  Aarogya Setu is a mobile application developed by the Government of India to connect essential health services with the people of India in our combined fight against COVID-19. The App is aimed at augmenting the initiatives of the Government of India, particularly the Department of Health, in proactively reaching out to and informing the users of the app regarding risks, best practices and relevant advisories pertaining to the containment of COVID-19. 
  - Got **Award of Chancellor Gold Medal for JCBOSE,YMCAUST 2011-2015 Batch** by Honourable State Governor.
- - Her library for fixing [Toast BadTokenException](https://ibb.co/ygNVVGG) published on June 17th,2020 has approx. 50 downloads so far within a month
+ Article on [Android’s Attribute android:allowBackup Demystified](https://medium.com/better-programming/androids-attribute-android-allowbackup-demystified-114b88087e3b) got featured in [OnCreate Digest Android newsletter](http://www.oncreatedigest.com/issues/oncreate-digest-issue-18-270712)
+ - Her library for fixing [Toast BadTokenException](https://ibb.co/ygNVVGG) published on June 17th,2020 has approx. 82 downloads so far within 2 months
  - Article on [How I resolved BadTokenException for Toast#handleShow()?](https://proandroiddev.com/how-i-resolved-windowmanager-badtokenexception-for-toast-handleshow-2308203ebb91) got [TRENDING]() on LinkedIn and on [ProAndroidDev](https://ibb.co/55cJ30T) for a month since the day it got published.
  - Article on [Understanding the core of Aarogya Setu App: Bluetooth](https://medium.com/aarogyasetu/understanding-the-core-of-aarogya-setu-bluetooth-c09de3143fd2) got [TRENDING](https://ibb.co/0y2m7nn) on LinkedIn.
+  - Featured in [Droidcon](https://ibb.co/Zx1zgjF) Today's Highlight for the article [https://proandroiddev.com/constraintlayout-vs-other-layouts-a-battle-towards-performance-part-1-14d8116e876e](https://proandroiddev.com/constraintlayout-vs-other-layouts-a-battle-towards-performance-part-1-14d8116e876e)
   - Featured in [Droidcon](https://ibb.co/2WnGbhx) Today's Highlight for the article [How I resolved WindowManager.BadTokenException for Toast#handleShow()?
 ](https://proandroiddev.com/how-i-resolved-windowmanager-badtokenexception-for-toast-handleshow-2308203ebb91)
  - Featured in [Medium Daily Digest](https://ibb.co/Z1YDJY2) Today's Highlight for the article [Pitfalls in Android WebView Implementation](https://medium.com/1mgofficial/pitfalls-in-android-webview-implementation-b6524f9f38bb)
@@ -88,6 +90,8 @@ She has the following open-source demo projects :
  - [MVP-Dagger-Retrofit Sample](https://github.com/niharika2810/MVP-Dagger-Retrofit-Sample-App) - A Sample Application demonstrating implementation of MVP architecture using Dagger as dependency injection framework and Retrofit for network call.
  - [Layout Performance Analysis](https://github.com/niharika2810/LayoutPerformance-Analysis-App) - A Demo Application with different XMLs developed using different viewgroups for same UI screens to measure layout performance.Please go through the [Medium Blog](https://medium.com/1mgofficial/constraintlayout-vs-other-layouts-a-battle-towards-performance-part-1-14d8116e876e) for the results.
  - [SectionedRecyclerView](https://github.com/niharika2810/SectionedRecyclerView-Sample) - A Sample project explaining how to create sections in Recyclerview with Pixel perfect UI, given a sample input.
+  - [Android-DS-Java Interview Questions Repo](https://github.com/niharika2810/android-interview-questions) - A repository containing interview questions on DS, Java & Android based on my experiences.
+   - [Android Development | Best Practices](https://github.com/niharika2810/android-development-best-practices) - With best practices under your fingertips, you will not lose precious time on reinventing the wheel. Instead, you can focus on writing quality code and getting the job done.
 
 Checkout the other repositories too :-)
 
