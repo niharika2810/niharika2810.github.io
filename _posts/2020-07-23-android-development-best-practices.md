@@ -85,6 +85,7 @@ ADB provides you with more details than your Android Studio Logcat. Just try it 
 Long build times have always been a problem in the developer’s life.
 
 <br/>
+
 ```
 org.gradle.daemon=true
 org.gradle.parallel=true
@@ -152,7 +153,7 @@ If multiple apps can respond to the intent and the user might want to use a diff
 15) Put all your sensitive information in <b>gradle.properties</b> and never push it to your version control system.<br/><br/>
 Don’t do this. This would appear in the version control system.
 
-<br/>
+
 ```
 signingConfigs
  {
