@@ -97,7 +97,7 @@ Yes, we do have.
 
 * **Unrestricted access to media files and download collections (Contributed)**: You have unrestricted access to contribute files to the media collections and downloads of your own app. So, no need to take permission if you want to save any image, video, or any other media file in the media collection. (as long as the file is stored in the organised collection.)
 
-* Media collection contributed by other apps can be accessed using **'READ_STORAGE_PERMISSION'** permission. **'WRITE_STORAGE_PERMISSION'** permission will be deprecated from the next version and if used, will work the same as **'READ_STORAGE_PERMISSION'**. 
+* **Media collection contributed by other apps** can be accessed using **'READ_STORAGE_PERMISSION'** permission. **'WRITE_STORAGE_PERMISSION'** permission will be deprecated from the next version and if used, will work the same as **'READ_STORAGE_PERMISSION'**. 
 
 * Non-media files contributed by other apps will need **Storage Access Framework APIs** for reading as well as write operations.
 
