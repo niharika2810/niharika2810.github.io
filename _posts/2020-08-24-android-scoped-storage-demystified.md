@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Constraint Layout vs Other Layouts(Part -2)
+title: Android Scoped Storage Demystified
 ---
 ![ScopedStorage](/images/scoped.jpeg)
 
