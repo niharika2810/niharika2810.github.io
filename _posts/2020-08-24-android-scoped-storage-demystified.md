@@ -40,7 +40,7 @@ Before going into the implementation part, Let's first understand the way data w
 
 ---
 
-Any Problem with the Current Structure & Access? 
+### Any Problem with the Current Structure & Access? 
 
 Do you see any problem with this structure or anything you ever wanted Google to change? 
 
@@ -48,21 +48,20 @@ Let me elaborate on some problems:
 
 * If I am an e-commerce app, which needs storage access only to ask the user to upload their profile picture, which means access to a certain file or file system. You can take another example as the chat application where you want to upload media or write a media file into the system. which means access to a single media file. So why am I asking for the whole storage access?
 
----
-
 * Have you ever got worried about your sensitive data like your doctor prescriptions or bank documents being getting accessed by all the apps installed on your device? 
 
 * If I am uninstalling an application and needed the data/files related to it till the time I was using the application, Do we have any easy way to clear all the clutter?
 
 I am sure this must have made you think about your app & data security, privacy and organisation. 
 
+
 >Don't worry, Google's recent Android update related to storage comes to the rescue.
 
 ---
 
-Scoped Storage
+## Scoped Storage
 
-Idea
+### Idea
 
  Google gives two valid reasons why it's making this change: Security and to reduce leftover "app clutter."
 
@@ -88,7 +87,7 @@ Being a user, I have more control over my files and to whom I am giving access. 
 
 ---
 
-Is there any change with permissions to access the files now?
+### Is there any change with permissions to access the files now?
 
 Yes, we do have.
 
@@ -106,7 +105,6 @@ Yes, we do have.
 
 ![Upgrade](/images/upgrade.png)
 
----
 
  Woohoo!! More specific permissions. I am happy and feeling more secured now. :-)
 
