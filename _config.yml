@@ -6,7 +6,7 @@
 name: Niharika Arora
 
 # Short bio or description (displayed in the header)
-description: Android Engineer@1mg | Blogger | Speaker | OpenSourceContributor | Gold Medalist | Fitness Freak
+description: Android Engineer@1mg | Blogger | Speaker | OpenSourceContributor | Mentor | Gold Medalist | Fitness Freak
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
 avatar: https://raw.githubusercontent.com/niharika2810/niharika2810.github.io/master/images/profile_pic.jpg
@@ -19,7 +19,7 @@ footer-links:
   flickr:
   github: niharika2810
   instagram: nik.arora59
-  linkedin: niharika-arora-4874967a
+  linkedin: thedroidlady
   pinterest:
   rss: # just type anything here for a working RSS icon
   twitter: theDroidLady
@@ -70,7 +70,7 @@ kramdown:
 sass:
   style: :expanded # You might prefer to minify using :compressed
 
-theme: minima
+theme: jekyll-theme-leap-day
 
 plugins:
   - jekyll-include-cache
