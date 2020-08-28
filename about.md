@@ -95,6 +95,7 @@ She has the following open-source demo projects :
  - [SectionedRecyclerView](https://github.com/niharika2810/SectionedRecyclerView-Sample) - A Sample project explaining how to create sections in Recyclerview with Pixel perfect UI, given a sample input.
  - [Android-DS-Java Interview Questions Repo](https://github.com/niharika2810/android-interview-questions) - A repository containing interview questions on DS, Java & Android based on my experiences.
  - [Android Development-Best Practices](https://github.com/niharika2810/android-development-best-practices) - With best practices under your fingertips, you will not lose precious time on reinventing the wheel. Instead, you can focus on writing quality code and getting the job done.
+  - [ScopedStorageDemo](https://github.com/niharika2810/ScopedStorageDemo) - A sample project explaining Scoped storage with different operations performed on file as well as Image.
 
 Checkout the other repositories too :-)
 
