@@ -13,6 +13,8 @@ She is  an interactive person ,a good listener and can convey her thoughts clear
 Recently, she was invited by [Truepush](https://www.truepush.com/) for a **PODCAST** telling  "[The story behind the inception of India's Contact Tracing app](https://www.truepush.com/blog/podcast-ep-9-the-story-behind-the-inception-of-indias-aarogya-setu-app/?fbclid=IwAR3AQK1TDyyUEZHHghHFHwR6hp7M0tFUdagfPi0dBtZMpWFeV3178c5zP6I)".<br/>
 She has also been recognized by [IndiaMentor](https://www.linkedin.com/company/indiamentor.com/) for her contributions towards the [community](https://www.linkedin.com/posts/niharika-arora-4874967a_hardwork-rewards-sharingknowledge-activity-6696836835148132352-cAwq).
 
+Apart from coding stuff, She loves to mentor people with their queries regarding their career, latest trends, architecture and best practices.
+
 ### Latest
  - Developed [AarogyaSetu app](https://github.com/nic-delhi/AarogyaSetu_Android/graphs/contributors) and served the country in this tough times.
  Aarogya Setu is a mobile application developed by the Government of India to connect essential health services with the people of India in our combined fight against COVID-19. The App is aimed at augmenting the initiatives of the Government of India, particularly the Department of Health, in proactively reaching out to and informing the users of the app regarding risks, best practices and relevant advisories pertaining to the containment of COVID-19.
