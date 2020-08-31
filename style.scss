@@ -284,7 +284,7 @@ footer {
   text-align: center;
 
   .newsletter-container {
-          width: 50%;
+          width: 400px;
           border-radius: 1em;
           padding: 1em 0;
           background: #444;
@@ -330,7 +330,7 @@ footer {
           font-weight: 600;
       }
 
-      @media screen and (min-width: 300px) {
+      @media screen and (min-width: 400px) {
           .newsletter-title {
               font-size: 2.5em;
           }
