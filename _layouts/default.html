@@ -44,7 +44,23 @@
     <div class="container">
         <footer class="footer">
             {% include svg-icons.html %}
+            <div class="newsletter-container">
+                <h4 class="newsletter-title">Subscribe</h4>
+                <!-- <p class="newsletter-text"></p> -->
+                <form class="newsletter-form" action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('https://feedburner.google.com/fb/a/mailverify?uri=thedroidlady', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true">
 
+                    <p class="newsletter-text">Get new posts to your inbox</p>
+
+                    <input type="hidden" value="thedroidlady" name="uri" />
+
+                    <input type="hidden" name="loc" value="en_US" />
+
+                    <input class="newsletter-email" type="text" name="email" placeholder="name@example.com" />
+
+                    <input class="newsletter-submit" type="submit" value="Subscribe" />
+
+                </form>
+            </div>
         </footer>
     </div>
 </div>
