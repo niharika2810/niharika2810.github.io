@@ -281,6 +281,7 @@ nav {
 
 footer {
   padding: 20px 0;
+  text-align: center;
 
   .newsletter-container {
           max-width: 350px;
@@ -289,6 +290,7 @@ footer {
           background: #444;
           box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2);
           margin-bottom: 2em;
+          text-align: center;
       }
       .newsletter-container * {
           align-self: center;
