@@ -4,8 +4,6 @@ title: Android Learning Resources
 ---
 ![learning](/images/learning.jpg)
 
-## Introduction
-
 ## Pick up the best and save it for future reference.
 
 We struggle a lot learning small, basic and specific concepts. Here is my list of resources which may help you understand **Android** in a better way.
