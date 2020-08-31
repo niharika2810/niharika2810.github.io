@@ -2,7 +2,7 @@
 layout: post
 title: Android Learning Resources
 ---
-![interview](/images/learning.png)
+![learning](/images/learning.png)
 
 ## Introduction
 
