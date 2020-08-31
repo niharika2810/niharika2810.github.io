@@ -193,5 +193,3 @@ Here is a repository containing link/resources to small, basic as well as specif
 
 Will be adding more daily. Please contribute if you have more so that I can also learn. :-)
 
-Article link [here]()
-
