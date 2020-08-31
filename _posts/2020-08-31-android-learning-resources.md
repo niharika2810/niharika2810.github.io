@@ -11,7 +11,7 @@ Here is a repository containing link/resources to small, basic as well as specif
 
 ## Java
 
-* Is java pass by reference or value?
+* Is Java pass by reference or value?
 
   [Link 1](https://www.infoworld.com/article/3512039/does-java-pass-by-reference-or-pass-by-value.html#:~:text=Java%20always%20passes%20parameter%20variables,is%20passed%20to%20a%20method.&text=%E2%80%9CPassing%20by%20reference%E2%80%9D%20refers%20to,of%20the%20variable%20in%20memory.)
 
@@ -147,7 +147,7 @@ Here is a repository containing link/resources to small, basic as well as specif
 
 * [If u need all time location access, what should you do?](https://developer.android.com/training/location/background#evaluate)
 
-* [LayoutAnimation attribute for recycelerView not working for some devices?](https://blog.usejournal.com/recyclerview-android-layoutanimation-not-working-7e4f3e6da9f)
+* [LayoutAnimation attribute for recycelrView not working for some devices?](https://blog.usejournal.com/recyclerview-android-layoutanimation-not-working-7e4f3e6da9f)
 
 * [RecyclerView Internals](https://android.jlelse.eu/anatomy-of-recyclerview-part-1-a-search-for-a-viewholder-404ba3453714)
 
@@ -185,7 +185,7 @@ Here is a repository containing link/resources to small, basic as well as specif
 
 * [Why @JvmOverloads in Kotlin](https://proandroiddev.com/misconception-about-kotlin-jvmoverloads-for-android-view-creation-cb88f432e1fe)
 
-* [Understanding Elvis Opearator pitfalls](https://medium.com/google-developer-experts/the-hidden-pitfalls-of-the-elvis-operator-da536ba68161)
+* [Understanding Elvis Operator pitfalls](https://medium.com/google-developer-experts/the-hidden-pitfalls-of-the-elvis-operator-da536ba68161)
 
 * [Understanding Scoped Storage](https://medium.com/@nik.arora8059/android-scoped-storage-demystified-3024a062ba24)
 
