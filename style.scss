@@ -285,7 +285,6 @@ footer {
 
   .newsletter-container {
           max-width: 400px;
-          align-self: center;
           border-radius: 1em;
           display: flex;
           flex-direction: column;
@@ -293,14 +292,15 @@ footer {
           background: #444;
           box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2);
           margin-bottom: 2em;
+          margin-left: 2em;
+
       }
       .newsletter-container * {
           align-self: center;
-            padding: 20px 0;
+          padding: 0;
       }
       .newsletter-form {
           text-align: center;
-           padding: 20px 0;
       }
       .newsletter-title {
           font-size: 1.5em;
