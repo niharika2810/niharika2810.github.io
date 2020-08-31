@@ -7,7 +7,7 @@ title: Android Learning Resources
 ## Pick up the best and save it for future reference.
 
 We struggle a lot learning small, basic and specific concepts. Here is my list of resources which may help you understand **Android** in a better way.
-Here is a repository containing link/resources to small, basic as well as specific android concepts.
+A repository containing link/resources to small, basic as well as specific Android concepts.
 
 ## Java
 

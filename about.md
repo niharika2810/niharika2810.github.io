@@ -98,6 +98,7 @@ She has the following open-source demo projects :
  - [Android-DS-Java Interview Questions Repo](https://github.com/niharika2810/android-interview-questions) - A repository containing interview questions on DS, Java & Android based on my experiences.
  - [Android Development-Best Practices](https://github.com/niharika2810/android-development-best-practices) - With best practices under your fingertips, you will not lose precious time on reinventing the wheel. Instead, you can focus on writing quality code and getting the job done.
   - [ScopedStorageDemo](https://github.com/niharika2810/ScopedStorageDemo) - A sample project explaining Scoped storage with different operations performed on file as well as Image.
+   - [Android Learning Resources](https://github.com/niharika2810/android-learning-resources) - A repository containing link/resources to small, basic as well as specific android concepts.
 
 Checkout the other repositories too :-)
 
