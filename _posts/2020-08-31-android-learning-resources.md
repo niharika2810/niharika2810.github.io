@@ -191,5 +191,5 @@ A repository containing link/resources to small, basic as well as specific Andro
 
 * [Understanding Android AllowBackup](https://medium.com/better-programming/androids-attribute-android-allowbackup-demystified-114b88087e3b)
 
-Will be adding more daily. Please contribute if you have more so that I can also learn. :-)
+Will be adding more [here](https://github.com/niharika2810/android-learning-resources) after sorting them out. You can follow this Github repository. Please contribute if you have more so that I can also learn. :-)
 
