@@ -167,7 +167,7 @@ A repository containing link/resources to small, basic as well as specific Andro
 
   [Link 2](https://proandroiddev.com/android-custom-view-level-1-67ed1c3febe1)
 
-* [Kotlin Flow](https://proandroiddev.com/android-custom-view-level-1-67ed1c3febe1)
+* [Kotlin Flow](https://proandroiddev.com/kotlin-flow-on-android-quick-guide-76667e872166)
 
 * [The SOLID Principles for Android Developers](https://medium.com/kayvan-kaseb/the-solid-principles-for-android-developers-75fd4ca3ef84)
 
