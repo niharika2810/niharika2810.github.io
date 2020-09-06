@@ -70,19 +70,12 @@ kramdown:
 sass:
   style: :expanded # You might prefer to minify using :compressed
 
-theme: jekyll-theme-tactile
+theme: jekyll-theme-cayman
 
 plugins:
-  - jekyll-include-cache
   -  jekyll-remote-theme
   - jekyll-feed
 
-
-  # Use the following plug-ins
-gems:
-  - jekyll-include-cache
-  - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
-  - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
 
 # Exclude these files from your production _site
 exclude:
