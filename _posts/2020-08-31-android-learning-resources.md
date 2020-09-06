@@ -63,7 +63,11 @@ A repository containing link/resources to small, basic as well as specific Andro
 
   [Link 2](https://www.geeksforgeeks.org/implement-runnable-vs-extend-thread-in-java/)
 
-* [Sparse Array s Hashmap](https://stackoverflow.com/questions/25560629/sparsearray-vs-hashmap#:~:text=A%20sparse%20array%20in%20Java,is%20a%20key%2Cvalue%20pair)
+* [Sparse Array vs Hashmap](https://stackoverflow.com/questions/25560629/sparsearray-vs-hashmap#:~:text=A%20sparse%20array%20in%20Java,is%20a%20key%2Cvalue%20pair)
+
+* [Static vs Singleton](https://stackoverflow.com/questions/3532161/what-is-the-difference-between-a-singleton-pattern-and-a-static-class-in-java)  
+
+* [Lambda vs Anonymous Classes](https://stackoverflow.com/questions/22637900/java8-lambdas-vs-anonymous-classes)
 
 
 
@@ -190,6 +194,30 @@ A repository containing link/resources to small, basic as well as specific Andro
 * [Understanding Scoped Storage](https://medium.com/@nik.arora8059/android-scoped-storage-demystified-3024a062ba24)
 
 * [Understanding Android AllowBackup](https://medium.com/better-programming/androids-attribute-android-allowbackup-demystified-114b88087e3b)
+
+* [Understanding JSON Web Token](https://medium.com/better-programming/what-exactly-is-a-json-web-token-678e8a8a5fe4)
+
+* [ConstraintLayout](https://medium.com/androiddevelopers/introducing-constraint-layout-2-0-9daa3e99995b)
+
+* [Should we use largeHeap attribute in Android manifest](https://stackoverflow.com/questions/27396892/what-are-advantages-of-setting-largeheap-to-true)
+
+* [Coroutines vs RxJava](https://www.codemotion.com/magazine/dev-hub/mobile-dev/async-code-on-kotlin-coroutines-vs-rxjava/)
+
+* [Mockito vs Mockk](https://stackshare.io/stackups/mockito-vs-mockk)
+
+* [Best practices to test Static Methods](https://www.javaindeed.com/3-best-practices-to-test-a-code-that-calls-static-methods/)
+
+* [Writing Testable Code](https://www.toptal.com/qa/how-to-write-testable-code-and-why-ait-matters)
+
+* [JUnit Annotations](https://www.vogella.com/tutorials/JUnit/article.html)
+
+* [Why Mockito can't mock static methods](https://stackoverflow.com/questions/4482315/why-doesnt-mockito-mock-static-methods)
+
+* [apply vs let vs run in Kotlin](https://medium.com/@fatihcoskun/kotlin-scoping-functions-apply-vs-with-let-also-run-816e4efb75f5)
+
+* [Improve recyclerView Performance](https://medium.com/@farshidabazari/improve-recyclerview-performance-ede5cec6c5bf)
+
+* [Understand Clean Architecture](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)
 
 Will be adding more [here](https://github.com/niharika2810/android-learning-resources) after sorting them out. You can follow this Github repository. Please contribute if you have more so that I can also learn. :-)
 
