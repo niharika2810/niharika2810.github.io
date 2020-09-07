@@ -2,6 +2,8 @@
 <div style="text-align:center">
 <img align="center" width="300" height="300" src="/Images/Article/ddms.jpeg">
 </div>
+
+
 ## Introduction
 
 Android uses paging and mmap instead of providing swap space, which means any memory your application touches cannot be paged out unless you release all references.

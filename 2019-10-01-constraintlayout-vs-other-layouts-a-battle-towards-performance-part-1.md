@@ -2,6 +2,8 @@
 <div style="text-align:center">
 <img align="center" width="300" height="300" src="/Images/Article/process.gif">
 </div>
+
+
 Imagine, you’ve just joined a new job and you need to shop for a whole new wardrobe that goes with your workplace culture and outlook (formals in most cases).
 You walk into an apparel store, head straight to the formals section, and you notice that some of the items hanging there are quite impractical and uncomfortable.
 Now, would you rather just buy the items listed there because the store tells you to or would you rather walk around the other sections and see what’s best for you?

@@ -2,6 +2,8 @@
 <div style="text-align:center">
 <img align="center" width="300" height="300" src="/Images/Article/scoped.jpeg">
 </div>
+
+
 ## Introduction
 
 Storage preventing apps from having unrestricted access to the filesystem and helping in reducing file clutter.
@@ -28,7 +30,7 @@ Recently, I deep dive into the concept of Scoped Storage to understand the inten
 
 Before going into the implementation part, Let's first understand the way data was organised before Android 10:
 <div style="text-align:center">
-<img align="center" width="300" height="300" src="/Images/Article/diagram_one.png">
+<img align="center" width="500" height="500" src="/Images/Article/diagram_one.png">
 </div>
 ---
 
@@ -71,7 +73,7 @@ I am sure this must have made you think about your app & data security, privacy 
 
 Look at the <b>Storage structure</b> on Android 10 & above:
 <div style="text-align:center">
-<img align="center" width="300" height="300" src="/Images/Article/diagram_two.png">
+<img align="center" width="500" height="500" src="/Images/Article/diagram_two.png">
 </div>
 >Now, **Private Storage** is the same as before but Shared Storage is further divided into Media & Download(Non-Media Files) Collection.
 
@@ -89,7 +91,7 @@ Being a user, I have more control over my files and to whom I am giving access. 
 
 Yes, we do have.
 <div style="text-align:center">
-<img align="center" width="300" height="300" src="/Images/Article/diagram_latest.png">
+<img align="center" width="600" height="500" src="/Images/Article/diagram_latest.png">
 </div>
 * **Unrestricted access to its individual app storage**: App will have unlimited access to their internal and external storage for both reads & write operation. So, with Android 10, you don't need to provide storage permission to write files to your own app directory on the SD card.
 

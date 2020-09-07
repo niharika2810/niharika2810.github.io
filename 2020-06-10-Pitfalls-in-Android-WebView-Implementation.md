@@ -3,6 +3,7 @@
 <img align="center" width="300" height="300" src="/Images/Article/webview.gif">
 </div>
 
+
 ## Introduction
 
 In the current era of hybrid mobile architecture, WebView is extensively used hand in hand to deliver dynamic web content.

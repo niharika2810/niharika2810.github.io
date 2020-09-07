@@ -2,6 +2,8 @@
 <div style="text-align:center">
 <img align="center" width="300" height="300" src="/Images/Article/toast.png">
 </div>
+
+
 ## Introduction
 
 “Every problem is a gift — without problems, we would not grow.” ― Anthony Robbins
