@@ -1,7 +1,8 @@
 <div style="text-align:center">
 <h1> Unit Testing in MVVM+Kotlin+DataBinding
-</h1
+</h1>
 </div>
+<br/>
 <br/>
 <div style="text-align:center">
 <img align="center" width="300" height="300" src="/Images/Article/testing.png">

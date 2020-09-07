@@ -1,7 +1,8 @@
 <div style="text-align:center">
 <h1> Understanding the core of AarogyaSetu: Bluetooth
-</h1
+</h1>
 </div>
+<br/>
 <br/>
 <div style="text-align:center">
 <img align="center" width="300" height="300" src="/Images/Article/aarogya_setu.jpeg">

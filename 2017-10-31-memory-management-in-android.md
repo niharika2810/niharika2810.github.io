@@ -1,7 +1,8 @@
 <div style="text-align:center">
 <h1> Memory Management in Android
-</h1
+</h1>
 </div>
+<br/>
 <br/>
 <div style="text-align:center">
 <img align="center" width="300" height="300" src="/Images/Article/ddms.jpeg">
