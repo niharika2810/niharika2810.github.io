@@ -1,7 +1,6 @@
 <div style="text-align:center">
 <h1> How I resolved WindowManager BadTokenException for Toast#handleShow()?
 </h1>
-<br/>
 Blog by <a href="http://thedroidlady.com/">theDroidLady</a>
 </div>
 <br/>
