@@ -2,11 +2,9 @@
 title: Unit Tetsing in MVVM+Kotlin+DataBinding
 ---
 <br/>
-<br/>
 <div style="text-align:center">
 <img align="center" width="300" height="300" src="/Images/Article/testing.png">
 </div>
-
 <br/>
 <br/>
 ## Introduction

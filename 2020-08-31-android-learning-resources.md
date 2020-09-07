@@ -3,13 +3,10 @@
 title: Android Learning Resources
 ---
 </div>
-
-<br/>
 <br/>
 <div style="text-align:center">
 <img align="center" width="300" height="300" src="/Images/Article/learning.jpg">
 </div>
-
 <br/>
 <br/>
 ## Pick up the best and save it for future reference.

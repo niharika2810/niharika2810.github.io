@@ -1,13 +1,11 @@
 ---
 title: Constraint vs Other Layouts- A Battle towards performance Part-1
 ---
-
 <br/>
 <br/>
 <div style="text-align:center">
 <img align="center" width="300" height="300" src="/Images/Article/process.gif">
 </div>
-
 <br/>
 <br/>
 Imagine, you’ve just joined a new job and you need to shop for a whole new wardrobe that goes with your workplace culture and outlook (formals in most cases).

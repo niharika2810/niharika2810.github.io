@@ -2,13 +2,11 @@
 title: Understanding the core of AarogyaSetu: Bluetooth
 ---
 <br/>
-<br/>
 <div style="text-align:center">
 <img align="center" width="300" height="300" src="/Images/Article/aarogya_setu.jpeg">
 </div>
 <br/>
 <br/>
-
 ## Introduction
 
 [Aarogya Setu](https://play.google.com/store/apps/details?id=nic.goi.aarogyasetu&hl=en_IN) is a mobile application developed by the Government of India to connect essential health services with the people of India in our combined fight against COVID-19.Do visit this [link](https://aarogyasetu.gov.in/) for more details.

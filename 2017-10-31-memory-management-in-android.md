@@ -2,11 +2,9 @@
 title: Memory Management in Android
 ---
 <br/>
-<br/>
 <div style="text-align:center">
 <img align="center" width="300" height="300" src="/Images/Article/ddms.jpeg">
 </div>
-
 <br/>
 <br/>
 ## Introduction

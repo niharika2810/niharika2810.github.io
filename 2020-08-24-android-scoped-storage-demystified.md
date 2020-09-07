@@ -2,13 +2,11 @@
 title: Scoped Storage Demystified
 ---
 <br/>
-<br/>
 <div style="text-align:center">
 <img align="center" width="300" height="300" src="/Images/Article/scoped.jpeg">
 </div>
 <br/>
 <br/>
-
 ## Introduction
 
 Storage preventing apps from having unrestricted access to the filesystem and helping in reducing file clutter.
