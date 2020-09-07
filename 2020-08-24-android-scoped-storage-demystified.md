@@ -1,6 +1,4 @@
 
-# Android Scoped Storage Demystified
-
 <div style="text-align:center">
 <img align="center" width="300" height="300" src="/Images/Article/scoped.jpeg">
 </div>

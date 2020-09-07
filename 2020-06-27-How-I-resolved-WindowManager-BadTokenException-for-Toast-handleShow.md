@@ -1,6 +1,4 @@
 
-# How I resolved WindowManager.BadTokenException for Toast#handleShow()?
-
 <div style="text-align:center">
 <img align="center" width="300" height="300" src="/Images/Article/toast.png">
 </div>

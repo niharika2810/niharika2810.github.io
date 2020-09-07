@@ -1,11 +1,7 @@
 
-# Android Learning Resources
-
 <div style="text-align:center">
 <img align="center" width="300" height="300" src="/Images/Article/learning.jpg">
 </div>
-
-<div style="background-color: #ff6f61; margin-top: 10%; margin-left: 10%; margin-right: 10%; margin-bottom: 10%; padding-top: 60px; padding-left: 60px; padding-right: 60px; padding-bottom: 60px;">
 
 ## Pick up the best and save it for future reference.
 
@@ -223,4 +219,4 @@ A repository containing link/resources to small, basic as well as specific Andro
 * [Understand Clean Architecture](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)
 
 Will be adding more [here](https://github.com/niharika2810/android-learning-resources) after sorting them out. You can follow this Github repository. Please contribute if you have more so that I can also learn. :-)
-</div
+

@@ -1,6 +1,4 @@
 
-# Memory Management in Android
-
 <div style="text-align:center">
 <img align="center" width="300" height="300" src="/Images/Article/ddms.jpeg">
 </div>

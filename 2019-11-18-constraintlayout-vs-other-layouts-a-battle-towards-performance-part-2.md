@@ -1,6 +1,4 @@
 
-# Constraint Layout vs Other Layouts(Part -2)
-
 
 ## Introduction
 

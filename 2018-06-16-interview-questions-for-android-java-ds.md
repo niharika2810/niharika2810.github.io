@@ -1,6 +1,4 @@
 
-# Top Android Interview Questions
-
 <div style="text-align:center">
 <img align="center" width="300" height="300" src="/Images/Article/interview.png">
 </div>
