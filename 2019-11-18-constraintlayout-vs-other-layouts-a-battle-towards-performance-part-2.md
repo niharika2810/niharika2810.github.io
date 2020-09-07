@@ -45,7 +45,7 @@ With overdraw in Android, we waste GPU time by coloring the pixels on the screen
 Fortunately, we can detect re-painting in android by selecting “Show overdraw areas” in “Debug GPU overdraw” under “Developer options” in phone settings.
 
 
-![Demo](/images/demo_page.png)
+![Demo](/Images/Article/demo_page.png)
 
 The colors are hinting at the amount of overdraw on your screen for each pixel, as follows:
 
