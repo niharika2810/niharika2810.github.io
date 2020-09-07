@@ -4,9 +4,8 @@
 Blog by <a href="http://thedroidlady.com/">theDroidLady</a>
 </div>
 <br/>
-<br/>
 <div style="text-align:center">
-<img align="center" width="600" height="400" src="/Images/Article/allow_backup.jpg">
+<img align="center" width="600" height="300" src="/Images/Article/allow_backup.jpg">
 </div>
 <br/>
 <br/>

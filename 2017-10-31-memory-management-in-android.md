@@ -4,7 +4,6 @@
 Blog by <a href="http://thedroidlady.com/">theDroidLady</a>
 </div>
 <br/>
-<br/>
 <div style="text-align:center">
 <img align="center" src="/Images/Article/ddms.jpeg">
 </div>
@@ -59,6 +58,8 @@ When it starts, DDMS connects to <b>ADB</b> (Android Debug Bridge which is a com
 <div style="text-align:center">
 <img align="center" src="/Images/Article/ddms.jpeg">
 </div>
+
+
 ### How to Improve Memory Usage
 
 Android is a worldwide mobile platform and millions of Android developers are dedicated to building stable and scalable applications. Here is a list of tips and best practices for improving memory usage in Android applications:

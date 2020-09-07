@@ -105,6 +105,7 @@ For Android 9 or higher, we already have the System Tracing app which works exac
 <div style="text-align:center">
 <img align="center" src="/Images/Article/perfetto_sample.png">
 </div>
+
 The image displays a part of the Systrace output. The numbers have the following meanings:
 
 1) Section for each process

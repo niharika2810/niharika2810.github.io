@@ -34,6 +34,7 @@ These results may vary device to device and OEMs as well because optimizations v
 <div style="text-align:center">
 <img align="center" width="500" height="400" src="/Images/Article/result_4.png">
 </div>
+
 Note*: Now there are lot enhancements with various viewgroups, so these results may vary for you.
 
 >Please Note:- Always measure your layout performance through systrace and GPU overdraw before finalizing any layout. These results can vary from device to device and with respect to the OS version too. On average, however, the results will remain the same.

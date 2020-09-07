@@ -4,7 +4,6 @@
 Blog by <a href="http://thedroidlady.com/">theDroidLady</a>
 </div>
 <br/>
-<br/>
 <div style="text-align:center">
 <img align="center" width="300" height="300" src="/Images/Article/toast.png">
 </div>
@@ -77,8 +76,10 @@ From API 25, Android added a new param <b>IBinder windowToken</b> for Toast#hand
 
 Let me show you the code:
 <div style="text-align:center">
-<img align="center" width="300" height="300" src="/Images/Article/api_difference.png">
+<img align="center" src="/Images/Article/api_difference.png">
 </div>
+
+
 As you can see here, they try-catch the <b>mWM.addView(mView, mParams)</b>
 
 >Since the notification manager service cancels the token right after it notifies us to cancel the toast there is an inherent race and we may attempt to add a window after the token has been invalidated. Let us hedge against that.

@@ -6,7 +6,7 @@ Blog by <a href="http://thedroidlady.com/">theDroidLady</a>
 <br/>
 <br/>
 <div style="text-align:center">
-<img align="center" width="400" height="400" src="/Images/Article/testing.png">
+<img align="center" width="400" height="300" src="/Images/Article/testing.png">
 </div>
 <br/>
 <br/>
