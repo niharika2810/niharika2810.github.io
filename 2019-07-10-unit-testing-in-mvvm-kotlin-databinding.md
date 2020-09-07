@@ -3,8 +3,9 @@ layout: post
 title: Unit Testing in MVVM+Kotlin+DataBinding
 
 ---
+<div style="text-align:center">
 <img align="center" width="300" height="300" src="/Images/Article/testing.png">
-
+</div>
 ## Introduction
 
 I love Kotlin and MVVM. When I began writing the application with it here at 1mg, I instantly went, “Wow”! It’s clean, it’s easy to read (sometimes 😁) and helps you write better code.

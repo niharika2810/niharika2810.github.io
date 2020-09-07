@@ -2,8 +2,9 @@
 layout: post
 title: How I resolved WindowManager.BadTokenException for Toast#handleShow()?
 ---
+<div style="text-align:center">
 <img align="center" width="300" height="300" src="/Images/Article/toast.png">
-
+</div>
 ## Introduction
 
 “Every problem is a gift — without problems, we would not grow.” ― Anthony Robbins
@@ -42,9 +43,9 @@ Before the analysis, it's important for you to know about <b>WindowManager.BadTo
 >Exception that is thrown when trying to add view whose LayoutParams [LayoutParams#token](https://developer.android.com/reference/android/view/WindowManager.LayoutParams#token) is invalid.
 
 Lets, Look at the WindowManagerService.java file.
-
+<div style="text-align:center">
 <img align="center" width="300" height="300" src="/Images/Article/window_token.png">
-
+</div>
 WindowManagerService (WMS) is a system service that manages the windows on Android.
 
 ### Window Tokens:
@@ -70,9 +71,9 @@ I compared the API level 25 Toast class and others for the difference and I foun
 From API 25, Android added a new param <b>IBinder windowToken</b> for Toast#handleShow(), and It brought an exception. 😪
 
 Let me show you the code:
-
+<div style="text-align:center">
 <img align="center" width="300" height="300" src="/Images/Article/api_difference.png">
-
+</div>
 As you can see here, they try-catch the <b>mWM.addView(mView, mParams)</b>
 
 >Since the notification manager service cancels the token right after it notifies us to cancel the toast there is an inherent race and we may attempt to add a window after the token has been invalidated. Let us hedge against that.

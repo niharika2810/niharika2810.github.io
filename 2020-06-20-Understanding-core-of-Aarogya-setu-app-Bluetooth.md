@@ -2,8 +2,9 @@
 layout: post
 title: Understanding the core of Aarogya Setu-Bluetooth
 ---
+<div style="text-align:center">
 <img align="center" width="300" height="300" src="/Images/Article/aarogya_setu.jpeg">
-
+</div>
 ## Introduction
 
 >[Aarogya Setu](https://play.google.com/store/apps/details?id=nic.goi.aarogyasetu&hl=en_IN) is a mobile application developed by the Government of India to connect essential health services with the people of India in our combined fight against COVID-19.Do visit this [link](https://aarogyasetu.gov.in/) for more details.
@@ -17,9 +18,9 @@ For contact tracing, we had two options to go with: <b>Bluetooth or GPS</b>.
 <b>Bluetooth<.b> was chosen because it is able to classify close contacts with a significantly <b>lower false-positive</b> rate than GPS.
 
 Given that GPS accuracy decreases in indoor environments, entire shopping malls or skyscrapers would be within the margin of error of a single GPS point.
-
+<div style="text-align:center">
 <img align="center" width="300" height="300" src="/Images/Article/bluetooth.jpeg">
-
+</div>
 So, with an idea that is more scalable, accurate and less resource-intensive, we created an app which:
 
 1) Can help us in tracing the nearby contacts through Bluetooth.

@@ -2,8 +2,9 @@
 layout: post
 title: Top Android Interview Questions
 ---
+<div style="text-align:center">
 <img align="center" width="300" height="300" src="/Images/Article/interview.png">
-
+</div>
 ## Introduction
 
 >Sharing your knowledge and experience makes you more comfortable and up to date with the technology stuff.

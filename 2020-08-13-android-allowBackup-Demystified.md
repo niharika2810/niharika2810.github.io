@@ -2,8 +2,9 @@
 layout: post
 title: android:allowBackup Attribute Demystified
 ---
+<div style="text-align:center">
 <img align="center" width="300" height="300" src="/Images/Article/allow_backup.jpg">
-
+</div>
 ## Introduction
 
 There are all sorts of "backups" that help get you out of various situations. Think of the spare tire in your trunk or the extra pieces of webbing in a climbing anchor. If you've ever been rock climbing, you know that it's essential to build redundancies into your anchors. That way, if one part fails, you've got another part as a backup.

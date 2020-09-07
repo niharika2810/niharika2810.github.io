@@ -22,9 +22,9 @@ The human brain receives and processes visual information continuously.This allo
 For example, when still images are displayed to follow each other fast enough, we perceive them as motion.
 
 A flip book is a good example that’s just at the edge of perception.
-
+<div style="text-align:center">
 <img align="center" width="300" height="300" src="/Images/Article/flip_book.gif">
-
+</div>
 Flip books are just at the edge of what humans perceive as motion.
 
 1) At about <b>10–12 pages per second</b>, there is clearly motion, but you also retain awareness of individual pages.
@@ -43,9 +43,9 @@ Imagine painting a room and re-painting it all over again; this results in wasti
 With overdraw in Android, we waste GPU time by coloring the pixels on the screen that end up being colored again by something else later.
 
 Fortunately, we can detect re-painting in android by selecting “Show overdraw areas” in “Debug GPU overdraw” under “Developer options” in phone settings.
-
+<div style="text-align:center">
 <img align="center" width="300" height="300" src="/Images/Article/demo_page.png">
-
+</div>
 The colors are hinting at the amount of overdraw on your screen for each pixel, as follows:
 
 1) <b>True colour</b>: No overdraw
@@ -71,9 +71,9 @@ Systrace(Android System Trace) captures and displays the execution time of your 
 The tool combines data from the Android kernel such as the CPU scheduler, disk activity, and app threads.
 
 The tool uses this data to generate an HTML report that shows an overall picture of an Android-powered device’s system processes for a given period of time.
-
+<div style="text-align:center">
 <img align="center" width="300" height="300" src="/Images/Article/systrace_output.png">
-
+</div>
 ### What you should do
 
 1) Find the <b>Frames</b> section in the Systrace output and get more information about specific frames.
@@ -95,9 +95,9 @@ python systrace.py [options] [categories]
 For Android 9 or higher, we already have the System Tracing app which works exactly the same way command-line utility works.
 
 <b>[Developer Options](https://developer.android.com/studio/debug/dev-options#enable) -> Debugging -> System Tracing ->Record trace -> Do some Actions in your app -> Stop Trace -> Share Trace (.perfetto-trace)-> [Open on Perfetto UI](https://ui.perfetto.dev/#!/)</b>
-
+<div style="text-align:center">
 <img align="center" width="300" height="300" src="/Images/Article/perfetto_sample.png">
-
+</div>
 The image displays a part of the Systrace output. The numbers have the following meanings:
 
 1) Section for each process
