@@ -1,6 +1,8 @@
 <div style="text-align:center">
 <h1> Android allowBackup demystified
 </h1>
+<br/>
+Blog by <a href="http://thedroidlady.com/">theDroidLady</a>
 </div>
 <br/>
 <br/>
