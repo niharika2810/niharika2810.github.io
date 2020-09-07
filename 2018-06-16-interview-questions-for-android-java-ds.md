@@ -7,7 +7,7 @@ title: Top Android Interview Questions
 </div>
 ## Introduction
 
->Sharing your knowledge and experience makes you more comfortable and up to date with the technology stuff.
+Sharing your knowledge and experience makes you more comfortable and up to date with the technology stuff.
 
 I always try that whatever I learn, I should share it with people and everyone should try it out.
 I won’t be writing so much story stuff otherwise you will get bored 😉. Let’s get to the point for which you opened this blog.

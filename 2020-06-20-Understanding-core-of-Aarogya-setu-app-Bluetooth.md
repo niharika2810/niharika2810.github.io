@@ -7,7 +7,7 @@ title: Understanding the core of Aarogya Setu-Bluetooth
 </div>
 ## Introduction
 
->[Aarogya Setu](https://play.google.com/store/apps/details?id=nic.goi.aarogyasetu&hl=en_IN) is a mobile application developed by the Government of India to connect essential health services with the people of India in our combined fight against COVID-19.Do visit this [link](https://aarogyasetu.gov.in/) for more details.
+[Aarogya Setu](https://play.google.com/store/apps/details?id=nic.goi.aarogyasetu&hl=en_IN) is a mobile application developed by the Government of India to connect essential health services with the people of India in our combined fight against COVID-19.Do visit this [link](https://aarogyasetu.gov.in/) for more details.
 
 <b>AarogyaSetu</b> started with an idea of automatic contact tracing. Proximity logging within an app addresses a key limitation of manual contact tracing: it is dependent on a person’s memory and is therefore limited to the contacts that a person is acquainted with and remembers having met.
 
