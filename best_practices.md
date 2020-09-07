@@ -1,61 +1,14 @@
-<!DOCTYPE html>
-<html>
+---
+layout: post
+title: Android Development | Best Practices
+---
+![Best Practices](/images/best_practice.jpeg)
 
-<head>
-    <title>Android Development Best Practices</title>
-    <META name="keywords"
-          content="Niharika, niharika, Niharika Arora, Arora Niharika, arora niharika, niharikaarora, android developer, theDroidLady, thedroidlady, niharika2810, niharika 1mg, androiddev, TheDroidLady, Thedroidlady">
-    <META name="description"
-          content="Official Website of Niharika Arora. Android Engineer@1mg, Blogger, Speaker, Open Source Contributor, Mentor, WomenTech Global Ambassador, Gold Medalist, Fitness Freak.">
-    <link rel="shortcut icon" href="Images/profile.jpg" type="image/jpeg"/>
-    <link rel="canonical" href="https://droidlady.com/"/>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-    <link rel="stylesheet"
-          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-          crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-          integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-          crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-            crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-            crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-            crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="js/modernizr.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/style.css"/>
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-    <meta property="og:title"
-          content="Niharika Arora. Android Engineer@1mg, Blogger, Speaker, Open Source Contributor, Mentor, WomenTech Global Ambassador, Gold Medalist, Fitness Freak">
-    <meta property="og:image"
-          content="https://github.com/niharika2810/niharika2810.github.io/raw/master/Images/profile.jpg">
-</head>
-
-<body data-spy="scroll" data-target=".navbar" data-offset="50">
-<h5 class="card-title font-weight-bold center" >Android Development | Best Practices</h5>
-<img  src="Images/Article/best_practice.jpeg"
-     height="400"
-     class="center"
-     alt="Best Practice">
-
-<br/>
-<br/>
+## Introduction
 
 <b>Android development</b> continues to dominate the world of mobile development.
-Fun projects, great pay, and tons of job prospects are just some of the reasons developers are starting their journeys into the exciting world of the Android operating system.
-Some [experts](https://proandroiddev.com/theres-never-been-a-better-time-to-learn-android-development-d1724409bdfc) say that there has never been a better time to learn Android skills, especially since the recent updates, like the addition of Kotlin and improvements to Google’s policies.
+ Fun projects, great pay, and tons of job prospects are just some of the reasons developers are starting their journeys into the exciting world of the Android operating system.
+ Some [experts](https://proandroiddev.com/theres-never-been-a-better-time-to-learn-android-development-d1724409bdfc) say that there has never been a better time to learn Android skills, especially since the recent updates, like the addition of Kotlin and improvements to Google’s policies.
 
 It’s been five years now that I’ve been into Android development and there has been no single day I haven't learned something new. But with these passing years, what I have realized is:
 <br/><b>Just writing the code is not enough, Writing in an efficient way is the real challenge.</b>
@@ -72,25 +25,25 @@ Supporting multiple resolutions are a sometimes nightmare to developers. Includi
 <br/>The solution is to use Vector Graphics such as SVG images or use WebP which can make a big difference in solving the image size problem by compressing lossless images.
 
 3)  Choose your layout wisely and separate out the reusable XML and add it using [include](https://developer.android.com/training/improving-layouts/reusing-layouts) tag.<br/><br/>
-We have different layouts like [ConstraintLayout](https://developer.android.com/training/constraint-layout), [LinearLayout](https://developer.android.com/reference/android/widget/LinearLayout),
-[RelativeLayout](https://developer.android.com/guide/topics/ui/layout/relative), [FrameLayout](https://developer.android.com/reference/android/widget/FrameLayout),
-[CoordinatorLayout](https://developer.android.com/reference/androidx/coordinatorlayout/widget/CoordinatorLayout). I did [performance](https://medium.com/1mgofficial/constraintlayout-vs-other-layouts-a-battle-towards-performance-part-1-14d8116e876e) analysis for some of them and found out that one should use layout based on their scenario/requirement only.
-<br/>Also, If you have some part of your XML getting reused in different layouts, extract it in a separate layout and use <include/> tag to avoid replication of code in different layouts.
+  We have different layouts like [ConstraintLayout](https://developer.android.com/training/constraint-layout), [LinearLayout](https://developer.android.com/reference/android/widget/LinearLayout),
+   [RelativeLayout](https://developer.android.com/guide/topics/ui/layout/relative), [FrameLayout](https://developer.android.com/reference/android/widget/FrameLayout),
+    [CoordinatorLayout](https://developer.android.com/reference/androidx/coordinatorlayout/widget/CoordinatorLayout). I did [performance](https://medium.com/1mgofficial/constraintlayout-vs-other-layouts-a-battle-towards-performance-part-1-14d8116e876e) analysis for some of them and found out that one should use layout based on their scenario/requirement only.
+  <br/>Also, If you have some part of your XML getting reused in different layouts, extract it in a separate layout and use <include/> tag to avoid replication of code in different layouts.
 
 4) Learn how to use [Build types](https://www.journaldev.com/21533/android-build-types-product-flavors), [Product Flavors](https://levelup.gitconnected.com/simple-guide-to-android-product-flavors-674106455038#:~:text=Simply%20put%2C%20a%20product%20flavor,app%20using%20a%20single%20codebase.) and [Build Variants](https://developer.android.com/studio/build/build-variants) and make most out of it for faster and easier development.<br/><br/>
 ####  Build Type
-Decides how our code will be compiled. For instance, If we want to sign our .apk with debug key, we put our debug configuration into debug build type. If we want to have obfuscated code when it is compiled and ready to release, we put that configuration on our release build type. If we want to log our HTTP request in debug mode but we want to disable it on release mode, we put that configuration on build types or call build types in library dependencies.
+   Decides how our code will be compiled. For instance, If we want to sign our .apk with debug key, we put our debug configuration into debug build type. If we want to have obfuscated code when it is compiled and ready to release, we put that configuration on our release build type. If we want to log our HTTP request in debug mode but we want to disable it on release mode, we put that configuration on build types or call build types in library dependencies.
 <br/>
 ```
 buildTypes
 {
-release {
-minifyEnabled true
-proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-}
-debug {
-applicationIdSuffix ".debug"
-}
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            applicationIdSuffix ".debug"
+        }
 }
 ```
 
@@ -103,18 +56,18 @@ Let’s say we have are developing your app for your customer users. Everything 
 <br/>
 ```
 android
-{
-...
-defaultConfig {...}
-buildTypes {...}
-productFlavors {
-admin {
-..
-}
-customer {
-..
-}
-}
+ {
+    ...
+    defaultConfig {...}
+    buildTypes {...}
+    productFlavors {
+        admin {
+            ..
+        }
+        customer {
+            ..
+        }
+    }
 }
 ```
 
@@ -174,13 +127,13 @@ We use logs to display useful information, errors, workflows or even to debug so
 Its knowledge of the internals of the Android Framework gives it a unique ability to narrow down the cause of each leak, helping developers dramatically reduce OutOfMemoryError crashes.
 
 11) Handle [Configuration changes](https://developer.android.com/guide/topics/resources/runtime-changes) for your App.<br/><br/>
-Sometimes handling the orientation changes for your Activity, Fragment or AsyncTasks becomes most frustrating things to deal. If orientation changes are not handled properly then it results in unexpected behaviour of the application.
-When such changes occur, Android restarts the running Activity means it destroys and again created.
-<br/> There are different options to handle the orientation changes:<br/>
-1. Lock screen orientation<br/>
-2. Prevent Activity to recreated<br/>
-3. Save basic state<br/>
-4. Save complex objects<br/>
+    Sometimes handling the orientation changes for your Activity, Fragment or AsyncTasks becomes most frustrating things to deal. If orientation changes are not handled properly then it results in unexpected behaviour of the application.
+    When such changes occur, Android restarts the running Activity means it destroys and again created.
+   <br/> There are different options to handle the orientation changes:<br/>
+    1. Lock screen orientation<br/>
+    2. Prevent Activity to recreated<br/>
+    3. Save basic state<br/>
+    4. Save complex objects<br/>
 
 12) Perform validations in screens like input form on Client end only.<br/><br/>
 Do we really need to hit backend for the <b>validations</b> like Is users email valid or Is user’s contact number is of the required length?
@@ -203,14 +156,14 @@ Don’t do this. This would appear in the version control system.
 
 ```
 signingConfigs
-{
-release {
-// DON'T DO THIS!!
-storeFile file("myapp.keystore")
-storePassword "password123"
-keyAlias "thekey"
-keyPassword "password789"
-}
+ {
+    release {
+        // DON'T DO THIS!!
+        storeFile file("myapp.keystore")
+        storePassword "password123"
+        keyAlias "thekey"
+        keyPassword "password789"
+    }
 }
 ```
 
@@ -226,19 +179,19 @@ That file is automatically imported by Gradle, so you can use it in build.gradle
 ```
 signingConfigs
 {
-release
-{
-try
-{
-storeFile file("myapp.keystore")
-storePassword KEYSTORE_PASSWORD
-keyAlias "thekey"
-keyPassword KEY_PASSWORD
-}
-catch (ex) {
-throw new InvalidUserDataException("You should define KEYSTORE_PASSWORD and KEY_PASSWORD in gradle.properties.")
-}
-}
+    release
+    {
+        try
+         {
+            storeFile file("myapp.keystore")
+            storePassword KEYSTORE_PASSWORD
+            keyAlias "thekey"
+            keyPassword KEY_PASSWORD
+        }
+        catch (ex) {
+            throw new InvalidUserDataException("You should define KEYSTORE_PASSWORD and KEY_PASSWORD in gradle.properties.")
+        }
+    }
 }
 ```
 
@@ -287,7 +240,7 @@ Don’t trust your application’s client-side. Hacker can easily tamper or hack
 24) Learn how to use [Proguard](https://developer.android.com/studio/build/shrink-code) to the maximum for code Obfuscation and Optimization.<br/><br/>
 It is quite easy to reverse engineer Android applications, so if you want to prevent this from happening, you should use ProGuard for its main function: obfuscation, a process of creating source code in a form that is hard for a human to understand(changing the name of classes and members).<br/>
 ProGuard has also two other important functions: shrinking which eliminates unused code and is obviously highly useful and also optimization.
-<br/>Optimization operates with Java bytecode, though, and since Android runs on Dalvik bytecode which is converted from Java bytecode, some optimizations won’t work so well. So you should be careful there.
+ <br/>Optimization operates with Java bytecode, though, and since Android runs on Dalvik bytecode which is converted from Java bytecode, some optimizations won’t work so well. So you should be careful there.
 
 25) Use [Network security configuration](https://developer.android.com/training/articles/security-config) to improve your app’s network security.<br/><br/>
 Security is more about layers of protection than a single iron wall. The Android Network Security Configuration feature provides a simple layer to protect apps from unintentionally transmitting sensitive data in unencrypted cleartext.<br/>
@@ -298,6 +251,3 @@ If you don’t know what “unencrypted communications” means, think of it thi
 When you’re reviewing code of your teammates don’t be a friend, Be their arch enemy, don’t let them make mistakes that you might have to clean someday. Cleaning other’s shit will only make your hand dirty. Enforce good practices in code reviews.
 
 
-</body>
-
-</html>
