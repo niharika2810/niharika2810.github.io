@@ -2,7 +2,7 @@
 layout: post
 title: Pitfalls in Android WebView Implementation
 ---
-<img align="center" width="100" height="100" src="/Images/Article/webview.gif">
+<img align="center" width="300" height="300" src="/Images/Article/webview.gif">
 
 ## Introduction
 

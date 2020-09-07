@@ -2,7 +2,7 @@
 layout: post
 title: Understanding the core of Aarogya Setu-Bluetooth
 ---
-<img align="center" width="100" height="100" src="/Images/Article/aarogya_setu.jpeg">
+<img align="center" width="300" height="300" src="/Images/Article/aarogya_setu.jpeg">
 
 ## Introduction
 
@@ -18,7 +18,7 @@ For contact tracing, we had two options to go with: <b>Bluetooth or GPS</b>.
 
 Given that GPS accuracy decreases in indoor environments, entire shopping malls or skyscrapers would be within the margin of error of a single GPS point.
 
-<img align="center" width="100" height="100" src="/Images/Article/bluetooth.jpeg">
+<img align="center" width="300" height="300" src="/Images/Article/bluetooth.jpeg">
 
 So, with an idea that is more scalable, accurate and less resource-intensive, we created an app which:
 

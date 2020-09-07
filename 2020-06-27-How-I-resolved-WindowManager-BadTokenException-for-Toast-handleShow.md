@@ -2,7 +2,7 @@
 layout: post
 title: How I resolved WindowManager.BadTokenException for Toast#handleShow()?
 ---
-<img align="center" width="100" height="100" src="/Images/Article/toast.png">
+<img align="center" width="300" height="300" src="/Images/Article/toast.png">
 
 ## Introduction
 
@@ -43,7 +43,7 @@ Before the analysis, it's important for you to know about <b>WindowManager.BadTo
 
 Lets, Look at the WindowManagerService.java file.
 
-<img align="center" width="100" height="100" src="/Images/Article/window_token.png">
+<img align="center" width="300" height="300" src="/Images/Article/window_token.png">
 
 WindowManagerService (WMS) is a system service that manages the windows on Android.
 
@@ -71,7 +71,7 @@ From API 25, Android added a new param <b>IBinder windowToken</b> for Toast#hand
 
 Let me show you the code:
 
-<img align="center" width="100" height="100" src="/Images/Article/api_difference.png">
+<img align="center" width="300" height="300" src="/Images/Article/api_difference.png">
 
 As you can see here, they try-catch the <b>mWM.addView(mView, mParams)</b>
 

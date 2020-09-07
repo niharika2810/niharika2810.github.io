@@ -3,7 +3,7 @@ layout: post
 title: Unit Testing in MVVM+Kotlin+DataBinding
 
 ---
-<img align="center" width="100" height="100" src="/Images/Article/testing.png">
+<img align="center" width="300" height="300" src="/Images/Article/testing.png">
 
 ## Introduction
 

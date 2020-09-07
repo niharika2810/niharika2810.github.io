@@ -2,7 +2,7 @@
 layout: post
 title: android:allowBackup Attribute Demystified
 ---
-<img align="center" width="100" height="100" src="/Images/Article/allow_backup.jpg">
+<img align="center" width="300" height="300" src="/Images/Article/allow_backup.jpg">
 
 ## Introduction
 

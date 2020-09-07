@@ -2,7 +2,7 @@
 layout: post
 title: Top Android Interview Questions
 ---
-<img align="center" width="100" height="100" src="/Images/Article/interview.png">
+<img align="center" width="300" height="300" src="/Images/Article/interview.png">
 
 ## Introduction
 
