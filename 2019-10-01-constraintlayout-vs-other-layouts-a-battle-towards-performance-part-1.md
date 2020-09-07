@@ -83,4 +83,4 @@ You should be wary of situations where one of the following conditions applies t
 
  3) There are many instances of it populating the screen, similar to children in a [ListView](https://developer.android.com/reference/android/widget/ListView.html) object.
 
-I hope you enjoyed this blog and learned something! In my [next]((/_posts/2019-11-18-constraintlayout-vs-other-layouts-a-battle-towards-performance-part-2.md)) blog, I have covered the tools I used for measuring various layout performances.
+I hope you enjoyed this blog and learned something! In my next blog, I have covered the tools I used for measuring various layout performances.

@@ -131,7 +131,7 @@ On devices running <b>Android 5.0 (API level 21) or higher</b>, this work is spl
 
 To get into more detail on how systrace works, Please go through this [link](https://developer.android.com/studio/profile/systrace.html).
 
-In the [next](/_posts/2019-11-18-constraintlayout-vs-other-layouts-a-battle-towards-performance-part-3.md) blog, I have shared the results I got after testing similar screens with different layouts.
+In the next blog, I have shared the results I got after testing similar screens with different layouts.
 
 
 
