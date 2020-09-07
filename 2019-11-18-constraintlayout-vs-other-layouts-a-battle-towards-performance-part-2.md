@@ -1,7 +1,6 @@
----
-layout: post
-title: Constraint Layout vs Other Layouts(Part -2)
----
+
+# Constraint Layout vs Other Layouts(Part -2)
+
 
 ## Introduction
 

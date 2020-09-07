@@ -1,7 +1,6 @@
----
-layout: post
-title: Understanding the core of Aarogya Setu-Bluetooth
----
+
+# Understanding the core of Aarogya Setu-Bluetooth
+
 <div style="text-align:center">
 <img align="center" width="300" height="300" src="/Images/Article/aarogya_setu.jpeg">
 </div>
