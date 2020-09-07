@@ -23,7 +23,7 @@ For example, when still images are displayed to follow each other fast enough, w
 
 A flip book is a good example that’s just at the edge of perception.
 
-![FlipBook](/Images/Article/flip_book.gif)
+<img align="center" width="100" height="100" src="/Images/Article/flip_book.gif">
 
 Flip books are just at the edge of what humans perceive as motion.
 
@@ -44,8 +44,7 @@ With overdraw in Android, we waste GPU time by coloring the pixels on the screen
 
 Fortunately, we can detect re-painting in android by selecting “Show overdraw areas” in “Debug GPU overdraw” under “Developer options” in phone settings.
 
-
-![Demo](/Images/Article/demo_page.png)
+<img align="center" width="100" height="100" src="/Images/Article/demo_page.png">
 
 The colors are hinting at the amount of overdraw on your screen for each pixel, as follows:
 
@@ -73,8 +72,7 @@ The tool combines data from the Android kernel such as the CPU scheduler, disk a
 
 The tool uses this data to generate an HTML report that shows an overall picture of an Android-powered device’s system processes for a given period of time.
 
-
-![Systrace](/images/systrace_output.png)
+<img align="center" width="100" height="100" src="/Images/Article/systrace_output.png">
 
 ### What you should do
 
@@ -98,8 +96,7 @@ For Android 9 or higher, we already have the System Tracing app which works exac
 
 <b>[Developer Options](https://developer.android.com/studio/debug/dev-options#enable) -> Debugging -> System Tracing ->Record trace -> Do some Actions in your app -> Stop Trace -> Share Trace (.perfetto-trace)-> [Open on Perfetto UI](https://ui.perfetto.dev/#!/)</b>
 
-
-![Perfetto](/images/perfetto_sample.png)
+<img align="center" width="100" height="100" src="/Images/Article/perfetto_sample.png">
 
 The image displays a part of the Systrace output. The numbers have the following meanings:
 

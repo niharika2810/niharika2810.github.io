@@ -2,7 +2,7 @@
 layout: post
 title: Android Development | Best Practices
 ---
-![Best Practices](/Images/Article/best_practice.jpeg)
+<img align="center" width="100" height="100" src="/Images/Article/best_practice.jpeg">
 
 ## Introduction
 
@@ -74,7 +74,7 @@ android
 ### Build Variants
 Combines your build types and product flavors. Sync your project after you update your build.gradle. Then you will see all your build variants.
 
-![Build Variants](/Images/Article/build_variants.png)
+<img align="center" width="100" height="100" src="/Images/Article/build_variants.png">
 
 5) Learn & Use [Android Debug Bridge (ADB)](https://developer.android.com/studio/command-line/adb#:~:text=Android%20Debug%20Bridge%20(adb)%20is,of%20commands%20on%20a%20device.) to debug your application.<br/><br/>
 Android Debug Bridge (ADB) is a versatile command-line tool that lets you communicate with a device.

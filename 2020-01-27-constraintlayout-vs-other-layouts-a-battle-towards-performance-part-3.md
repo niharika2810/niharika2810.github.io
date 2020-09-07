@@ -18,19 +18,19 @@ These results may vary device to device and OEMs as well because optimizations v
 
 1) View inside another View in the centre-
 
-![result1](/Images/Article/result_1.png)
+<img align="center" width="100" height="100" src="/Images/Article/result_1.png">
 
 2) RecyclerView with 100 Items
 
-![result1](/Images/Article/result_2.png)
+<img align="center" width="100" height="100" src="/Images/Article/result_2.png">
 
 3) Simple UI with TextViews and Images
 
-![result1](/Images/Article/result_3.png)
+<img align="center" width="100" height="100" src="/Images/Article/result_3.png">
 
 4) Complex UI with Images, Text, ScrollView, Buttons etc.
 
-![result1](/Images/Article/result_3.png)
+<img align="center" width="100" height="100" src="/Images/Article/result_4.png">
 
 Note*: Now there are lot enhancements with various viewgroups, so these results may vary for you.
 

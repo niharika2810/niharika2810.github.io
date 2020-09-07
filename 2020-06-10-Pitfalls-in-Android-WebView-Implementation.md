@@ -2,7 +2,7 @@
 layout: post
 title: Pitfalls in Android WebView Implementation
 ---
-![Toast](/Images/Article/webview.gif)
+<img align="center" width="100" height="100" src="/Images/Article/webview.gif">
 
 ## Introduction
 

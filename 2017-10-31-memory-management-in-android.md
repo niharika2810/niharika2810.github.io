@@ -2,7 +2,7 @@
 layout: post
 title: Memory Management in Android
 ---
-![ddms](/Images/Article/ddms.jpeg)
+<img align="center" width="100" height="100" src="/Images/Article/ddms.jpeg">
 
 ## Introduction
 
@@ -50,7 +50,7 @@ DDMS connects the IDE to the applications running on the device. On Android, eve
 
 When it starts, DDMS connects to <b>ADB</b> (Android Debug Bridge which is a command-line utility included with Google’s Android SDK.). An Android Debugger is used for debugging the Android app and starts a device monitoring service between the two. This will notify DDMS when a device is connected or disconnected. When a device is connected, a VM monitoring service is created between ADB and DDMS, which will notify DDMS when a VM on the device is started or terminated.
 
-![ddms](/Images/Article/ddms.jpeg)
+<img align="center" width="100" height="100" src="/Images/Article/ddms.jpeg">
 
 ### How to Improve Memory Usage
 
@@ -129,7 +129,7 @@ Refer to the Figure below:
 
 5) After a few seconds, a pane with your recorded data opens.
 
-![pane](/Images/Article/pane.jpeg)
+<img align="center" width="100" height="100" src="/Images/Article/pane.jpeg">
 
 ## Heap Dumps
 

@@ -2,7 +2,7 @@
 layout: post
 title: Android Learning Resources
 ---
-![learning](/Images/Article/learning.jpg)
+<img align="center" width="100" height="100" src="/Images/Article/learning.jpg">
 
 ## Pick up the best and save it for future reference.
 

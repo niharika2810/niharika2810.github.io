@@ -2,7 +2,7 @@
 layout: post
 title: Constraint Layout vs Other Layouts(Part -1)
 ---
-![process](/Images/Article/process.gif)
+<img align="center" width="100" height="100" src="/Images/Article/process.gif">
 
 Imagine, you’ve just joined a new job and you need to shop for a whole new wardrobe that goes with your workplace culture and outlook (formals in most cases).
 You walk into an apparel store, head straight to the formals section, and you notice that some of the items hanging there are quite impractical and uncomfortable.
@@ -44,7 +44,7 @@ However, with some more complicated layout cases, the framework may have to iter
 
 Having to perform more than one layout-and-measure iteration is what we call double taxation.
 
-![process](/Images/Article/heirarchy.jpeg)
+<img align="center" width="100" height="100" src="/Images/Article/heirarchy.jpeg">
 
 For example, when you use the [RelativeLayout](https://developer.android.com/reference/android/widget/RelativeLayout.html) container, which allows you to position [View](https://developer.android.com/reference/android/view/View.html) objects with respect to the positions of other View objects, the framework performs the following actions:
 
