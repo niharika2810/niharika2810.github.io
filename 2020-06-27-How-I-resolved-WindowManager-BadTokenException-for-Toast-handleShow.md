@@ -1,3 +1,6 @@
+---
+title: How I resolved WindowManager BadTokenException for Toast
+---
 
 <div style="text-align:center">
 <img align="center" width="300" height="300" src="/Images/Article/toast.png">

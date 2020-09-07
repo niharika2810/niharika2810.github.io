@@ -1,3 +1,6 @@
+---
+title: Android learning resources
+---
 
 <div style="text-align:center">
 <img align="center" width="300" height="300" src="/Images/Article/learning.jpg">
