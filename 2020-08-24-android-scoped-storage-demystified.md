@@ -6,7 +6,7 @@ Blog by <a href="http://thedroidlady.com/">theDroidLady</a>
 <br/>
 <br/>
 <div style="text-align:center">
-<img align="center" width="300" height="300" src="/Images/Article/scoped.jpeg">
+<img align="center" width="400" height="500" src="/Images/Article/scoped.jpeg">
 </div>
 <br/>
 <br/>
@@ -38,6 +38,8 @@ Before going into the implementation part, Let's first understand the way data w
 <div style="text-align:center">
 <img align="center" width="500" height="500" src="/Images/Article/diagram_one.png">
 </div>
+
+
 ---
 
 * Private Storage: All apps have their own private directory in internal storage, i.e Android/data/{package name}, not visible to other apps.
@@ -63,6 +65,7 @@ I am sure this must have made you think about your app & data security, privacy 
 
 >Don't worry, Google's recent Android update related to storage comes to the rescue.
 
+
 ---
 
 ## Scoped Storage
@@ -81,6 +84,8 @@ Look at the <b>Storage structure</b> on Android 10 & above:
 <div style="text-align:center">
 <img align="center" width="500" height="500" src="/Images/Article/diagram_two.png">
 </div>
+
+
 >Now, **Private Storage** is the same as before but Shared Storage is further divided into Media & Download(Non-Media Files) Collection.
 
 * **Reducing File Clutter**: The system will bind storage to owner apps so that it becomes easier for the system to locate relevant files, corresponding to an app. It is useful when the App is uninstalled, so all the data related to the app is also uninstalled.
@@ -92,6 +97,7 @@ Wow, Now this appears something cool, Isn't it?
 Being a user, I have more control over my files and to whom I am giving access. Also, It will bring more extra space available for my device if non-required files are getting deleted with the app itself.
 
 ---
+
 
 ### Is there any change with permissions to access the files now?
 
@@ -112,14 +118,17 @@ Yes, we do have.
 <img align="center" width="300" height="300" src="/Images/Article/upgrade.png">
 </div>
 
+
  Woohoo!! More specific permissions. I am happy and feeling more secured now. :-)
 
 
 ---
 
+
 **Is there any way to opt-out of this storage structure for apps targetting Android 10 and above?**
 
 >To give developers additional time for testing, apps that target Android 10 (API level 29) can still request the requestLegacyExternalStorage attribute. This flag allows apps to temporarily opt out of the changes associated with scoped storage, such as granting access to different directories and different types of media files.
+
 
 ---
 
@@ -223,15 +232,19 @@ We have a way out for this too. You need to follow these simple steps:
 * Once the user grants the permission to have broad access, then the user will get an unfiltered view of MediaStore that include non-media file.
 * Only apps granted by Google will have complete access to storage. For that, submit the declaration form to Google Play. Now, these are only [Whitelisted](https://support.google.com/a/answer/7281227?visit_id=637338122728852013-3109567423&rd=1) apps by Google.
 
+
 ---
+
 
 ## What if my app uses custom file picker which displays exact data directories?
 
 There is nothing you can do about it. You might want to use system picker from now on.
 
+
 ---
 
 ---
+
 
 ## Is there anything which I should remember while implementing it?
 
@@ -244,6 +257,7 @@ There is nothing you can do about it. You might want to use system picker from n
 * Non-media files should be in the download directory (recommended).
 
 * To access non-media files by other apps, use [System Picker](https://developer.android.com/guide/topics/providers/document-provider) with SAF( Storage Access Framework). Runtime permission will be requested for complete access to that app.
+
 
 ---
 

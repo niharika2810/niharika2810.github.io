@@ -6,7 +6,7 @@ Blog by <a href="http://thedroidlady.com/">theDroidLady</a>
 <br/>
 <br/>
 <div style="text-align:center">
-<img align="center" width="300" height="300" src="/Images/Article/learning.jpg">
+<img align="center" width="500" height="400" src="/Images/Article/learning.jpg">
 </div>
 <br/>
 <br/>
@@ -227,3 +227,28 @@ A repository containing link/resources to small, basic as well as specific Andro
 
 Will be adding more [here](https://github.com/niharika2810/android-learning-resources) after sorting them out. You can follow this Github repository. Please contribute if you have more so that I can also learn. :-)
 
+    <div class="justify-content-center">
+        <div class="h1 text-center" data-aos="zoom-in-up"><i class="fas fa-user-alt mr-2"></i><b>Subscribe</b>
+        </div>
+        <div class="d-flex align-items-center">
+            <div class="p text-monospace d-block mx-auto p-2 larger align-self-center"
+                 data-aos="zoom-in-down">
+                <div class="newsletter-container">
+                    <!-- <p class="newsletter-text"></p> -->
+                    <form class="newsletter-form" action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('https://feedburner.google.com/fb/a/mailverify?uri=thedroidlady', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true">
+
+                        <p class="newsletter-text text-center">Get new posts to your inbox</p>
+
+                        <input type="hidden" value="thedroidlady" name="uri" />
+
+                        <input type="hidden" name="loc" value="en_US" />
+
+                        <input class="newsletter-email" type="text" name="email" placeholder="name@example.com" />
+
+                        <input class="newsletter-submit" type="submit" value="Subscribe" />
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>

@@ -6,7 +6,7 @@ Blog by <a href="http://thedroidlady.com/">theDroidLady</a>
 <br/>
 <br/>
 <div style="text-align:center">
-<img align="center" width="300" height="300" src="/Images/Article/aarogya_setu.jpeg">
+<img align="center" width="700" height="300" src="/Images/Article/aarogya_setu.jpeg">
 </div>
 <br/>
 <br/>

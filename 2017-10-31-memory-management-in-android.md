@@ -6,7 +6,7 @@ Blog by <a href="http://thedroidlady.com/">theDroidLady</a>
 <br/>
 <br/>
 <div style="text-align:center">
-<img align="center" width="300" height="300" src="/Images/Article/ddms.jpeg">
+<img align="center" src="/Images/Article/ddms.jpeg">
 </div>
 <br/>
 <br/>
@@ -57,7 +57,7 @@ DDMS connects the IDE to the applications running on the device. On Android, eve
 When it starts, DDMS connects to <b>ADB</b> (Android Debug Bridge which is a command-line utility included with Google’s Android SDK.). An Android Debugger is used for debugging the Android app and starts a device monitoring service between the two. This will notify DDMS when a device is connected or disconnected. When a device is connected, a VM monitoring service is created between ADB and DDMS, which will notify DDMS when a VM on the device is started or terminated.
 
 <div style="text-align:center">
-<img align="center" width="300" height="300" src="/Images/Article/ddms.jpeg">
+<img align="center" src="/Images/Article/ddms.jpeg">
 </div>
 ### How to Improve Memory Usage
 
@@ -132,13 +132,18 @@ DDMS provides a feature to track objects that are being allocated to memory and 
 
 Refer to the Figure below:
 
-![allocation_tracker](/Images/Article/allocation_tracker.png)
+<div style="text-align:center">
+<img align="center" width="300" height="300" src="/Images/allocation_tracker.png">
+</div>
+
 
 5) After a few seconds, a pane with your recorded data opens.
 
 <div style="text-align:center">
 <img align="center" width="300" height="300" src="/Images/Article/pane.jpeg">
 </div>
+
+
 ## Heap Dumps
 
 A Heap Dump is a snapshot of an application’s heap, which is stored in a binary format called HPROF. The Dalvik virtual machine can produce a complete dump of the contents of the virtual heap. This is very useful for debugging memory usage and looking for memory leaks.

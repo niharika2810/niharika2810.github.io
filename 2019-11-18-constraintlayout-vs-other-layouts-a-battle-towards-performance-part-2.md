@@ -5,6 +5,11 @@ Blog by <a href="http://thedroidlady.com/">theDroidLady</a>
 </div>
 <br/>
 <br/>
+<div style="text-align:center">
+<img align="center" width="300" height="300" src="/Images/Article/flip_book.gif">
+</div>
+<br/>
+<br/>
 ## Introduction
 
 In the last article, I showed off my love for fashion which lead me to correlate it with the topic at hand i.e, [how UI is created and what will be the impact of view lifecycle methods in the context of various layouts](https://medium.com/@nik.arora8059/constraintlayout-vs-other-layouts-a-battle-towards-performance-part-1-14d8116e876e).
@@ -46,7 +51,7 @@ With overdraw in Android, we waste GPU time by coloring the pixels on the screen
 
 Fortunately, we can detect re-painting in android by selecting “Show overdraw areas” in “Debug GPU overdraw” under “Developer options” in phone settings.
 <div style="text-align:center">
-<img align="center" width="300" height="300" src="/Images/Article/demo_page.png">
+<img align="center" width="300" height="600" src="/Images/Article/demo_page.png">
 </div>
 The colors are hinting at the amount of overdraw on your screen for each pixel, as follows:
 
@@ -74,7 +79,7 @@ The tool combines data from the Android kernel such as the CPU scheduler, disk a
 
 The tool uses this data to generate an HTML report that shows an overall picture of an Android-powered device’s system processes for a given period of time.
 <div style="text-align:center">
-<img align="center" width="300" height="300" src="/Images/Article/systrace_output.png">
+<img align="center" src="/Images/Article/systrace_output.png">
 </div>
 ### What you should do
 
@@ -98,7 +103,7 @@ For Android 9 or higher, we already have the System Tracing app which works exac
 
 <b>[Developer Options](https://developer.android.com/studio/debug/dev-options#enable) -> Debugging -> System Tracing ->Record trace -> Do some Actions in your app -> Stop Trace -> Share Trace (.perfetto-trace)-> [Open on Perfetto UI](https://ui.perfetto.dev/#!/)</b>
 <div style="text-align:center">
-<img align="center" width="300" height="300" src="/Images/Article/perfetto_sample.png">
+<img align="center" src="/Images/Article/perfetto_sample.png">
 </div>
 The image displays a part of the Systrace output. The numbers have the following meanings:
 

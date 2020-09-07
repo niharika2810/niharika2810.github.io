@@ -20,19 +20,19 @@ These results may vary device to device and OEMs as well because optimizations v
 
 1) View inside another View in the centre-
 <div style="text-align:center">
-<img align="center" width="300" height="300" src="/Images/Article/result_1.png">
+<img align="center" width="500" height="400" src="/Images/Article/result_1.png">
 </div>
 2) RecyclerView with 100 Items
 <div style="text-align:center">
-<img align="center" width="300" height="300" src="/Images/Article/result_2.png">
+<img align="center" width="500" height="400" src="/Images/Article/result_2.png">
 </div>
 3) Simple UI with TextViews and Images
 <div style="text-align:center">
-<img align="center" width="300" height="300" src="/Images/Article/result_3.png">
+<img align="center" width="500" height="400" src="/Images/Article/result_3.png">
 </div>
 4) Complex UI with Images, Text, ScrollView, Buttons etc.
 <div style="text-align:center">
-<img align="center" width="300" height="300" src="/Images/Article/result_4.png">
+<img align="center" width="500" height="400" src="/Images/Article/result_4.png">
 </div>
 Note*: Now there are lot enhancements with various viewgroups, so these results may vary for you.
 
