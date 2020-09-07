@@ -1,7 +1,6 @@
 <div style="text-align:center">
----
-title: Android Learning Resources
----
+<h1> Android Learning Resources
+</h1
 </div>
 <br/>
 <div style="text-align:center">

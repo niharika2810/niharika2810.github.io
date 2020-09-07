@@ -1,7 +1,7 @@
----
-title: Constraint vs Other Layouts- A Battle towards performance Part-1
----
-<br/>
+<div style="text-align:center">
+<h1> Constraint vs Other Layouts- A Battle towards performance Part-1
+</h1
+</div>
 <br/>
 <div style="text-align:center">
 <img align="center" width="300" height="300" src="/Images/Article/process.gif">

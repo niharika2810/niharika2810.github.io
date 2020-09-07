@@ -1,6 +1,7 @@
----
-title: Android Interview Questions
----
+<div style="text-align:center">
+<h1> Android Interview Questions
+</h1
+</div>
 <br/>
 <div style="text-align:center">
 <img align="center" width="300" height="300" src="/Images/Article/interview.png">

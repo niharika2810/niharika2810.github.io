@@ -1,6 +1,7 @@
----
-title: Scoped Storage Demystified
----
+<div style="text-align:center">
+<h1> Scoped Storage Demystified
+</h1
+</div>
 <br/>
 <div style="text-align:center">
 <img align="center" width="300" height="300" src="/Images/Article/scoped.jpeg">

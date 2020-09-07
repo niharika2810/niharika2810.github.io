@@ -1,6 +1,7 @@
----
-title: Android allowBackup demystified
----
+<div style="text-align:center">
+<h1> Android allowBackup demystified
+</h1
+</div>
 <br/>
 <div style="text-align:center">
 <img align="center" width="300" height="300" src="/Images/Article/allow_backup.jpg">
