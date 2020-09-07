@@ -1,12 +1,15 @@
+---
+title: Android Learning Resources
+---
 
-<title> Android learning resources</title>
-
-
+<br/>
+<br/>
 <div style="text-align:center">
 <img align="center" width="300" height="300" src="/Images/Article/learning.jpg">
 </div>
 
-
+<br/>
+<br/>
 ## Pick up the best and save it for future reference.
 
 We struggle a lot learning small, basic and specific concepts. Here is my list of resources which may help you understand **Android** in a better way.

@@ -1,11 +1,13 @@
 ---
 title: Scoped Storage Demystified
 ---
-
+<br/>
+<br/>
 <div style="text-align:center">
 <img align="center" width="300" height="300" src="/Images/Article/scoped.jpeg">
 </div>
-
+<br/>
+<br/>
 
 ## Introduction
 

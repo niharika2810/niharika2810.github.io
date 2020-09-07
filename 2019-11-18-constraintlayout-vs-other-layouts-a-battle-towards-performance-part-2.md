@@ -1,7 +1,8 @@
 ---
 title: Constraint vs Other Layouts- A Battle towards performance Part-1
 ---
-
+<br/>
+<br/>
 ## Introduction
 
 In the last article, I showed off my love for fashion which lead me to correlate it with the topic at hand i.e, [how UI is created and what will be the impact of view lifecycle methods in the context of various layouts](https://medium.com/@nik.arora8059/constraintlayout-vs-other-layouts-a-battle-towards-performance-part-1-14d8116e876e).

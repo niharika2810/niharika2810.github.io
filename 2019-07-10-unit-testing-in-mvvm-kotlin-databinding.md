@@ -1,12 +1,14 @@
 ---
 title: Unit Tetsing in MVVM+Kotlin+DataBinding
 ---
-
+<br/>
+<br/>
 <div style="text-align:center">
 <img align="center" width="300" height="300" src="/Images/Article/testing.png">
 </div>
 
-
+<br/>
+<br/>
 ## Introduction
 
 I love Kotlin and MVVM. When I began writing the application with it here at 1mg, I instantly went, “Wow”! It’s clean, it’s easy to read (sometimes 😁) and helps you write better code.
