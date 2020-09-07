@@ -1,6 +1,8 @@
+<div style="text-align:center">
 ---
 title: Android Learning Resources
 ---
+</div>
 
 <br/>
 <br/>
