@@ -57,7 +57,7 @@ When it starts, DDMS connects to <b>ADB</b> (Android Debug Bridge which is a com
 
 <div style="text-align:center">
 <img align="center" src="/Images/Article/ddms.jpeg">
-</div>
+</div><br/><br/>
 
 
 ### How to Improve Memory Usage
@@ -134,7 +134,7 @@ DDMS provides a feature to track objects that are being allocated to memory and 
 Refer to the Figure below:
 
 <div style="text-align:center">
-<img align="center" width="300" height="300" src="/Images/allocation_tracker.png">
+<img align="center" width="300" height="300" src="/Images/Article/allocation_tracker.png">
 </div>
 
 
