@@ -112,7 +112,7 @@ Bluetooth LE scan settings are passed to [BluetoothLeScanner#startScan](https://
 
 The scan mode can be one of [ScanSettings#SCAN_MODE_LOW_POWER](https://developer.android.com/reference/android/bluetooth/le/ScanSettings#SCAN_MODE_LOW_POWER), [ScanSettings#SCAN_MODE_BALANCED](https://developer.android.com/reference/android/bluetooth/le/ScanSettings#SCAN_MODE_BALANCED) or [ScanSettings#SCAN_MODE_LOW_LATENCY](https://developer.android.com/reference/android/bluetooth/le/ScanSettings#SCAN_MODE_LOW_LATENCY).
 
-2) <b>setMatchMode</b>(Added in API level 23): We have set it MATCH_MODE_AGGRESSIVE (h/w will determine a match sooner even with feeble signal strength and few numbers of sightings/match in a duration).
+2) <b>setMatchMode</b>(Added in API level 23): We have set it to MATCH_MODE_STICKY (For sticky mode, a higher threshold of signal strength and sightings is required  before reporting by h/w)
 
 3) <b>setPhy</b>(Added in API level 26): Setting the Physical Layer to use during this scan. This is used only if [ScanSettings.Builder#setLegacy](https://developer.android.com/reference/android/bluetooth/le/ScanSettings.Builder#setLegacy(boolean)) is set to false. To improve scan performance, we have used PHY_LE_1M channel for scanning. Read more about it [here](https://developer.android.com/reference/android/bluetooth/le/ScanSettings.Builder#setPhy(int)).
 
