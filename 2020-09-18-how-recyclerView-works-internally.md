@@ -17,9 +17,11 @@ So Now my question is,
 
 >Have you ever got curious about the internals, how it actually works, how the data flows and displayed to the user?
 
-
+<br/>
+<br/>
 ---
-
+<br/>
+<br/>
 
 ## Why do we need to know all these factors?
 
@@ -32,9 +34,11 @@ Also, A famous quote about learning is :
 
 >"Tell me and I forget, teach me and I may remember, involve me and I learn."
 
-
+<br/>
+<br/>
 ---
-
+<br/>
+<br/>
 
 Wait, Before we move to <b>RecyclerView</b> internals, one should be clear why it came to existence when we already had <b>ListView</b>.
 
@@ -48,9 +52,11 @@ With <b>ListView</b>, We had some downsides :
 
 There are many more reasons other than the above listed which made Android devs realize that something <b>NEW</b> is needed which is highly <b>optimized</b> and comes with great <b>capabilities</b>.
 
-
+<br/>
+<br/>
 ---
-
+<br/>
+<br/>
 
 ## RecyclerView: What it is?
 
@@ -59,11 +65,13 @@ As per Android documentation: 
 <b>RecyclerView</b> is a UI component which allows us to create a scrolling list. It is basically a new ViewGroup used to render any adapter-based view in horizontal/vertical /grid or staggered grid manner using the Viewholder pattern.
 
 Hold on, many new terms introduced right. Don't get confused. Let's understand these:
-
+<br/>
+<br/>
 <div style="text-align:center">
 <img align="center" src="/Images/Article/recycler_view_working.gif">
 </div>
-
+<br/>
+<br/>
 We have 4 major components of RecyclerView:
 
 * [RecyclerView.Adapter](https://developer.android.com/reference/androidx/recyclerview/widget/RecyclerView.Adapter): Provides a binding from your app's data set (which is specific to your app) to item views that are displayed within the RecyclerView. The adapter knows how to associate each item-view position in the RecyclerView to a specific location in the data source.
@@ -78,31 +86,37 @@ Let's understand all these through an <b>example</b>,
 
 Assume, You and I are standing in front of a Burger stall and there is a huge line and at once only 4 members can be entertained. The person making it provides each of the 4 members with one plate and on preparing burgers, he put it on their plate. Another thing what he does is, he kept some plates extra and gave few to the members in line waiting to have a burger in advance and 2 to the members who already finished eating and maybe can ask for the repetition. And then the ones who already had burgers but were holding plates pass the plates to the selling guy so that he can clean them up and give them to the new 2 members in line.
 
-
+<br/>
+<br/>
 
 <div style="text-align:center">
 <img align="center" src="/Images/Article/burger.gif">
 </div>
-
+<br/>
+<br/>
 
 
 So here, the selling guy is the <b>recyclerView</b>, the plates are the <b>Views</b>, the burger is <b>Data</b>, at once 4 members getting entertained(visible) is termed as <b>Viewport</b> in RecyclerView world and the idea behind using lesser number of plates is our <b>ViewHolder</b> as we can see the person is cleaning them and reusing them as per required. This is the main advantage of using ViewHolder as we are clearing <b>reducing the CPU intensive task</b> of more View Creations.
 
 I hope we are clear with the terminology. Let's get to the internals now.
 
-
+<br/>
+<br/>
 ---
-
+<br/>
+<br/>
 
 ## RecyclerView: How it works?
 
 ### Now, let's understand the process:
 
-
+<br/>
+<br/>
 <div style="text-align:center">
 <img align="center" src="/Images/Article/recycler_internal.png">
 </div>
-
+<br/>
+<br/>
 
 So, There is data kept in the data-set. The adapter binds data to the View and then gives it to the Layout Manager which happens to control the views.
 
@@ -136,9 +150,11 @@ It is a collection which consists of views that are assumed to have incorrect da
 
 > Each time the adapter inflates an item-layout, it also creates a corresponding ViewHolder. The ViewHolder uses FindViewById to get references to the views inside the inflated item-layout file. These references are used to load new data into the views every time the layout is recycled to show new data.
 
-
+<br/>
+<br/>
 ---
-
+<br/>
+<br/>
 
 ## RecyclerView: Methods
 
@@ -152,15 +168,19 @@ When you implement an adapter, you must override the following RecyclerView.Adap
 
 The layout manager calls these methods while it is positioning items within the <b>RecyclerView</b>.
 
-
+<br/>
+<br/>
 ---
-
+<br/>
+<br/>
 
 >If LayoutManager fails to find a suitable View in all of those places, it creates one by calling adapter's onCreateViewHolder() method. It then binds the View via onBindViewHolder() if necessary, and finally returns it.
 
-
+<br/>
+<br/>
 ---
-
+<br/>
+<br/>
 
 ## RecyclerView: Notifying changes
 
@@ -172,9 +192,11 @@ The layout manager calls these methods while it is positioning items within the 
 
 Like this we have [notifyItemRangeInserted](), [notifyItemRangeRemoved]() , [notifyItemRangeChanged](). Read about these, check your scenario and use them wisely. If you know exactly how your data set has changed, you can call the appropriate methods listed above to refresh RecyclerView in the most efficient manner.
 
-
+<br/>
+<br/>
 ---
-
+<br/>
+<br/>
 
 ## RecyclerView: Some Performance Tips
 
@@ -184,9 +206,11 @@ Like this we have [notifyItemRangeInserted](), [notifyItemRangeRemoved]() , [no
 
 * Check how and when to use [adapter.setHasStableIds(true)](https://developer.android.com/reference/androidx/recyclerview/widget/RecyclerView.Adapter#hasStableIds())(This can help for the purposes of animation and visual object persistence).
 
-
+<br/>
+<br/>
 ---
-
+<br/>
+<br/>
 
 ## References :
 
@@ -195,6 +219,8 @@ Like this we have [notifyItemRangeInserted](), [notifyItemRangeRemoved]() , [no
 * [Link 2](https://medium.com/@manuaravindpta/what-is-the-difference-between-listview-and-recyclerview-bcd82c64ffbb)
 
 * [Link 3](https://android.jlelse.eu/anatomy-of-recyclerview-part-1-a-search-for-a-viewholder-404ba3453714)
+<br/>
+<br/>
 
 This is all from my side!! I hope you learned something from this article.
 
