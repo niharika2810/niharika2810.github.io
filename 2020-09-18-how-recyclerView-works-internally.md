@@ -1,6 +1,9 @@
 <div style="text-align:center">
 <h1> How RecyclerView works internally?
 </h1>
+<br/>
+<h3> Let's take a deep dive into how the things work under the hood in RecyclerView.
+</h3>
 Blog by <a href="http://thedroidlady.com/">theDroidLady</a>
 </div>
 <br/>
