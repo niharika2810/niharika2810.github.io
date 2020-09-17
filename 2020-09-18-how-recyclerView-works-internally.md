@@ -5,7 +5,7 @@ Blog by <a href="http://thedroidlady.com/">theDroidLady</a>
 </div>
 <br/>
 <div style="text-align:center">
-<img align="center" width="400" height="300" src="/Images/Article/recycler_view.jpeg">
+<img align="center" width="400" height="300" src="/Images/Article/recycler_view.png">
 </div>
 <br/>
 <br/>
