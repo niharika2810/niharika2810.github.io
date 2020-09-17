@@ -17,7 +17,9 @@ So Now my question is,
 
 >Have you ever got curious about the internals, how it actually works, how the data flows and displayed to the user?
 
+
 ---
+
 
 ## Why do we need to know all these factors?
 
@@ -25,11 +27,14 @@ Just think about it: RecyclerView is needed almost in every modern Android app, 
 
 I definitely don't want my users to have a bad experience for my Home screen(or any other) which currently shows a list of recommended products for them. So, I wanted to know the exact process and flow to make sure I am utilizing the things in the correct approach.
 
+
 Also, A famous quote about learning is :
 
 >"Tell me and I forget, teach me and I may remember, involve me and I learn."
 
+
 ---
+
 
 Wait, Before we move to <b>RecyclerView</b> internals, one should be clear why it came to existence when we already had <b>ListView</b>.
 
@@ -43,7 +48,9 @@ With <b>ListView</b>, We had some downsides :
 
 There are many more reasons other than the above listed which made Android devs realize that something <b>NEW</b> is needed which is highly <b>optimized</b> and comes with great <b>capabilities</b>.
 
+
 ---
+
 
 ## RecyclerView: What it is?
 
@@ -72,23 +79,30 @@ Let's understand all these through an <b>example</b>,
 Assume, You and I are standing in front of a Burger stall and there is a huge line and at once only 4 members can be entertained. The person making it provides each of the 4 members with one plate and on preparing burgers, he put it on their plate. Another thing what he does is, he kept some plates extra and gave few to the members in line waiting to have a burger in advance and 2 to the members who already finished eating and maybe can ask for the repetition. And then the ones who already had burgers but were holding plates pass the plates to the selling guy so that he can clean them up and give them to the new 2 members in line.
 
 
+
 <div style="text-align:center">
 <img align="center" src="/Images/Article/burger.gif">
 </div>
+
+
 
 So here, the selling guy is the <b>recyclerView</b>, the plates are the <b>Views</b>, the burger is <b>Data</b>, at once 4 members getting entertained(visible) is termed as <b>Viewport</b> in RecyclerView world and the idea behind using lesser number of plates is our <b>ViewHolder</b> as we can see the person is cleaning them and reusing them as per required. This is the main advantage of using ViewHolder as we are clearing <b>reducing the CPU intensive task</b> of more View Creations.
 
 I hope we are clear with the terminology. Let's get to the internals now.
 
+
 ---
+
 
 ## RecyclerView: How it works?
 
 ### Now, let's understand the process:
 
+
 <div style="text-align:center">
 <img align="center" src="/Images/Article/recycler_internal.png">
 </div>
+
 
 So, There is data kept in the data-set. The adapter binds data to the View and then gives it to the Layout Manager which happens to control the views.
 
@@ -104,6 +118,7 @@ Views placed here, are <b>temporarily detached</b> but will be <b>reused</b> wit
 
 >The View just above and below the View port are the <b>Detached Views</b>. These views which are detached are expected to be re-attached before code returns.
 
+
 * When a new item is to be displayed, a view is taken from the recycle pool for reuse. Because this view must be re-bound by the adapter before being displayed, it is called a <>bdirty view</b>.
 
 Same like the Scrap heap, we have another caching system for these type of views which is <b>Recycle Pool</b>:
@@ -111,6 +126,7 @@ Same like the Scrap heap, we have another caching system for these type of views
 It is a collection which consists of views that are assumed to have incorrect data (data from a different position or index) also called the <b>dirty view</b>, is always passed to the adapter back so that data can be attached or bound again to the ViewHolder and then returned to the Layout Manager.
 
 >Recycler instance is provided to the Layout Manager at some points so that it can obtain new views or recycle old views.
+
 
 * The dirty view is <b>recycled</b>: the adapter locates the data for the next item to be displayed and copies this data to the views for this item. References for these views are retrieved from the recycler view's view holder.
 
@@ -120,7 +136,9 @@ It is a collection which consists of views that are assumed to have incorrect da
 
 > Each time the adapter inflates an item-layout, it also creates a corresponding ViewHolder. The ViewHolder uses FindViewById to get references to the views inside the inflated item-layout file. These references are used to load new data into the views every time the layout is recycled to show new data.
 
+
 ---
+
 
 ## RecyclerView: Methods
 
@@ -134,11 +152,15 @@ When you implement an adapter, you must override the following RecyclerView.Adap
 
 The layout manager calls these methods while it is positioning items within the <b>RecyclerView</b>.
 
+
 ---
+
 
 >If LayoutManager fails to find a suitable View in all of those places, it creates one by calling adapter's onCreateViewHolder() method. It then binds the View via onBindViewHolder() if necessary, and finally returns it.
 
+
 ---
+
 
 ## RecyclerView: Notifying changes
 
@@ -150,7 +172,9 @@ The layout manager calls these methods while it is positioning items within the 
 
 Like this we have [notifyItemRangeInserted](), [notifyItemRangeRemoved]() , [notifyItemRangeChanged](). Read about these, check your scenario and use them wisely. If you know exactly how your data set has changed, you can call the appropriate methods listed above to refresh RecyclerView in the most efficient manner.
 
+
 ---
+
 
 ## RecyclerView: Some Performance Tips
 
@@ -159,6 +183,10 @@ Like this we have [notifyItemRangeInserted](), [notifyItemRangeRemoved]() , [no
 * [recyclerView.setItemViewCacheSize(size)](https://developer.android.com/reference/kotlin/androidx/recyclerview/widget/RecyclerView#setitemviewcachesize): Set the number of offscreen views to retain before adding them to the potentially shared recycled view pool. So when you scroll the RecyclerView such that there's a view that is just barely completely off-screen, the RecyclerView will keep it around so that you can scroll it back into view without having to re-execute onBindViewHolder().
 
 * Check how and when to use [adapter.setHasStableIds(true)](https://developer.android.com/reference/androidx/recyclerview/widget/RecyclerView.Adapter#hasStableIds())(This can help for the purposes of animation and visual object persistence).
+
+
+---
+
 
 ## References :
 
