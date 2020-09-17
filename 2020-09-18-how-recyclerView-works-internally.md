@@ -18,11 +18,9 @@ Being an Android developer, our life revolves around recyclerViews only. Take a 
 So Now my question is,
 
 >Have you ever got curious about the internals, how it actually works, how the data flows and displayed to the user?
-
-
-
+<br/>
 ---
-
+<br/>
 
 
 ## Why do we need to know all these factors?
