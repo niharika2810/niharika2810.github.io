@@ -18,9 +18,6 @@ Being an Android developer, our life revolves around recyclerViews only. Take a 
 So Now my question is,
 
 >Have you ever got curious about the internals, how it actually works, how the data flows and displayed to the user?
-<br/>
----
-<br/>
 
 
 ## Why do we need to know all these factors?
@@ -35,11 +32,7 @@ Also, A famous quote about learning is :
 >"Tell me and I forget, teach me and I may remember, involve me and I learn."
 
 
----
-
-
-
-Wait, Before we move to <b>RecyclerView</b> internals, one should be clear about why it came to existence when we already had <b>ListView</b>.
+## Wait, Before we move to <b>RecyclerView</b> internals, one should be clear about why it came to existence when we already had <b>ListView</b>.
 
 With <b>ListView</b>, We had some downsides :
 
@@ -50,11 +43,6 @@ With <b>ListView</b>, We had some downsides :
 * <b>One Scrolling Orientation(Vertical)</b>: No Horizontal lists allowed. Only vertical scrolling is supported in ListView.
 
 There are many more reasons other than the above listed which made Android devs realize that something <b>NEW</b> is needed which is highly <b>optimized</b> and comes with great <b>capabilities</b>.
-
-
-
----
-
 
 
 ## RecyclerView: What it is?
@@ -97,11 +85,6 @@ Assume, You and I are standing in front of a Burger stall and there is a huge li
 So here, the selling guy is the <b>recyclerView</b>, the plates are the <b>Views</b>, the burger is <b>Data</b>, at once 4 members getting entertained(visible) is termed as <b>Viewport</b> in RecyclerView world and the idea behind using lesser number of plates is our <b>ViewHolder</b> as we can see the person is cleaning them and reusing them as per required. This is the main advantage of using ViewHolder as we are clearing <b>reducing the CPU intensive task</b> of more View Creations.
 
 I hope we are clear with the terminology. Let's get to the internals now.
-
-
-
----
-
 
 
 ## RecyclerView: How it works?
@@ -149,9 +132,6 @@ It is a collection which consists of views that are assumed to have incorrect da
 > Each time the adapter inflates an item-layout, it also creates a corresponding ViewHolder. The ViewHolder uses FindViewById to get references to the views inside the inflated item-layout file. These references are used to load new data into the views every time the layout is recycled to show new data.
 
 
----
-
-
 ## RecyclerView: Methods
 
 When you implement an adapter, you must override the following RecyclerView.Adapter methods:
@@ -164,13 +144,8 @@ When you implement an adapter, you must override the following RecyclerView.Adap
 
 The layout manager calls these methods while it is positioning items within the <b>RecyclerView</b>.
 
----
-
 
 >If LayoutManager fails to find a suitable View in all of those places, it creates one by calling adapter's onCreateViewHolder() method. It then binds the View via onBindViewHolder() if necessary, and finally returns it.
-
-
----
 
 
 ## RecyclerView: Notifying changes
@@ -184,10 +159,6 @@ The layout manager calls these methods while it is positioning items within the 
 Like this we have [notifyItemRangeInserted](https://developer.android.com/reference/androidx/recyclerview/widget/RecyclerView.Adapter#notifyItemRangeInserted(int,%20int)), [notifyItemRangeRemoved](https://developer.android.com/reference/androidx/recyclerview/widget/RecyclerView.Adapter#notifyItemRangeRemoved(int,%20int)) , [notifyItemRangeChanged](https://developer.android.com/reference/androidx/recyclerview/widget/RecyclerView.Adapter#notifyItemRangeChanged(int,%20int)). Read about these, check your scenario and use them wisely. If you know exactly how your data set has changed, you can call the appropriate methods listed above to refresh RecyclerView in the most efficient manner.
 
 
----
-
-
-
 ## RecyclerView: Some Performance Tips
 
 * [recyclerView.setHasFixedSize(true)](https://developer.android.com/reference/kotlin/androidx/recyclerview/widget/RecyclerView#sethasfixedsize): If it is possible to set the width and height of the items at the XML file and they don't change based on adapter's content, add this line to your RecyclerView Initializing method. By this method, you told RecyclerView to don't calculate items size every time they added and removed from RecyclerView.
@@ -195,9 +166,6 @@ Like this we have [notifyItemRangeInserted](https://developer.android.com/refere
 * [recyclerView.setItemViewCacheSize(size)](https://developer.android.com/reference/kotlin/androidx/recyclerview/widget/RecyclerView#setitemviewcachesize): Set the number of offscreen views to retain before adding them to the potentially shared recycled view pool. So when you scroll the RecyclerView such that there's a view that is just barely completely off-screen, the RecyclerView will keep it around so that you can scroll it back into view without having to re-execute onBindViewHolder().
 
 * Check how and when to use [adapter.setHasStableIds(true)](https://developer.android.com/reference/androidx/recyclerview/widget/RecyclerView.Adapter#hasStableIds())(This can help for the purposes of animation and visual object persistence).
-
-
----
 
 
 ## References :
