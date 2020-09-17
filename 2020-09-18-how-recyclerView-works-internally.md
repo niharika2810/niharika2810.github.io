@@ -39,7 +39,7 @@ Also, A famous quote about learning is :
 
 
 
-Wait, Before we move to <b>RecyclerView</b> internals, one should be clear why it came to existence when we already had <b>ListView</b>.
+Wait, Before we move to <b>RecyclerView</b> internals, one should be clear about why it came to existence when we already had <b>ListView</b>.
 
 With <b>ListView</b>, We had some downsides :
 
