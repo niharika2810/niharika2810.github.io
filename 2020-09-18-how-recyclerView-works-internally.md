@@ -160,14 +160,11 @@ When you implement an adapter, you must override the following RecyclerView.Adap
 
 * <b>OnBindViewHolder</b> – Loads the data at the specified position into the views whose references are stored in the given ViewHolder.
 
-* <b>ItemCount<.b> – Returns the number of items in the data source.
+* <b>ItemCount</b> – Returns the number of items in the data source.
 
 The layout manager calls these methods while it is positioning items within the <b>RecyclerView</b>.
 
-
-
 ---
-
 
 
 >If LayoutManager fails to find a suitable View in all of those places, it creates one by calling adapter's onCreateViewHolder() method. It then binds the View via onBindViewHolder() if necessary, and finally returns it.
@@ -176,16 +173,15 @@ The layout manager calls these methods while it is positioning items within the 
 ---
 
 
-
 ## RecyclerView: Notifying changes
 
-* [NotifyDataSetChanged]() – Signals that the data set has changed (forces a full update).
+* [NotifyDataSetChanged](https://developer.android.com/reference/androidx/recyclerview/widget/RecyclerView.Adapter#notifyDataSetChanged()) – Signals that the data set has changed (forces a full update).
 
-* [NotifyItemChanged]() – Signals that the item at the specified position has changed.
+* [NotifyItemChanged](https://developer.android.com/reference/androidx/recyclerview/widget/RecyclerView.Adapter#notifyItemChanged(int,%20java.lang.Object)) – Signals that the item at the specified position has changed.
 
-* [NotifyItemRemoved]() – Signals that the item in the specified position has been removed.
+* [NotifyItemRemoved](https://developer.android.com/reference/androidx/recyclerview/widget/RecyclerView.Adapter#notifyItemRemoved(int)) – Signals that the item in the specified position has been removed.
 
-Like this we have [notifyItemRangeInserted](), [notifyItemRangeRemoved]() , [notifyItemRangeChanged](). Read about these, check your scenario and use them wisely. If you know exactly how your data set has changed, you can call the appropriate methods listed above to refresh RecyclerView in the most efficient manner.
+Like this we have [notifyItemRangeInserted](https://developer.android.com/reference/androidx/recyclerview/widget/RecyclerView.Adapter#notifyItemRangeInserted(int,%20int)), [notifyItemRangeRemoved](https://developer.android.com/reference/androidx/recyclerview/widget/RecyclerView.Adapter#notifyItemRangeRemoved(int,%20int)) , [notifyItemRangeChanged](https://developer.android.com/reference/androidx/recyclerview/widget/RecyclerView.Adapter#notifyItemRangeChanged(int,%20int)). Read about these, check your scenario and use them wisely. If you know exactly how your data set has changed, you can call the appropriate methods listed above to refresh RecyclerView in the most efficient manner.
 
 
 ---
