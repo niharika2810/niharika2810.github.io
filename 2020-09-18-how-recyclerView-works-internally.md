@@ -61,13 +61,13 @@ Hold on, many new terms introduced right. Don't get confused. Let's understand t
 <br/>
 We have 4 major components of RecyclerView:
 
-* [RecyclerView.Adapter](https://developer.android.com/reference/androidx/recyclerview/widget/RecyclerView.Adapter): Provides a binding from your app's data set (which is specific to your app) to item views that are displayed within the RecyclerView. The adapter knows how to associate each item-view position in the RecyclerView to a specific location in the data source.
+1. [RecyclerView.Adapter](https://developer.android.com/reference/androidx/recyclerview/widget/RecyclerView.Adapter): Provides a binding from your app's data set (which is specific to your app) to item views that are displayed within the RecyclerView. The adapter knows how to associate each item-view position in the RecyclerView to a specific location in the data source.
 
-* [RecyclerView.LayoutManager](https://developer.android.com/reference/androidx/recyclerview/widget/RecyclerView.LayoutManager): Positions items within the RecyclerView. You can use one of several predefined layout managers or you can implement your own custom layout manager. It can be linearly or in a grid.
+2. [RecyclerView.LayoutManager](https://developer.android.com/reference/androidx/recyclerview/widget/RecyclerView.LayoutManager): Positions items within the RecyclerView. You can use one of several predefined layout managers or you can implement your own custom layout manager. It can be linearly or in a grid.
 
-* [RecyclerView.ItemAnimator](https://developer.android.com/reference/androidx/recyclerview/widget/RecyclerView.ItemAnimator): RecyclerView comes with default animations which we can override and change according to our needs. By default, RecyclerView uses DefaultItemAnimator.
+3. [RecyclerView.ItemAnimator](https://developer.android.com/reference/androidx/recyclerview/widget/RecyclerView.ItemAnimator): RecyclerView comes with default animations which we can override and change according to our needs. By default, RecyclerView uses DefaultItemAnimator.
 
-* [RecyclerView.ViewHolder](https://developer.android.com/reference/androidx/recyclerview/widget/RecyclerView.ViewHolder): It is mandatory to use with recyclerView and helps us to draw the UI for individual items that we want to draw on the screen.
+4. [RecyclerView.ViewHolder](https://developer.android.com/reference/androidx/recyclerview/widget/RecyclerView.ViewHolder): It is mandatory to use with recyclerView and helps us to draw the UI for individual items that we want to draw on the screen.
 
 Let's understand all these through an <b>example</b>,
 
@@ -103,7 +103,7 @@ So, There is data(item) kept in the data-set(list of items). The adapter binds d
 
 RecyclerView does not allocate an item view for every item in your data source. Instead,<b> it allocates only the number of item views that fit on the screen(Viewport)</b> and it <b>reuses</b> those item layouts as the user <b>scrolls</b>. When the view first scrolls out of sight, it goes through the recycling process as shown in the above diagram:
 
-* When a view scrolls out of sight and is no longer displayed, it becomes a <b>scrap view</b>.
+1. When a view scrolls out of sight and is no longer displayed, it becomes a <b>scrap view</b>.
 
 Let's understand the Scrap view. The Recycler has a <b>Scrap Heap</b> Caching System for these views:
 
@@ -114,7 +114,7 @@ Views placed here, are <b>temporarily detached</b> but will be <b>reused</b> wit
 >The View just above and below the View port are the <b>Detached Views</b>. These views which are detached are expected to be re-attached before code returns.
 
 
-* When a new item is to be displayed, a view is taken from the recycle pool for reuse. Because this view must be re-bound by the adapter before being displayed, it is called a <>bdirty view</b>.
+2. When a new item is to be displayed, a view is taken from the recycle pool for reuse. Because this view must be re-bound by the adapter before being displayed, it is called a <>bdirty view</b>.
 
 Same like the Scrap heap, we have another caching system for these type of views which is <b>Recycle Pool</b>:
 
@@ -123,11 +123,11 @@ It is a collection which consists of views that are assumed to have incorrect da
 >Recycler instance is provided to the Layout Manager at some points so that it can obtain new views or recycle old views.
 
 
-* The dirty view is <b>recycled</b>: the adapter locates the data for the next item to be displayed and copies this data to the views for this item. References for these views are retrieved from the recycler view's view holder.
+3. The dirty view is <b>recycled</b>: the adapter locates the data for the next item to be displayed and copies this data to the views for this item. References for these views are retrieved from the recycler view's view holder.
 
-* The recycled view is added to the list of items in the <b>RecyclerView</b> that is about to go on-screen.
+4. The recycled view is added to the list of items in the <b>RecyclerView</b> that is about to go on-screen.
 
-* The recycled view goes on-screen as the user scrolls the RecyclerView to the next item in the list. Meanwhile, another view scrolls out of sight and is recycled according to the above steps.
+5. The recycled view goes on-screen as the user scrolls the RecyclerView to the next item in the list. Meanwhile, another view scrolls out of sight and is recycled according to the above steps.
 
 > Each time the adapter inflates an item-layout, it also creates a corresponding ViewHolder. The ViewHolder uses FindViewById to get references to the views inside the inflated item-layout file. These references are used to load new data into the views every time the layout is recycled to show new data.
 
@@ -150,22 +150,22 @@ The layout manager calls these methods while it is positioning items within the 
 
 ## RecyclerView: Notifying changes
 
-* [NotifyDataSetChanged](https://developer.android.com/reference/androidx/recyclerview/widget/RecyclerView.Adapter#notifyDataSetChanged()) – Signals that the data set has changed (forces a full update).
+1. [NotifyDataSetChanged](https://developer.android.com/reference/androidx/recyclerview/widget/RecyclerView.Adapter#notifyDataSetChanged()) – Signals that the data set has changed (forces a full update).
 
-* [NotifyItemChanged](https://developer.android.com/reference/androidx/recyclerview/widget/RecyclerView.Adapter#notifyItemChanged(int,%20java.lang.Object)) – Signals that the item at the specified position has changed.
+2. [NotifyItemChanged](https://developer.android.com/reference/androidx/recyclerview/widget/RecyclerView.Adapter#notifyItemChanged(int,%20java.lang.Object)) – Signals that the item at the specified position has changed.
 
-* [NotifyItemRemoved](https://developer.android.com/reference/androidx/recyclerview/widget/RecyclerView.Adapter#notifyItemRemoved(int)) – Signals that the item in the specified position has been removed.
+3. [NotifyItemRemoved](https://developer.android.com/reference/androidx/recyclerview/widget/RecyclerView.Adapter#notifyItemRemoved(int)) – Signals that the item in the specified position has been removed.
 
 Like this we have [notifyItemRangeInserted](https://developer.android.com/reference/androidx/recyclerview/widget/RecyclerView.Adapter#notifyItemRangeInserted(int,%20int)), [notifyItemRangeRemoved](https://developer.android.com/reference/androidx/recyclerview/widget/RecyclerView.Adapter#notifyItemRangeRemoved(int,%20int)) , [notifyItemRangeChanged](https://developer.android.com/reference/androidx/recyclerview/widget/RecyclerView.Adapter#notifyItemRangeChanged(int,%20int)). Read about these, check your scenario and use them wisely. If you know exactly how your data set has changed, you can call the appropriate methods listed above to refresh RecyclerView in the most efficient manner.
 
 
 ## RecyclerView: Some Performance Tips
 
-* [recyclerView.setHasFixedSize(true)](https://developer.android.com/reference/kotlin/androidx/recyclerview/widget/RecyclerView#sethasfixedsize): If it is possible to set the width and height of the items at the XML file and they don't change based on adapter's content, add this line to your RecyclerView Initializing method. By this method, you told RecyclerView to don't calculate items size every time they added and removed from RecyclerView.
+1. [recyclerView.setHasFixedSize(true)](https://developer.android.com/reference/kotlin/androidx/recyclerview/widget/RecyclerView#sethasfixedsize): If it is possible to set the width and height of the items at the XML file and they don't change based on adapter's content, add this line to your RecyclerView Initializing method. By this method, you told RecyclerView to don't calculate items size every time they added and removed from RecyclerView.
 
-* [recyclerView.setItemViewCacheSize(size)](https://developer.android.com/reference/kotlin/androidx/recyclerview/widget/RecyclerView#setitemviewcachesize): Set the number of offscreen views to retain before adding them to the potentially shared recycled view pool. So when you scroll the RecyclerView such that there's a view that is just barely completely off-screen, the RecyclerView will keep it around so that you can scroll it back into view without having to re-execute onBindViewHolder().
+2. [recyclerView.setItemViewCacheSize(size)](https://developer.android.com/reference/kotlin/androidx/recyclerview/widget/RecyclerView#setitemviewcachesize): Set the number of offscreen views to retain before adding them to the potentially shared recycled view pool. So when you scroll the RecyclerView such that there's a view that is just barely completely off-screen, the RecyclerView will keep it around so that you can scroll it back into view without having to re-execute onBindViewHolder().
 
-* Check how and when to use [adapter.setHasStableIds(true)](https://developer.android.com/reference/androidx/recyclerview/widget/RecyclerView.Adapter#hasStableIds())(This can help for the purposes of animation and visual object persistence).
+3. Check how and when to use [adapter.setHasStableIds(true)](https://developer.android.com/reference/androidx/recyclerview/widget/RecyclerView.Adapter#hasStableIds())(This can help for the purposes of animation and visual object persistence).
 
 
 ## References :
