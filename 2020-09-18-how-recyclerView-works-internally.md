@@ -136,11 +136,13 @@ It is a collection which consists of views that are assumed to have incorrect da
 
 When you implement an adapter, you must override the following RecyclerView.Adapter methods:
 
-* <b>OnCreateViewHolder</b> – Instantiates the item layout file and view holder.
-
-* <b>OnBindViewHolder</b> – Loads the data at the specified position into the views whose references are stored in the given ViewHolder.
-
-* <b>ItemCount</b> – Returns the number of items in the data source.
+<br/>
+<br/>
+<div style="text-align:center">
+<img align="center" src="/Images/Article/recycler_methods.png">
+</div>
+<br/>
+<br/>
 
 The layout manager calls these methods while it is positioning items within the <b>RecyclerView</b>.
 
