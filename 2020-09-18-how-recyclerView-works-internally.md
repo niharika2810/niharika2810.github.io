@@ -99,9 +99,9 @@ I hope we are clear with the terminology. Let's get to the internals now.
 <br/>
 <br/>
 
-So, There is data kept in the data-set. The adapter binds data to the View and then gives it to the Layout Manager which happens to control the views.
+So, There is data(item) kept in the data-set(list of items). The adapter binds data to the View and then gives it to the Layout Manager which happens to control the views.
 
-RecyclerView does not allocate an item view for every item in your data source. Instead,<b> it allocates only the number of item views that fit on the screen</b> and it <b>reuses</b> those item layouts as the user <b>scrolls</b>. When the view first scrolls out of sight, it goes through the recycling process as shown in the above diagram:
+RecyclerView does not allocate an item view for every item in your data source. Instead,<b> it allocates only the number of item views that fit on the screen(Viewport)</b> and it <b>reuses</b> those item layouts as the user <b>scrolls</b>. When the view first scrolls out of sight, it goes through the recycling process as shown in the above diagram:
 
 * When a view scrolls out of sight and is no longer displayed, it becomes a <b>scrap view</b>.
 
@@ -136,13 +136,11 @@ It is a collection which consists of views that are assumed to have incorrect da
 
 When you implement an adapter, you must override the following RecyclerView.Adapter methods:
 
-<br/>
-<br/>
+
 <div style="text-align:center">
 <img align="center" src="/Images/Article/recycler_methods.png">
 </div>
-<br/>
-<br/>
+
 
 The layout manager calls these methods while it is positioning items within the <b>RecyclerView</b>.
 
