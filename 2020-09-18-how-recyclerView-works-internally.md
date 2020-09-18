@@ -136,11 +136,11 @@ It is a collection which consists of views that are assumed to have incorrect da
 
 When you implement an adapter, you must override the following RecyclerView.Adapter methods:
 
-
+<br/>
 <div style="text-align:center">
 <img align="center" src="/Images/Article/recycler_methods.png">
 </div>
-
+<br/>
 
 The layout manager calls these methods while it is positioning items within the <b>RecyclerView</b>.
 
