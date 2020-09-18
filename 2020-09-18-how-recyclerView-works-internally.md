@@ -103,7 +103,7 @@ So, There is data(item) kept in the data-set(list of items). The adapter binds d
 
 RecyclerView does not allocate an item view for every item in your data source. Instead,<b> it allocates only the number of item views that fit on the screen(Viewport)</b> and it <b>reuses</b> those item layouts as the user <b>scrolls</b>. When the view first scrolls out of sight, it goes through the recycling process as shown in the above diagram:
 
-1. When a view scrolls out of sight and is no longer displayed, it becomes a <b>scrap view</b>.
+* When a view scrolls out of sight and is no longer displayed, it becomes a <b>scrap view</b>.
 
 Let's understand the Scrap view. The Recycler has a <b>Scrap Heap</b> Caching System for these views:
 
@@ -114,7 +114,7 @@ Views placed here, are <b>temporarily detached</b> but will be <b>reused</b> wit
 >The View just above and below the View port are the <b>Detached Views</b>. These views which are detached are expected to be re-attached before code returns.
 
 
-2. When a new item is to be displayed, a view is taken from the recycle pool for reuse. Because this view must be re-bound by the adapter before being displayed, it is called a <>bdirty view</b>.
+* When a new item is to be displayed, a view is taken from the recycle pool for reuse. Because this view must be re-bound by the adapter before being displayed, it is called a <>bdirty view</b>.
 
 Same like the Scrap heap, we have another caching system for these type of views which is <b>Recycle Pool</b>:
 
@@ -123,11 +123,11 @@ It is a collection which consists of views that are assumed to have incorrect da
 >Recycler instance is provided to the Layout Manager at some points so that it can obtain new views or recycle old views.
 
 
-3. The dirty view is <b>recycled</b>: the adapter locates the data for the next item to be displayed and copies this data to the views for this item. References for these views are retrieved from the recycler view's view holder.
+* The dirty view is <b>recycled</b>: the adapter locates the data for the next item to be displayed and copies this data to the views for this item. References for these views are retrieved from the recycler view's view holder.
 
-4. The recycled view is added to the list of items in the <b>RecyclerView</b> that is about to go on-screen.
+* The recycled view is added to the list of items in the <b>RecyclerView</b> that is about to go on-screen.
 
-5. The recycled view goes on-screen as the user scrolls the RecyclerView to the next item in the list. Meanwhile, another view scrolls out of sight and is recycled according to the above steps.
+* The recycled view goes on-screen as the user scrolls the RecyclerView to the next item in the list. Meanwhile, another view scrolls out of sight and is recycled according to the above steps.
 
 > Each time the adapter inflates an item-layout, it also creates a corresponding ViewHolder. The ViewHolder uses FindViewById to get references to the views inside the inflated item-layout file. These references are used to load new data into the views every time the layout is recycled to show new data.
 
