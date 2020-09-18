@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=d1065cc6ce2f22814c3f3b6cc553d25312b49559">
+
+    <!-- Begin Jekyll SEO tag v2.3.0 -->
+<title>niharika2810.github.io | Personal blog site by theDroidLady.</title>
+<meta property="og:title" content="niharika2810.github.io" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Personal blog site by theDroidLady." />
+<meta property="og:description" content="Personal blog site by theDroidLady." />
+<link rel="canonical" href="http://localhost:4000/2019-11-18-constraintlayout-vs-other-layouts-a-battle-towards-performance-part-2.html" />
+<meta property="og:url" content="http://localhost:4000/2019-11-18-constraintlayout-vs-other-layouts-a-battle-towards-performance-part-2.html" />
+<meta property="og:site_name" content="niharika2810.github.io" />
+<script type="application/ld+json">
+{"publisher":null,"url":"http://localhost:4000/2019-11-18-constraintlayout-vs-other-layouts-a-battle-towards-performance-part-2.html","image":null,"headline":"niharika2810.github.io","dateModified":null,"datePublished":null,"sameAs":null,"mainEntityOfPage":null,"name":null,"author":null,"description":"Personal blog site by theDroidLady.","@type":"WebPage","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+<body>
+
+<div class="container">
+    <section id="main_content">
+        <article class="page">
+
+  <h1></h1>
+
+  <div class="entry">
+    <div style="text-align:center">
+<h1> Constraint vs Other Layouts- A Battle towards performance Part-2
+</h1>
+Blog by <a href="http://thedroidlady.com/">theDroidLady</a>
+</div>
+<p><br />
+<br /></p>
+<div style="text-align:center">
+<img align="center" width="300" height="300" src="/Images/Article/flip_book.gif" />
+</div>
+<p><br />
+<br /></p>
+<h2 id="introduction">Introduction</h2>
+
+<p>In the last article, I showed off my love for fashion which lead me to correlate it with the topic at hand i.e, <a href="https://medium.com/@nik.arora8059/constraintlayout-vs-other-layouts-a-battle-towards-performance-part-1-14d8116e876e">how UI is created and what will be the impact of view lifecycle methods in the context of various layouts</a>.</p>
+
+<p>In this blog, I will be discussing various tools I used to measure performance-</p>
+
+<p>1) <a href="https://developer.android.com/topic/performance/rendering/inspect-gpu-rendering#debug_overdraw">GPU overdraw</a></p>
+
+<p>2) <a href="https://developer.android.com/topic/performance/tracing">Systrace</a></p>
+
+<p>But before going into performance metrics, one should know the 16 ms/frame logic.</p>
+
+<h3 id="human-eyes-and-16-ms-per-refresh">Human eyes and 16 ms per refresh</h3>
+
+<p>The human brain receives and processes visual information continuously.This allows us some cool tricks.</p>
+
+<p>For example, when still images are displayed to follow each other fast enough, we perceive them as motion.</p>
+
+<p>A flip book is a good example that’s just at the edge of perception.</p>
+<div style="text-align:center">
+<img align="center" width="300" height="300" src="/Images/Article/flip_book.gif" />
+</div>
+<p>Flip books are just at the edge of what humans perceive as motion.</p>
+
+<p>1) At about <b>10–12 pages per second</b>, there is clearly motion, but you also retain awareness of individual pages.</p>
+
+<p>2) <b>24 pages per second</b> allow the human eye to see fluid motion, thanks to technologies such as motion blurring, which help you perceive motion when you should just see each individual frame of the animation. 24 images per second is a sweet spot for the film industry since it’s fast enough to show motion but cheap enough to produce films on a budget.</p>
+
+<p>3) <b>30 pages per second</b> is sufficient, but not life-like. It is enough for movies, but without fancy cinematic effects, it’s not convincing.</p>
+
+<p>4) <b>60 pages per second</b> is ideal, as most people see this as high-quality, smooth motion.</p>
+
+<h3 id="gpu-overdraw">GPU Overdraw</h3>
+
+<p>Overdraw as the name suggests is a term used to describe how many times a pixel on the screen has been redrawn in a single frame.</p>
+
+<p>Imagine painting a room and re-painting it all over again; this results in wasting time and energy to paint the room the first time.
+With overdraw in Android, we waste GPU time by coloring the pixels on the screen that end up being colored again by something else later.</p>
+
+<p>Fortunately, we can detect re-painting in android by selecting “Show overdraw areas” in “Debug GPU overdraw” under “Developer options” in phone settings.</p>
+<div style="text-align:center">
+<img align="center" width="300" height="600" src="/Images/Article/demo_page.png" />
+</div>
+<p>The colors are hinting at the amount of overdraw on your screen for each pixel, as follows:</p>
+
+<p>1) <b>True colour</b>: No overdraw</p>
+
+<p>2) <b>Blue</b>: Overdrawn once</p>
+
+<p>3) <b>Green</b>: Overdrawn twice</p>
+
+<p>4) <b>Pink</b>: Overdrawn thrice</p>
+
+<p>5) <b>Red</b>: Overdrawn four or more times</p>
+
+<p>We can prevent this <b>re-painting</b> by keeping the following things in mind -</p>
+
+<p>1) If you are using unnecessary background(transparent/white/Common background), remove that immediately.</p>
+
+<p>2) Flatten the hierarchy as much as possible.</p>
+
+<h3 id="systrace">Systrace</h3>
+
+<p>Systrace(Android System Trace) captures and displays the execution time of your app’s processes and other Android system processes, which helps you analyze the performance of your app.</p>
+
+<p>The tool combines data from the Android kernel such as the CPU scheduler, disk activity, and app threads.</p>
+
+<p>The tool uses this data to generate an HTML report that shows an overall picture of an Android-powered device’s system processes for a given period of time.</p>
+<div style="text-align:center">
+<img align="center" src="/Images/Article/systrace_output.png" />
+</div>
+<h3 id="what-you-should-do">What you should do</h3>
+
+<p>1) Find the <b>Frames</b> section in the Systrace output and get more information about specific frames.</p>
+
+<p>2) Examine the alerts, which show potential performance issues with your code.</p>
+
+<h3 id="running-systrace-through-command-line">Running Systrace through Command Line</h3>
+
+<p>I always prefer the command line(terminal) over UI frameworks as terminal always gives you more power than a UI framework possesses.</p>
+
+<p>To generate the HTML report for the app, you need to run <a href="https://developer.android.com/studio/profile/systrace/command-line">systrace</a> from the command line using the following syntax:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python systrace.py [options] [categories]
+</code></pre></div></div>
+
+<h3 id="capturing-a-system-trace-on-device">Capturing a System Trace on Device</h3>
+
+<p>For Android 9 or higher, we already have the System Tracing app which works exactly the same way command-line utility works.</p>
+
+<p><b><a href="https://developer.android.com/studio/debug/dev-options#enable">Developer Options</a> -&gt; Debugging -&gt; System Tracing -&gt;Record trace -&gt; Do some Actions in your app -&gt; Stop Trace -&gt; Share Trace (.perfetto-trace)-&gt; <a href="https://ui.perfetto.dev/#!/">Open on Perfetto UI</a></b></p>
+<div style="text-align:center">
+<img align="center" src="/Images/Article/perfetto_sample.png" />
+</div>
+
+<p>The image displays a part of the Systrace output. The numbers have the following meanings:</p>
+
+<p>1) Section for each process</p>
+
+<p>2) Frames section</p>
+
+<p>3) Frame indicator for a frame that rendered successfully</p>
+
+<p>4) Frame indicator for a frame that did not completely render</p>
+
+<p>5) Method calls for rendering selected frame</p>
+
+<p>Let me explain some of the key points -</p>
+
+<p>1) In the <b>Frames</b> line, on the graph to the right, you should see circles that are either green or red and are labelled with the letter <b>F</b> for Frame. You may need to zoom in (<b>w</b> on the keyboard) and pan right (<b>d</b> on the keyboard) to see individual, labelled circles.</p>
+
+<p>2) Select a green circle. This frame is green because it completed rendering in the allotted time slot of <a href="https://medium.com/mindorks/android-app-performance-optimization-cdccb422e38e">16 milliseconds</a> per frame.</p>
+
+<p>3) Select a red circle. This frame is red because it did not complete rendering within 16 milliseconds.</p>
+
+<p>4) On the left-hand pane, scroll down if necessary until you find <b>Render Thread</b>.</p>
+
+<p>On devices running <b>Android 5.0 (API level 21) or higher</b>, this work is split between the UI Thread and RenderThread. On prior versions, all work for creating a frame is done on the UI thread. If you do not see Render Thread, select UI Thread instead.</p>
+
+<p>5) Click on the black triangle to the right of <b>Render ThreadM</b> to expand the graph. This expands the bars that show you how much time was spent in each system action involved in rendering this frame.</p>
+
+<p>6) Open the <b>Alerts</b> tab on the right edge of the trace window. Click on an Alert type to see a list of all alerts in the bottom pane. Click an alert to see details, a description of what may be the problem, and links to further resources.</p>
+
+<p>To get into more detail on how systrace works, Please go through this <a href="https://developer.android.com/studio/profile/systrace.html">link</a>.</p>
+
+<p>In the next blog, I have shared the results I got after testing similar screens with different layouts.</p>
+
+
+  </div>
+</article>
+
+        <br/>
+        <a href="https://feedburner.google.com/fb/a/mailverify?uri=thedroidlady&amp;loc=en_US">Subscribe to theDroidLady blog by Email</a>
+    </section>
+</div>
+</body>
+</html>
+

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=d1065cc6ce2f22814c3f3b6cc553d25312b49559">
+
+    <!-- Begin Jekyll SEO tag v2.3.0 -->
+<title>niharika2810.github.io | Personal blog site by theDroidLady.</title>
+<meta property="og:title" content="niharika2810.github.io" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Personal blog site by theDroidLady." />
+<meta property="og:description" content="Personal blog site by theDroidLady." />
+<link rel="canonical" href="http://localhost:4000/2020-01-27-constraintlayout-vs-other-layouts-a-battle-towards-performance-part-3.html" />
+<meta property="og:url" content="http://localhost:4000/2020-01-27-constraintlayout-vs-other-layouts-a-battle-towards-performance-part-3.html" />
+<meta property="og:site_name" content="niharika2810.github.io" />
+<script type="application/ld+json">
+{"publisher":null,"url":"http://localhost:4000/2020-01-27-constraintlayout-vs-other-layouts-a-battle-towards-performance-part-3.html","image":null,"headline":"niharika2810.github.io","dateModified":null,"datePublished":null,"sameAs":null,"mainEntityOfPage":null,"name":null,"author":null,"description":"Personal blog site by theDroidLady.","@type":"WebPage","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+<body>
+
+<div class="container">
+    <section id="main_content">
+        <article class="page">
+
+  <h1></h1>
+
+  <div class="entry">
+    <div style="text-align:center">
+<h1> Constraint vs Other Layouts- A Battle towards performance Part-3
+</h1>
+Blog by <a href="http://thedroidlady.com/">theDroidLady</a>
+</div>
+<p><br />
+<br /></p>
+<h2 id="introduction">Introduction</h2>
+<p>Now we already know <a href="https://medium.com/1mgofficial/constraintlayout-vs-other-layouts-a-battle-towards-performance-part-2-21d6b5a6054c">various tools</a> that can be used for measuring the performance of layouts with different ViewGroups we have in Android.</p>
+
+<p>Here, we are sharing the result for different layouts testing performed on Coolpad and Android 6.0 Marshmallow.</p>
+
+<p>I also created a <a href="https://github.com/niharika2810/LayoutPerformance-Analysis-App">Github project</a> for your reference. You can check out the code for various layouts there.</p>
+
+<h3 id="disclaimer">Disclaimer:</h3>
+
+<p>These results may vary device to device and OEMs as well because optimizations vary from device to device and OS level too. You can check with your device.</p>
+
+<h3 id="here-are-the-results--">Here are the results -</h3>
+
+<p>1) View inside another View in the centre-</p>
+<div style="text-align:center">
+<img align="center" width="500" height="400" src="/Images/Article/result_1.png" />
+</div>
+<p>2) RecyclerView with 100 Items</p>
+<div style="text-align:center">
+<img align="center" width="500" height="400" src="/Images/Article/result_2.png" />
+</div>
+<p>3) Simple UI with TextViews and Images</p>
+<div style="text-align:center">
+<img align="center" width="500" height="400" src="/Images/Article/result_3.png" />
+</div>
+<p>4) Complex UI with Images, Text, ScrollView, Buttons etc.</p>
+<div style="text-align:center">
+<img align="center" width="500" height="400" src="/Images/Article/result_4.png" />
+</div>
+
+<p>Note*: Now there are lot enhancements with various viewgroups, so these results may vary for you.</p>
+
+<blockquote>
+  <p>Please Note:- Always measure your layout performance through systrace and GPU overdraw before finalizing any layout. These results can vary from device to device and with respect to the OS version too. On average, however, the results will remain the same.</p>
+</blockquote>
+
+<h3 id="conclusion--">Conclusion -</h3>
+
+<p>The complete analysis of the various layouts tells us -</p>
+
+<p>1) With Complex UI where we can have more hierarchies, it is wise to use constraint layouts.</p>
+
+<p>2) If you are using LinearLayout with weights/RelativeLayout with hierarchies, replace them with Constraint layout.</p>
+
+<p>3) For simple layouts with just one view centred on the screen, go for Frame layouts.</p>
+
+<p>4) For simple screens, where you have to place views just horizontally and vertically, go for LinearLayout.</p>
+
+<h3 id="references--">References -</h3>
+
+<p>1) <a href="https://medium.com/comparethemarket/three-key-lessons-when-migrating-to-constraintlayout-dff38c31a47">Three-key-lessons-when-migrating-to-constraintlayout</a></p>
+
+<p>2) <a href="https://github.com/googlesamples/android-constraint-layout-performance">Android-constraint-layout-performance</a></p>
+
+<p>3) <a href="https://stuff.mit.edu/afs/sipb/project/android/docs/tools/debugging/systrace.html">Systrace</a></p>
+
+<p>4) <a href="https://medium.com/rosberryapps/make-your-custom-view-60fps-in-android-4587bbffa557">Make-your-custom-view-60fps-in-android</a></p>
+
+<p>5) <a href="https://medium.com/mindorks/android-app-performance-optimization-cdccb422e38e">Android-app-performance-optimization</a></p>
+
+
+  </div>
+</article>
+
+        <br/>
+        <a href="https://feedburner.google.com/fb/a/mailverify?uri=thedroidlady&amp;loc=en_US">Subscribe to theDroidLady blog by Email</a>
+    </section>
+</div>
+</body>
+</html>
+

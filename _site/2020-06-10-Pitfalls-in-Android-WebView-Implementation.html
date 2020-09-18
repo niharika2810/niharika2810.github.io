@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=d1065cc6ce2f22814c3f3b6cc553d25312b49559">
+
+    <!-- Begin Jekyll SEO tag v2.3.0 -->
+<title>niharika2810.github.io | Personal blog site by theDroidLady.</title>
+<meta property="og:title" content="niharika2810.github.io" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Personal blog site by theDroidLady." />
+<meta property="og:description" content="Personal blog site by theDroidLady." />
+<link rel="canonical" href="http://localhost:4000/2020-06-10-Pitfalls-in-Android-WebView-Implementation.html" />
+<meta property="og:url" content="http://localhost:4000/2020-06-10-Pitfalls-in-Android-WebView-Implementation.html" />
+<meta property="og:site_name" content="niharika2810.github.io" />
+<script type="application/ld+json">
+{"publisher":null,"url":"http://localhost:4000/2020-06-10-Pitfalls-in-Android-WebView-Implementation.html","image":null,"headline":"niharika2810.github.io","dateModified":null,"datePublished":null,"sameAs":null,"mainEntityOfPage":null,"name":null,"author":null,"description":"Personal blog site by theDroidLady.","@type":"WebPage","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+<body>
+
+<div class="container">
+    <section id="main_content">
+        <article class="page">
+
+  <h1></h1>
+
+  <div class="entry">
+    <div style="text-align:center">
+<h1> Pitfalls in Android WebView Implementation
+</h1>
+Blog by <a href="http://thedroidlady.com/">theDroidLady</a>
+</div>
+<p><br /></p>
+<div style="text-align:center">
+<img align="center" width="300" height="400" src="/Images/Article/webview.gif" />
+</div>
+<p><br />
+<br /></p>
+<h2 id="introduction">Introduction</h2>
+
+<p>In the current era of hybrid mobile architecture, WebView is extensively used hand in hand to deliver dynamic web content.</p>
+
+<p>In this blog, I will be explaining the WebView pitfalls among different Android versions.</p>
+
+<p>This thought of writing on WebView came when one of my colleagues reported some design issues for Android Kitkat and lower versions.</p>
+
+<p>So I tried to understand why WebView is behaving differently in different OS versions. Then while reading about them, I found some other inconsistencies. So thought of sharing that through a blog.</p>
+
+<p>Before going into much detail, lets first understand the term <b>WebView</b>.</p>
+
+<h3 id="what-is-android-webview">What is Android WebView?</h3>
+
+<p><b>WebView</b> is an Android provided View like <b>TextView, EditText, Button etc</b>.</p>
+
+<p>By using WebView, we can load the web(Html) pages as a part of our activity layout.</p>
+
+<p>It uses <b>Webkit rendering engine</b> to display web pages and includes methods to navigate forward and backwards through a history, zoom in and out, perform text searches and more.</p>
+
+<p>To learn more about WebView, read this <a href="https://developer.android.com/reference/android/webkit/WebView">document</a>.</p>
+
+<p>Now, let’s talk about the pitfalls:</p>
+
+<h3 id="1-no-webview-update-in-kitkat-and-lower-versions">1) No WebView update in Kitkat and lower versions</h3>
+
+<p>1) In older versions of Android (4.3 and below), WebView uses code based on Apple’s Webkit — the same tech behind the Safari browser.</p>
+
+<p>A <a href="https://www.zdnet.com/article/half-of-all-android-devices-still-vulnerable-to-privacy-disaster-browser-bug/">vulnerability</a> was discovered in the WebView tool that affects anyone using Android 4.3 or earlier.</p>
+
+<p>This vulnerability allows WebView to be exploited. When the vulnerability was reported, Google decided it would leave the patching of the 4.3 and earlier releases up to someone else(<a href="https://us.nuumobile.com/android-oems-vs-odms-5-things-you-should-know/">OEMs</a>).</p>
+
+<p>Google fixed the Jelly Bean WebView issue with Android 4.4 KitKat patch.</p>
+
+<ul>
+  <li>The WebView shipped with <a href="https://www.androidcentral.com/android-kitkat">Android 4.4</a> (KitKat) is based on the same code as Chrome(which uses Google’s Blink engine) for Android version 30. This WebView does not have full feature parity with Chrome for Android and is given the version number 30.0.0.0.</li>
+</ul>
+
+<p>The updated WebView shipped with Android 4.4.3 has the version number <b>33.0.0.0</b>.</p>
+
+<p>Then came a design issue in <b>Android KitKat</b> that left the OS exposed to newly-disclosed bugs in the <b>Chromium</b> project. Android 5.0 was released with WebView updates to fix it.</p>
+
+<blockquote>
+  <p>In all versions of Android(KitKat and below), WebView has been bundled with Android firmware. From a security standpoint, that wasn’t good, because if a new flaw was found in WebView, the only way a fix would reach end-users was through the unwieldy process of delivering it from Google to OEMs and carriers and finally, if ever, to the end-user.</p>
+</blockquote>
+
+<ul>
+  <li>Then In <a href="https://www.androidcentral.com/lollipop">Android 5.0</a>, WebView was broken out as a separate app, presumably to allow timely updates through Google Play without requiring firmware updates to be issued. So, Now one can update WebView from Google Play.</li>
+</ul>
+
+<h3 id="2-webview-on-android-7-and-above-doesnt-render-the-page">2) WebView on Android 7 and above doesn’t render the page</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>webView.setWebViewClient(new WebViewClient() {
+
+        public void onReceivedError(WebView view, int errorCode, String description, String failingUrl) {
+            //do something here
+        }
+
+        @Override
+        public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest request) {
+            return true;
+        }
+    });
+    webView.loadUrl("https://google.com/");
+</code></pre></div></div>
+
+<p>This code perfectly works on &lt;7.0 android version devices.</p>
+
+<p>When you try to debug it, you will see it loads something(google URL appears in <b>shouldOverrideUrlLoading</b> method) but it shows nothing. No error logs will appear.</p>
+
+<p>The <b>reason</b> is right here -</p>
+
+<p>For Pre Android N,</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@Deprecated
+public boolean shouldOverrideUrlLoading(WebView view, String url) {
+    return false;
+}
+</code></pre></div></div>
+
+<p>and this is since Android N,</p>
+
+<p>1) @return True if the host application wants to leave the current WebView and handle the URL itself, otherwise return false.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@Override
+    public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest request) {
+        return true;
+    }
+</code></pre></div></div>
+
+<p>Solution -</p>
+
+<p>Returning <b>false</b> from your code will solve your problem 😃.</p>
+
+<h3 id="3-failed-to-load-webview-provider-no-webview-installed-android-internal-crash">3) Failed to load WebView provider: No WebView installed (Android Internal crash).</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Caused by android.util.AndroidRuntimeException:
+android.webkit.WebViewFactory$MissingWebViewPackageException:
+Failed to load WebView provider: No WebView installed
+at android.webkit.WebViewFactory.getProviderClass(WebViewFactory.java:371)
+at android.webkit.WebViewFactory.getProvider(WebViewFactory.java:194)
+at android.webkit.WebView.getFactory(WebView.java:2325)
+at android.webkit.WebView.ensureProviderCreated(WebView.java:2320)
+at android.webkit.WebView.setOverScrollMode(WebView.java:2379)
+at android.view.View.&lt;init&gt;(View.java:4371)
+at android.view.View.&lt;init&gt;(View.java:4519)
+at android.view.ViewGroup.&lt;init&gt;(ViewGroup.java:582)
+</code></pre></div></div>
+
+<p>This problem seems to be happening in Lenovo, Oneplus, Samsung, Motorola, Xiaomi etc.(Non-rooted Android 5 and above devices).</p>
+
+<p>It’s very hard to believe that such devices don’t have WebView installed.</p>
+
+<p>Here’s what I discovered while digging the <b>reason</b> for this issue:</p>
+
+<p>As we know that WebView has been shipping as a separate app from android 5.0,<b> at the time view is being inflated, the WebView package is being updated by the OS and therefore it can’t find the WebView package for those few moments</b>.</p>
+
+<p>People on the GitHub bug tracker said chrome and android were not going to fix this because it’s normal behaviour and up to the developer to handle it.</p>
+
+<p>So here’s a hacky solution that prevents crashes (You can catch the specific exception too):</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>try {
+        // the inflating code that's causing the crash
+
+    } catch (Exception e) {
+        if (e.getMessage() != null &amp;&amp; e.getMessage().contains("webview")) {
+            // If the system failed to inflate this view because of the WebView (which could
+            // be one of several types of exceptions), it likely means that the system WebView
+            // is either not present (unlikely) OR in the process of being updated (also unlikely).
+            // It's unlikely but we have been receiving a lot of crashes.
+            // In this case, show the user a message and finish the activity
+        }
+  }
+</code></pre></div></div>
+
+<p>So next time when the user opens the app, probably they won’t see the crash again as WebView must be updated by then.</p>
+
+<p>Happy Coding !!</p>
+
+
+  </div>
+</article>
+
+        <br/>
+        <a href="https://feedburner.google.com/fb/a/mailverify?uri=thedroidlady&amp;loc=en_US">Subscribe to theDroidLady blog by Email</a>
+    </section>
+</div>
+</body>
+</html>
+

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=d1065cc6ce2f22814c3f3b6cc553d25312b49559">
+
+    <!-- Begin Jekyll SEO tag v2.3.0 -->
+<title>niharika2810.github.io | Personal blog site by theDroidLady.</title>
+<meta property="og:title" content="niharika2810.github.io" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Personal blog site by theDroidLady." />
+<meta property="og:description" content="Personal blog site by theDroidLady." />
+<link rel="canonical" href="http://localhost:4000/2020-08-13-android-allowBackup-Demystified.html" />
+<meta property="og:url" content="http://localhost:4000/2020-08-13-android-allowBackup-Demystified.html" />
+<meta property="og:site_name" content="niharika2810.github.io" />
+<script type="application/ld+json">
+{"publisher":null,"url":"http://localhost:4000/2020-08-13-android-allowBackup-Demystified.html","image":null,"headline":"niharika2810.github.io","dateModified":null,"datePublished":null,"sameAs":null,"mainEntityOfPage":null,"name":null,"author":null,"description":"Personal blog site by theDroidLady.","@type":"WebPage","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+<body>
+
+<div class="container">
+    <section id="main_content">
+        <article class="page">
+
+  <h1></h1>
+
+  <div class="entry">
+    <div style="text-align:center">
+<h1> Android allowBackup demystified
+</h1>
+Blog by <a href="http://thedroidlady.com/">theDroidLady</a>
+</div>
+<p><br /></p>
+<div style="text-align:center">
+<img align="center" width="600" height="300" src="/Images/Article/allow_backup.jpg" />
+</div>
+<p><br />
+<br /></p>
+<h2 id="introduction">Introduction</h2>
+
+<p>There are all sorts of “backups” that help get you out of various situations. Think of the spare tire in your trunk or the extra pieces of webbing in a climbing anchor. If you’ve ever been rock climbing, you know that it’s essential to build redundancies into your anchors. That way, if one part fails, you’ve got another part as a backup.</p>
+
+<p>Likewise, Android provides you with an impressive setting by the name of allowBackup which helps us automatically backing up application data.</p>
+
+<h3 id="what-does-android-allowbackup-do">What Does Android allowBackup Do?</h3>
+
+<p>As the <a href="https://developer.android.com/guide/topics/data/autobackup">documentation</a> says, “Auto Backup for Apps automatically backs up a user’s data from apps that target and run on Android 6.0 (API level 23) or later.”<br /></p>
+
+<p>We can leverage auto backup in our Android app so that our users can more quickly recover their data if they ever switch phones or reinstall our app after having uninstalled it.<br /></p>
+
+<p>If the user deletes the app in any way, including via a factory reset of their device, the data for the app will still be available when the user re-downloads the app and the .apk is installed. Auto Backup also works across devices, meaning that when your user gets a new phone, they won’t lose key information from your app.<br /></p>
+
+<h3 id="where-is-the-backup-datastored">Where Is the Backup Data Stored?</h3>
+
+<p>Android preserves app data by uploading it to the user’s Google Drive (by default) where it’s protected by the user’s Google Account credentials.</p>
+
+<p>Data is stored in a private folder in the user’s Google Drive account. The saved data does not count towards the user’s personal Google Drive quota. Only the most recent backup is stored. When a backup is made, the previous backup (if one exists) is deleted. The backup data can’t be read by the user or other apps on the device.</p>
+
+<p>Users can see a list of apps that have been backed up in the Google Drive Android app. On an Android-powered device, users can find this list in the Drive app’s navigation drawer under Settings &gt; Backup and reset &gt; App data.</p>
+
+<h3 id="how-much-data-can-be-backedup">How Much Data Can Be Backed Up?</h3>
+
+<p>Users can store up to 25MB of data, which persists across the lifetime of an app being installed on your device.</p>
+
+<p>In practice, however, this is more than enough if you just need to save settings and preferences.</p>
+
+<h3 id="what-is-backedup">What Is Backed Up?</h3>
+
+<p>By default, Auto Backup includes files in most of the directories that are assigned to your app by the system:</p>
+
+<p>1) Shared preferences files</p>
+
+<p>2) Files saved to your app’s internal storage, accessed by <a href="https://developer.android.com/reference/android/content/Context#getFilesDir()">getFilesDir()</a> or <a href="https://developer.android.com/reference/android/content/Context#getDir(java.lang.String,%20int)">getDir(String, int)</a></p>
+
+<p>3) Files in the directory returned by <a href="https://developer.android.com/reference/android/content/Context#getDatabasePath(java.lang.String)">getDatabasePath(String)</a>, which also includes files created with the SQLiteOpenHelper class</p>
+
+<p>4) Files on external storage in the directory returned by <a href="https://developer.android.com/reference/android/content/Context#getExternalFilesDir(java.lang.String)">getExternalFilesDir(String)</a></p>
+
+<p>You can configure your app to include and exclude particular files.</p>
+
+<h3 id="how-can-we-customize-what-to-include-and-exclude-from-thebackup">How Can We Customize What to Include and Exclude From the Backup?</h3>
+
+<p>For this we have <a href="https://developer.android.com/guide/topics/manifest/application-element#fullBackupContent">android:fullBackupContent</a>, which points to an XML file that contains <a href="https://developer.android.com/guide/topics/data/autobackup">full backup rules</a> for Auto Backup. These rules determine what files get backed up.</p>
+
+<p>You can do this in just a couple of steps:</p>
+
+<p>1) Create an XML file auto_backup_rules.xml in the res/xml directory.</p>
+
+<p>2) Specify what you want to include or exclude from the backup using the syntax below:</p>
+
+<p>a)If a type is specified in both the include and the exclude tags, the item specified in the exclude tag takes precedence.</p>
+
+<p>b)You can add a new <include> or <exclude> tag for every new resource you want to specify.</exclude></include></p>
+
+<p>c)The path tag specifies the path to a resource you want to include or exclude. For example: <exclude domain="database" path="my_db.db"></exclude></p>
+
+<p>3) Include your backup file in your Android Manifest:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    &lt;application ... android:fullBackupContent="@xml/auto_backup_rules"&gt;
+</code></pre></div></div>
+
+<p>Here is the sample example for the XML file:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span>
+<span class="nt">&lt;full-backup-content&gt;</span>
+    <span class="nt">&lt;include</span> <span class="na">domain=</span><span class="s">"sharedpref"</span> <span class="na">path=</span><span class="s">"."</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;exclude</span> <span class="na">domain=</span><span class="s">"sharedpref"</span> <span class="na">path=</span><span class="s">"device.xml"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/full-backup-content&gt;</span>
+</code></pre></div></div>
+
+<p>The above sample backups all shared preferences except device.xml.</p>
+
+<h3 id="when-can-the-backups-be-triggered">When Can the Backups Be Triggered?</h3>
+
+<p>Backups occur automatically when all of the following conditions are met:</p>
+
+<p>1) The user has enabled backup on the device. In Android 9, this setting is in Settings &gt; System &gt; Backup.</p>
+
+<p>2) At least 24 hours have elapsed since the last backup.</p>
+
+<p>3) The device is idle.</p>
+
+<p>4) The device is connected to a Wi-Fi network (if the device user hasn’t opted-in to mobile-data backups).</p>
+
+<h3 id="do-i-need-to-worry-about-thebackup">Do I Need to Worry About the Backup?</h3>
+
+<p>Android backups rely on the Android Debug Bridge (ADB) command to perform backup and restore. ADB, however, has been a soft target for hackers and is still not trusted by respected developers. The idea that someone can inject malicious code into your backup data is unsettling, to say the least. This generally isn’t a problem for end users as it requires debugging to be enabled on the device, but since a lot of Android users are fond of exploring and rooting their devices, it can become a serious problem.</p>
+
+<p>Once backed up, all application data can be read by the user. adb restore allows the creation of application data from a source specified by the user. Following a restore, applications should not assume that the data, file permissions, and directory permissions were created by the application itself.</p>
+
+<p>Therefore, applications that handle and store sensitive information such as card details, passwords etc. should have this setting explicitly set to false - by default, it is set to true - to prevent such risks, or you can also customize what needs to be backed up.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;application ...        android:allowBackup="false"&gt;
+</code></pre></div></div>
+
+  </div>
+</article>
+
+        <br/>
+        <a href="https://feedburner.google.com/fb/a/mailverify?uri=thedroidlady&amp;loc=en_US">Subscribe to theDroidLady blog by Email</a>
+    </section>
+</div>
+</body>
+</html>
+

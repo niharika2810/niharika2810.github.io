@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=d1065cc6ce2f22814c3f3b6cc553d25312b49559">
+
+    <!-- Begin Jekyll SEO tag v2.3.0 -->
+<title>niharika2810.github.io | Personal blog site by theDroidLady.</title>
+<meta property="og:title" content="niharika2810.github.io" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Personal blog site by theDroidLady." />
+<meta property="og:description" content="Personal blog site by theDroidLady." />
+<link rel="canonical" href="http://localhost:4000/2020-07-23-android-development-best-practices.html" />
+<meta property="og:url" content="http://localhost:4000/2020-07-23-android-development-best-practices.html" />
+<meta property="og:site_name" content="niharika2810.github.io" />
+<script type="application/ld+json">
+{"publisher":null,"url":"http://localhost:4000/2020-07-23-android-development-best-practices.html","image":null,"headline":"niharika2810.github.io","dateModified":null,"datePublished":null,"sameAs":null,"mainEntityOfPage":null,"name":null,"author":null,"description":"Personal blog site by theDroidLady.","@type":"WebPage","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+<body>
+
+<div class="container">
+    <section id="main_content">
+        <article class="page">
+
+  <h1></h1>
+
+  <div class="entry">
+    <div style="text-align:center">
+<h1> Android Development Best Practices
+</h1>
+Blog by <a href="http://thedroidlady.com/">theDroidLady</a>
+</div>
+<p><br /></p>
+<div style="text-align:center">
+<img align="center" width="300" height="300" src="/Images/Article/best_practice.jpeg" />
+</div>
+<p><br />
+<br /></p>
+<h2 id="introduction">Introduction</h2>
+
+<p><b>Android development</b> continues to dominate the world of mobile development.
+ Fun projects, great pay, and tons of job prospects are just some of the reasons developers are starting their journeys into the exciting world of the Android operating system.
+ Some <a href="https://proandroiddev.com/theres-never-been-a-better-time-to-learn-android-development-d1724409bdfc">experts</a> say that there has never been a better time to learn Android skills, especially since the recent updates, like the addition of Kotlin and improvements to Google’s policies.</p>
+
+<p>It’s been five years now that I’ve been into Android development and there has been no single day I haven’t learned something new. But with these passing years, what I have realized is:
+<br /><b>Just writing the code is not enough, Writing in an efficient way is the real challenge.</b></p>
+
+<h3 id="tips-and-not-tricks">Tips and not Tricks</h3>
+
+<p>1) <b>Choose your App Architecture wisely based on your need, not just what the trend is.</b><br /><br />
+The architecture defines where the application performs its core functionality and how that functionality interacts with things like the database and the user interface.
+<br />We have many architectures like MVC, MVP, MVVM, MVI, Clean Architecture.
+<br />If any of these architectures is fulfilling your project requirements and you are following the standard coding guidelines and keeping your code clean, no architecture is bad.</p>
+
+<p>2) Consider using <b>SVGs</b> or <b>WebPs</b> for your image drawables.<br /><br />
+Supporting multiple resolutions are a sometimes nightmare to developers. Including multiple images for different resolutions also increases the project size.
+<br />The solution is to use Vector Graphics such as SVG images or use WebP which can make a big difference in solving the image size problem by compressing lossless images.</p>
+
+<p>3)  Choose your layout wisely and separate out the reusable XML and add it using <a href="https://developer.android.com/training/improving-layouts/reusing-layouts">include</a> tag.<br /><br />
+  We have different layouts like <a href="https://developer.android.com/training/constraint-layout">ConstraintLayout</a>, <a href="https://developer.android.com/reference/android/widget/LinearLayout">LinearLayout</a>,
+   <a href="https://developer.android.com/guide/topics/ui/layout/relative">RelativeLayout</a>, <a href="https://developer.android.com/reference/android/widget/FrameLayout">FrameLayout</a>,
+    <a href="https://developer.android.com/reference/androidx/coordinatorlayout/widget/CoordinatorLayout">CoordinatorLayout</a>. I did <a href="https://medium.com/1mgofficial/constraintlayout-vs-other-layouts-a-battle-towards-performance-part-1-14d8116e876e">performance</a> analysis for some of them and found out that one should use layout based on their scenario/requirement only.
+  <br />Also, If you have some part of your XML getting reused in different layouts, extract it in a separate layout and use <include></include> tag to avoid replication of code in different layouts.</p>
+
+<p>4) Learn how to use <a href="https://www.journaldev.com/21533/android-build-types-product-flavors">Build types</a>, <a href="https://levelup.gitconnected.com/simple-guide-to-android-product-flavors-674106455038#:~:text=Simply%20put%2C%20a%20product%20flavor,app%20using%20a%20single%20codebase.">Product Flavors</a> and <a href="https://developer.android.com/studio/build/build-variants">Build Variants</a> and make most out of it for faster and easier development.<br /><br /></p>
+<h4 id="build-type">Build Type</h4>
+<p>Decides how our code will be compiled. For instance, If we want to sign our .apk with debug key, we put our debug configuration into debug build type. If we want to have obfuscated code when it is compiled and ready to release, we put that configuration on our release build type. If we want to log our HTTP request in debug mode but we want to disable it on release mode, we put that configuration on build types or call build types in library dependencies.
+<br /></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>buildTypes
+{
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            applicationIdSuffix ".debug"
+        }
+}
+</code></pre></div></div>
+
+<p>Here is the simplest example:<br />
+When you run your app in debug mode, your application package name will be packagename.debug and if you run your app in release mode, your application package name will be packagename.</p>
+
+<h3 id="product-flavor">Product Flavor<br /></h3>
+<p>Let’s say we have are developing your app for your customer users. Everything is going fine for customer app. Then your product owner said that you need to develop that app for admin users. Admin user app should have all functionalities that customer app has. But also admin user can have access to statistics page and admin user should see the app in different colours and resources. And also your admin app’s analytics should not be mixed with customer app.What will you do? The answer is Product Flavor. Same app, different behaviour.
+<br />Edit your Gradle file:
+<br /></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>android
+ {
+    ...
+    defaultConfig {...}
+    buildTypes {...}
+    productFlavors {
+        admin {
+            ..
+        }
+        customer {
+            ..
+        }
+    }
+}
+</code></pre></div></div>
+
+<h3 id="build-variants">Build Variants</h3>
+<p>Combines your build types and product flavors. Sync your project after you update your build.gradle. Then you will see all your build variants.</p>
+<div style="text-align:center">
+<img align="center" width="500" height="200" src="/Images/Article/build_variants.png" />
+</div>
+<p>5) Learn &amp; Use <a href="https://developer.android.com/studio/command-line/adb#:~:text=Android%20Debug%20Bridge%20(adb)%20is,of%20commands%20on%20a%20device.">Android Debug Bridge (ADB)</a> to debug your application.<br /><br />
+Android Debug Bridge (ADB) is a versatile command-line tool that lets you communicate with a device.
+It allows you to do things on an Android device that may not be suitable for everyday use, yet can greatly benefit your user or developer experience. For example, you can install apps outside of the Play Store, debug apps, access hidden features, and bring up a Unix shell so you can issue commands directly on the device.
+ADB provides you with more details than your Android Studio Logcat. Just try it once and you can thank me later :-)</p>
+
+<p>6) Configure your gradle.properties to increase your build speed.<br /><br />
+Long build times have always been a problem in the developer’s life.</p>
+
+<p><br /></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>org.gradle.daemon=true
+org.gradle.parallel=true
+org.gradle.configureondemand=true
+android.enableBuildCache=true
+org.gradle.jvmargs=-Xmx3072m -XX:MaxPermSize=512m -XX:+HeapDumpOnOutOfMemoryError -Dfile.encoding=UTF-8
+org.gradle.caching= true
+android.useAndroidX=true
+android.enableJetifier=true
+kapt.incremental.apt=true
+kapt.use.worker.api=true
+</code></pre></div></div>
+
+<p>Showing you a sample of enhancements I did. You can read more about speeding up <a href="https://developer.android.com/studio/build/optimize-your-build">here</a>.</p>
+
+<p>7) Keep a check on structural problems in your App code through <a href="https://developer.android.com/studio/write/lint">Lint</a>.<br /><br />
+The lint tool helps find poorly structured code that can impact the reliability and efficiency of your Android apps.
+The command for MAC:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./gradlew lint
+</code></pre></div></div>
+<p>For Windows:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gradlew lint
+</code></pre></div></div>
+
+<p>8) Log everything in DEBUG mode only.<br /><br />
+We use logs to display useful information, errors, workflows or even to debug something.
+<br />But, Every information that we log can be a potential source of security issues! So make sure you remove before the code goes live.
+<br />And If you really want to keep these logs, you can either use <a href="https://medium.com/mindorks/better-logging-in-android-using-timber-72e40cc2293d">Timber</a> library which can log your messages and gives you the control over the flow of logs or you can create your own <a href="https://gist.github.com/niharika2810/eaf5b35b65b73883ef7714c57b3dffae">custom class</a> to print logs in debug mode.</p>
+
+<p>9) Never add whole <b>third party library</b> if it’s possible for you to extract specific methods or small no. of classes for your functionality.<br />
+<br />Just add those classes to your project and modify them accordingly.</p>
+
+<p>10) Detect and Fix <b>memory leaks</b> in Android App time to time. <br /><br />
+“A small leak will sink a great ship.” — Benjamin Franklin
+<br />Use memory tools like <a href="https://square.github.io/leakcanary/">Leak canary</a> to detect the cause for the memory leak.</p>
+
+<p>Its knowledge of the internals of the Android Framework gives it a unique ability to narrow down the cause of each leak, helping developers dramatically reduce OutOfMemoryError crashes.</p>
+
+<p>11) Handle <a href="https://developer.android.com/guide/topics/resources/runtime-changes">Configuration changes</a> for your App.<br /><br />
+    Sometimes handling the orientation changes for your Activity, Fragment or AsyncTasks becomes most frustrating things to deal. If orientation changes are not handled properly then it results in unexpected behaviour of the application.
+    When such changes occur, Android restarts the running Activity means it destroys and again created.
+   <br /> There are different options to handle the orientation changes:<br />
+    1. Lock screen orientation<br />
+    2. Prevent Activity to recreated<br />
+    3. Save basic state<br />
+    4. Save complex objects<br /></p>
+
+<p>12) Perform validations in screens like input form on Client end only.<br /><br />
+Do we really need to hit backend for the <b>validations</b> like Is users email valid or Is user’s contact number is of the required length?
+<br />Consider this kind of cases and write your logic accordingly.</p>
+
+<p>13) Don’t create references to activities that will prevent them from being <b>garbage collected</b> when they are done.<br /><br />
+Consider a very simple scenario — you need to register a local broadcast receiver in your activity. If you don’t unregister the broadcast receiver, then it still holds a reference to the activity, even if you close the activity.</p>
+
+<p>How to <b>solve</b> this?<br /> Always remember to call unregister receiver in onStop() of the activity.</p>
+
+<p>Like this, Find more scenarios and fix them.</p>
+
+<p>14) Use <b>App Chooser</b> for your implicit intents and always handle NoActivityFound Exception.<br /><br />
+If multiple apps can respond to the intent and the user might want to use a different app each time, you should explicitly show a chooser dialog.
+<br />Also, if for some reason no app is available, your app shouldn’t crash. Please handle it through try /catch with showing some toast message to the user.</p>
+
+<p>15) Put all your sensitive information in <b>gradle.properties</b> and never push it to your version control system.<br /><br />
+Don’t do this. This would appear in the version control system.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>signingConfigs
+ {
+    release {
+        // DON'T DO THIS!!
+        storeFile file("myapp.keystore")
+        storePassword "password123"
+        keyAlias "thekey"
+        keyPassword "password789"
+    }
+}
+</code></pre></div></div>
+
+<p>Instead, make a gradle.properties file :
+<br /></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>KEYSTORE_PASSWORD=password123
+KEY_PASSWORD=password789
+</code></pre></div></div>
+
+<p>That file is automatically imported by Gradle, so you can use it in build.gradle as such:
+<br /></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>signingConfigs
+{
+    release
+    {
+        try
+         {
+            storeFile file("myapp.keystore")
+            storePassword KEYSTORE_PASSWORD
+            keyAlias "thekey"
+            keyPassword KEY_PASSWORD
+        }
+        catch (ex) {
+            throw new InvalidUserDataException("You should define KEYSTORE_PASSWORD and KEY_PASSWORD in gradle.properties.")
+        }
+    }
+}
+</code></pre></div></div>
+
+<p>16) Implement SSL certificate pinning to prevent <a href="https://ieeexplore.ieee.org/document/4768661/?part=1">Man-in-the-middle Attack (MITM)</a>.<br /><br />
+To intercept any request, we mostly use a proxy tool. The proxy tool installs its own certificate on the device and application trust that certificate as a valid certificate and allow proxy tool to intercept application traffic. This way we can help hackers to tamper or know our data stuff.
+<br />With SSL Pinning implementation, the application does not trust custom certificates and does not allow proxy tools to intercept the traffic.
+<br />It’s a method that depends on server certificate verification on the client-side. Read more <a href="https://www.nowsecure.com/blog/2017/06/15/certificate-pinning-for-android-and-ios-mobile-man-in-the-middle-attack-prevention/">here</a>.</p>
+
+<p>17) Use <a href="https://developer.android.com/training/safetynet/attestation">SafetyNet Attestation API</a> to help determine whether your servers are interacting with your genuine app running on a genuine Android device.<br /><br />
+The API verifies the following:
+1) Whether the device is rooted or not.<br />
+2) Whether the device is monitored.<br />
+3) Whether the device has recognized hardware parameters.<br />
+4) Whether the software is Android compatible.<br />
+5) Whether the device is free form malicious apps.<br />
+But before implementing it, please check the <a href="https://developer.android.com/training/safetynet/attestation-checklist">Dos and Don’ts</a>.</p>
+
+<p>18) Use <a href="https://developer.android.com/reference/androidx/security/crypto/EncryptedSharedPreferences">EncryptedSharedPreferences</a> instead of SharedPreferences for storing sensitive information like your auth tokens etc.<br /><br /></p>
+
+<p>19) Use the <a href="https://medium.com/@josiassena/using-the-android-keystore-system-to-store-sensitive-information-3a56175a454b">Android Keystore system</a> to store and retrieve sensitive information from your storage like databases etc.<br /><br /></p>
+
+<p>The <a href="https://developer.android.com/training/articles/keystore.html">Android keystore</a> provides a secure system level credential storage. With the keystore, an app can create a new Private/Public key pair, and use this to encrypt application secrets before saving it in the private storage folders.
+While developing AarogyaSetu, I learnt about using Keystore for encrypting and decrypting highly sensitive information. You can check the implementation <a href="https://github.com/nic-delhi/AarogyaSetu_Android">here</a>.<br /></p>
+
+<blockquote>
+  <p>Note: We have an <a href="https://developer.android.com/guide/topics/data/autobackup">Android Backup</a> mechanism which is turned on by default. Android preserves app data by uploading it to the user’s Google Drive — where it’s protected by the user’s Google Account credentials and can be easily downloaded for the same credentials on other devices.
+But, When you have encrypted something with Android Keystore, you won’t be able to restore it because the cypher key is only for that specific device. We don’t have a sync mechanism for Keystore like iOS and their keychain. A better way to backup your users’ data is to store them on your backend.</p>
+</blockquote>
+
+<p>20) Call Google Play services methods to ensure that your app is running on a device that has the latest updates to protect against known vulnerabilities found in the default security provider.<br /><br />
+For example, a vulnerability was discovered in OpenSSL (<a href="http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2014-0224">CVE-2014–0224</a>) that can leave apps open to a “man-in-the-middle” attack that decrypts secure traffic without either side knowing. With Google Play services version 5.0, a fix is available, but apps must ensure that this fix is installed. By using the Google Play services methods, your app can ensure that it’s running on a device that’s secured against that attack.<br />
+To protect against these vulnerabilities, <a href="https://developers.google.com/android/guides/overview">Google Play services</a> provides a way to automatically update a device’s security provider to protect against known exploits. Read more <a href="https://developer.android.com/training/articles/security-gms-provider">here</a>.</p>
+
+<p>21) Implement <a href="https://developer.android.com/training/safetynet/recaptcha">reCAPTCHA</a> to ensure your app is not automated i.e handled by a robot.<br /><br />
+reCAPTCHA is a free service that uses an advanced risk analysis engine to protect your app from spam and other abusive actions. If the service suspects that the user interacting with your app might be a bot instead of a human, it serves a CAPTCHA that a human must solve before your app can continue executing.</p>
+
+<p>22) Write <a href="https://developer.android.com/training/testing/unit-testing">Unit tests</a> for your feature.<br /><br />
+Listing out some benefits:<br />
+1) Unit tests help to fix bugs early in the development cycle and save costs.<br />
+2) It helps the developers to understand the code base and enables them to make changes quickly<br />
+3) Good unit tests serve as project documentation.<br />
+4) You become more confident about the stuff you are writing.<br />
+There are many more <a href="https://www.seguetech.com/the-benefits-of-unit-testing/">benefits</a>.:-)</p>
+
+<p>23) Make <b>security decisions</b> on the server-side whenever possible.<br /><br />
+Don’t trust your application’s client-side. Hacker can easily tamper or hack your application’s codebase and can manipulate your code. So, it’s better to have checks on the backend side whenever possible.</p>
+
+<p>24) Learn how to use <a href="https://developer.android.com/studio/build/shrink-code">Proguard</a> to the maximum for code Obfuscation and Optimization.<br /><br />
+It is quite easy to reverse engineer Android applications, so if you want to prevent this from happening, you should use ProGuard for its main function: obfuscation, a process of creating source code in a form that is hard for a human to understand(changing the name of classes and members).<br />
+ProGuard has also two other important functions: shrinking which eliminates unused code and is obviously highly useful and also optimization.
+ <br />Optimization operates with Java bytecode, though, and since Android runs on Dalvik bytecode which is converted from Java bytecode, some optimizations won’t work so well. So you should be careful there.</p>
+
+<p>25) Use <a href="https://developer.android.com/training/articles/security-config">Network security configuration</a> to improve your app’s network security.<br /><br />
+Security is more about layers of protection than a single iron wall. The Android Network Security Configuration feature provides a simple layer to protect apps from unintentionally transmitting sensitive data in unencrypted cleartext.<br />
+If you don’t know what “unencrypted communications” means, think of it this way — let’s say your office has the policy to send all shipments via UPS. A new intern joins the office and is tasked with shipping equipment to an office across the country.<br /> Oblivious to the policy and with all the best intentions, the intern sets up all shipments to be sent through an unknown, less expensive service.<br /> The Android Network Security Configuration feature is like the shipping/receiving manager who examines all inbound and outbound shipments and stops the shipment before the equipment gets into the hands of an unvetted delivery system. It can be used to prevent the accidental use of untrusted, unencrypted connections.
+<br />Read more <a href="https://www.nowsecure.com/blog/2018/08/15/a-security-analysts-guide-to-network-security-configuration-in-android-p/">here</a>.</p>
+
+<h4 id="the-critics-principle">The Critics principle<br /></h4>
+<p>When you’re reviewing code of your teammates don’t be a friend, Be their arch enemy, don’t let them make mistakes that you might have to clean someday. Cleaning other’s shit will only make your hand dirty. Enforce good practices in code reviews.</p>
+
+
+  </div>
+</article>
+
+        <br/>
+        <a href="https://feedburner.google.com/fb/a/mailverify?uri=thedroidlady&amp;loc=en_US">Subscribe to theDroidLady blog by Email</a>
+    </section>
+</div>
+</body>
+</html>
+

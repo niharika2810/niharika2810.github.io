@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=d1065cc6ce2f22814c3f3b6cc553d25312b49559">
+
+    <!-- Begin Jekyll SEO tag v2.3.0 -->
+<title>niharika2810.github.io | Personal blog site by theDroidLady.</title>
+<meta property="og:title" content="niharika2810.github.io" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Personal blog site by theDroidLady." />
+<meta property="og:description" content="Personal blog site by theDroidLady." />
+<link rel="canonical" href="http://localhost:4000/2020-09-18-how-recyclerView-works-internally.html" />
+<meta property="og:url" content="http://localhost:4000/2020-09-18-how-recyclerView-works-internally.html" />
+<meta property="og:site_name" content="niharika2810.github.io" />
+<script type="application/ld+json">
+{"publisher":null,"url":"http://localhost:4000/2020-09-18-how-recyclerView-works-internally.html","image":null,"headline":"niharika2810.github.io","dateModified":null,"datePublished":null,"sameAs":null,"mainEntityOfPage":null,"name":null,"author":null,"description":"Personal blog site by theDroidLady.","@type":"WebPage","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+<body>
+
+<div class="container">
+    <section id="main_content">
+        <article class="page">
+
+  <h1></h1>
+
+  <div class="entry">
+    <div style="text-align:center">
+<h1> How RecyclerView works internally?
+</h1>
+<h3> Let's take a deep dive into how the things work under the hood in RecyclerView.
+</h3>
+Blog by <a href="http://thedroidlady.com/">theDroidLady</a>
+</div>
+<p><br /></p>
+<div style="text-align:center">
+<img align="center" width="400" height="300" src="/Images/Article/recycler_view.png" />
+</div>
+<p><br />
+<br /></p>
+<h2 id="introduction">Introduction</h2>
+
+<p>Being an Android developer, our life revolves around recyclerViews only. Take a look on your contacts list, photos app, Facebook feed, music app showing a list of tracks, online clothing app showing you a <b>list</b> of products and almost every other app we have in our device is using <a href="https://medium.com/r/?url=https%3A%2F%2Fdeveloper.android.com%2Freference%2Fandroidx%2Frecyclerview%2Fwidget%2FRecyclerView">recyclerView</a> to show a huge set of data to users.</p>
+
+<p>So Now my question is,</p>
+
+<blockquote>
+  <p>Have you ever got curious about the internals, how it actually works, how the data flows and displayed to the user?</p>
+</blockquote>
+
+<h2 id="why-do-we-need-to-know-all-thesefactors">Why do we need to know all these factors?</h2>
+
+<p>Just think about it: RecyclerView is needed almost in every modern Android app, so the way developers work with it affects the experience of millions and millions of users. We can surely find many good tutorials on how to show data list to users using recyclerView. But, Is that <b>“black box”</b> approach enough to handle a complex scenario where we have millions of Android devices with different rendering and performance issues?</p>
+
+<p>I definitely don’t want my users to have a bad experience for my Home screen(or any other) which currently shows a list of recommended products for them. So, I wanted to know the exact process and flow to make sure I am utilizing the things in the correct approach.</p>
+
+<p>Also, A famous quote about learning is :</p>
+
+<blockquote>
+  <p>“Tell me and I forget, teach me and I may remember, involve me and I learn.”</p>
+</blockquote>
+
+<h2 id="wait-before-we-move-to-recyclerview-internals-one-should-be-clear-about-why-it-came-to-existence-when-we-already-had-listview">Wait, Before we move to <b>RecyclerView</b> internals, one should be clear about why it came to existence when we already had <b>ListView</b>.</h2>
+
+<p>With <b>ListView</b>, We had some downsides :</p>
+
+<ul>
+  <li>
+    <p><b>Lag in Scrolling</b>: ListView has a habit of creating as many views (rows) as there are data items in the dataset. This creation of views and using findViewById() method is a costly affair. </p>
+  </li>
+  <li>
+    <p><b>No Default Animations Support</b>: ListView comes with no built-support for animations and we devs know how much time it takes to implement a perfect animation. </p>
+  </li>
+  <li>
+    <p><b>One Scrolling Orientation(Vertical)</b>: No Horizontal lists allowed. Only vertical scrolling is supported in ListView.</p>
+  </li>
+</ul>
+
+<p>There are many more reasons other than the above listed which made Android devs realize that something <b>NEW</b> is needed which is highly <b>optimized</b> and comes with great <b>capabilities</b>.</p>
+
+<h2 id="recyclerview-what-itis">RecyclerView: What it is?</h2>
+
+<p>As per Android documentation: </p>
+
+<p><b>RecyclerView</b> is a UI component which allows us to create a scrolling list. It is basically a new ViewGroup used to render any adapter-based view in horizontal/vertical /grid or staggered grid manner using the Viewholder pattern.</p>
+
+<p>Hold on, many new terms introduced right. Don’t get confused. Let’s understand these:
+<br />
+<br /></p>
+<div style="text-align:center">
+<img align="center" src="/Images/Article/recycler_view_working.gif" />
+</div>
+<p><br />
+<br />
+We have 4 major components of RecyclerView:</p>
+
+<ol>
+  <li>
+    <p><a href="https://developer.android.com/reference/androidx/recyclerview/widget/RecyclerView.Adapter">RecyclerView.Adapter</a>: Provides a binding from your app’s data set (which is specific to your app) to item views that are displayed within the RecyclerView. The adapter knows how to associate each item-view position in the RecyclerView to a specific location in the data source.</p>
+  </li>
+  <li>
+    <p><a href="https://developer.android.com/reference/androidx/recyclerview/widget/RecyclerView.LayoutManager">RecyclerView.LayoutManager</a>: Positions items within the RecyclerView. You can use one of several predefined layout managers or you can implement your own custom layout manager. It can be linearly or in a grid.</p>
+  </li>
+  <li>
+    <p><a href="https://developer.android.com/reference/androidx/recyclerview/widget/RecyclerView.ItemAnimator">RecyclerView.ItemAnimator</a>: RecyclerView comes with default animations which we can override and change according to our needs. By default, RecyclerView uses DefaultItemAnimator.</p>
+  </li>
+  <li>
+    <p><a href="https://developer.android.com/reference/androidx/recyclerview/widget/RecyclerView.ViewHolder">RecyclerView.ViewHolder</a>: It is mandatory to use with recyclerView and helps us to draw the UI for individual items that we want to draw on the screen.</p>
+  </li>
+</ol>
+
+<p>Let’s understand all these through an <b>example</b>,</p>
+
+<p>Assume, You and I are standing in front of a <b>Burger</b> stall and there is a huge line and at once only 4 members can be entertained. The person making it provides each of the 4 members with one plate and on preparing burgers, he put it on their plate. Another thing what he does is, he kept some plates extra and gave few to the members in line waiting to have a burger in advance and 2 to the members who already finished eating and maybe can ask for the repetition. And then the ones who already had burgers but were holding plates pass the plates to the selling guy so that he can clean them up and give them to the new 2 members in line.</p>
+
+<p><br />
+<br /></p>
+<div style="text-align:center">
+<img align="center" src="/Images/Article/burger.gif" />
+</div>
+<p><br />
+<br /></p>
+
+<p>So here, the selling guy is the <b>recyclerView</b>, the plates are the <b>Views</b>, the burger is <b>Data</b>, at once 4 members getting entertained(visible) is termed as <b>Viewport</b> in RecyclerView world and the idea behind using lesser number of plates is our <b>ViewHolder</b> as we can see the person is cleaning them and reusing them as per required. This is the main advantage of using ViewHolder as we are clearing <b>reducing the CPU intensive task</b> of more View Creations.</p>
+
+<p>I hope we are clear with the terminology. Let’s get to the internals now.</p>
+
+<h2 id="recyclerview-how-itworks">RecyclerView: How it works?</h2>
+
+<h3 id="now-lets-understand-the-process">Now, let’s understand the process:</h3>
+
+<p><br />
+<br /></p>
+<div style="text-align:center">
+<img align="center" src="/Images/Article/recycler_internal.png" />
+</div>
+<p><br />
+<br /></p>
+
+<p>So, There is data(item) kept in the data-set(list of items). The adapter binds data to the View and then gives it to the Layout Manager which happens to control the views.</p>
+
+<p>RecyclerView does not allocate an item view for every item in your data source. Instead,<b> it allocates only the number of item views that fit on the screen(Viewport)</b> and it <b>reuses</b> those item layouts as the user <b>scrolls</b>. When the view first scrolls out of sight, it goes through the recycling process as shown in the above diagram:</p>
+
+<ul>
+  <li>When a view scrolls out of sight and is no longer displayed, it becomes a <b>scrap view</b>.</li>
+</ul>
+
+<p>Let’s understand the Scrap view. The Recycler has a <b>Scrap Heap</b> Caching System for these views:</p>
+
+<p>It is a lightweight collection where views can be returned to the Layout Manager directly without passing the view back to Adapter again. This is because the data is still attached to the ViewHolder. So <b>no need</b> to pass it back to the Adapter for binding the data.</p>
+
+<p>Views placed here, are <b>temporarily detached</b> but will be <b>reused</b> within the same layout pass.</p>
+
+<blockquote>
+  <p>The View just above and below the View port are the <b>Detached Views</b>. These views which are detached are expected to be re-attached before code returns.</p>
+</blockquote>
+
+<ul>
+  <li>When a new item is to be displayed, a view is taken from the recycle pool for reuse. Because this view must be re-bound by the adapter before being displayed, it is called a &lt;&gt;bdirty view&lt;/b&gt;.</li>
+</ul>
+
+<p>Same like the Scrap heap, we have another caching system for these type of views which is <b>Recycle Pool</b>:</p>
+
+<p>It is a collection which consists of views that are assumed to have incorrect data (data from a different position or index) also called the <b>dirty view</b>, is always passed to the adapter back so that data can be attached or bound again to the ViewHolder and then returned to the Layout Manager.</p>
+
+<blockquote>
+  <p>Recycler instance is provided to the Layout Manager at some points so that it can obtain new views or recycle old views.</p>
+</blockquote>
+
+<ul>
+  <li>
+    <p>The dirty view is <b>recycled</b>: the adapter locates the data for the next item to be displayed and copies this data to the views for this item. References for these views are retrieved from the recycler view’s view holder.</p>
+  </li>
+  <li>
+    <p>The recycled view is added to the list of items in the <b>RecyclerView</b> that is about to go on-screen.</p>
+  </li>
+  <li>
+    <p>The recycled view goes on-screen as the user scrolls the RecyclerView to the next item in the list. Meanwhile, another view scrolls out of sight and is recycled according to the above steps.</p>
+  </li>
+</ul>
+
+<blockquote>
+  <p>Each time the adapter inflates an item-layout, it also creates a corresponding ViewHolder. The ViewHolder uses FindViewById to get references to the views inside the inflated item-layout file. These references are used to load new data into the views every time the layout is recycled to show new data.</p>
+</blockquote>
+
+<h2 id="recyclerview-methods">RecyclerView: Methods</h2>
+
+<p>When you implement an adapter, you must override the following RecyclerView.Adapter methods:</p>
+
+<p><br /></p>
+<div style="text-align:center">
+<img align="center" src="/Images/Article/recycler_methods.png" />
+</div>
+<p><br /></p>
+
+<p>The layout manager calls these methods while it is positioning items within the <b>RecyclerView</b>.</p>
+
+<blockquote>
+  <p>If LayoutManager fails to find a suitable View in all of those places, it creates one by calling adapter’s onCreateViewHolder() method. It then binds the View via onBindViewHolder() if necessary, and finally returns it.</p>
+</blockquote>
+
+<h2 id="recyclerview-notifying-changes">RecyclerView: Notifying changes</h2>
+
+<ol>
+  <li>
+    <p><a href="https://developer.android.com/reference/androidx/recyclerview/widget/RecyclerView.Adapter#notifyDataSetChanged()">NotifyDataSetChanged</a> – Signals that the data set has changed (forces a full update).</p>
+  </li>
+  <li>
+    <p><a href="https://developer.android.com/reference/androidx/recyclerview/widget/RecyclerView.Adapter#notifyItemChanged(int,%20java.lang.Object)">NotifyItemChanged</a> – Signals that the item at the specified position has changed.</p>
+  </li>
+  <li>
+    <p><a href="https://developer.android.com/reference/androidx/recyclerview/widget/RecyclerView.Adapter#notifyItemRemoved(int)">NotifyItemRemoved</a> – Signals that the item in the specified position has been removed.</p>
+  </li>
+</ol>
+
+<p>Like this we have <a href="https://developer.android.com/reference/androidx/recyclerview/widget/RecyclerView.Adapter#notifyItemRangeInserted(int,%20int)">notifyItemRangeInserted</a>, <a href="https://developer.android.com/reference/androidx/recyclerview/widget/RecyclerView.Adapter#notifyItemRangeRemoved(int,%20int)">notifyItemRangeRemoved</a> , <a href="https://developer.android.com/reference/androidx/recyclerview/widget/RecyclerView.Adapter#notifyItemRangeChanged(int,%20int)">notifyItemRangeChanged</a>. Read about these, check your scenario and use them wisely. If you know exactly how your data set has changed, you can call the appropriate methods listed above to refresh RecyclerView in the most efficient manner.</p>
+
+<h2 id="recyclerview-some-performance-tips">RecyclerView: Some Performance Tips</h2>
+
+<ol>
+  <li>
+    <p><a href="https://developer.android.com/reference/kotlin/androidx/recyclerview/widget/RecyclerView#sethasfixedsize">recyclerView.setHasFixedSize(true)</a>: If it is possible to set the width and height of the items at the XML file and they don’t change based on adapter’s content, add this line to your RecyclerView Initializing method. By this method, you told RecyclerView to don’t calculate items size every time they added and removed from RecyclerView.</p>
+  </li>
+  <li>
+    <p><a href="https://developer.android.com/reference/kotlin/androidx/recyclerview/widget/RecyclerView#setitemviewcachesize">recyclerView.setItemViewCacheSize(size)</a>: Set the number of offscreen views to retain before adding them to the potentially shared recycled view pool. So when you scroll the RecyclerView such that there’s a view that is just barely completely off-screen, the RecyclerView will keep it around so that you can scroll it back into view without having to re-execute onBindViewHolder().</p>
+  </li>
+  <li>
+    <p>Check how and when to use <a href="https://developer.android.com/reference/androidx/recyclerview/widget/RecyclerView.Adapter#hasStableIds()">adapter.setHasStableIds(true)</a>(This can help for the purposes of animation and visual object persistence).</p>
+  </li>
+</ol>
+
+<h2 id="references">References :</h2>
+
+<ul>
+  <li>
+    <p><a href="https://medium.com/@nileshsingh/understanding-recyclerview-part-1-the-basics-a7bd07cfae93">Link 1</a></p>
+  </li>
+  <li>
+    <p><a href="https://medium.com/@manuaravindpta/what-is-the-difference-between-listview-and-recyclerview-bcd82c64ffbb">Link 2</a></p>
+  </li>
+  <li>
+    <p><a href="https://android.jlelse.eu/anatomy-of-recyclerview-part-1-a-search-for-a-viewholder-404ba3453714">Link 3</a>
+<br />
+<br /></p>
+  </li>
+</ul>
+
+<p>This is all from my side!! I hope you learned something from this article.</p>
+
+<p>Enjoy reading!! Don’t forget to subscribe for more. :-)</p>
+
+  </div>
+</article>
+
+        <br/>
+        <a href="https://feedburner.google.com/fb/a/mailverify?uri=thedroidlady&amp;loc=en_US">Subscribe to theDroidLady blog by Email</a>
+    </section>
+</div>
+</body>
+</html>
+
