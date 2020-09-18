@@ -71,7 +71,7 @@ We have 4 major components of RecyclerView:
 
 Let's understand all these through an <b>example</b>,
 
-Assume, You and I are standing in front of a Burger stall and there is a huge line and at once only 4 members can be entertained. The person making it provides each of the 4 members with one plate and on preparing burgers, he put it on their plate. Another thing what he does is, he kept some plates extra and gave few to the members in line waiting to have a burger in advance and 2 to the members who already finished eating and maybe can ask for the repetition. And then the ones who already had burgers but were holding plates pass the plates to the selling guy so that he can clean them up and give them to the new 2 members in line.
+Assume, You and I are standing in front of a <b>Burger</b> stall and there is a huge line and at once only 4 members can be entertained. The person making it provides each of the 4 members with one plate and on preparing burgers, he put it on their plate. Another thing what he does is, he kept some plates extra and gave few to the members in line waiting to have a burger in advance and 2 to the members who already finished eating and maybe can ask for the repetition. And then the ones who already had burgers but were holding plates pass the plates to the selling guy so that he can clean them up and give them to the new 2 members in line.
 
 <br/>
 <br/>
