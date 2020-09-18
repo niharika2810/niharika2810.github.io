@@ -1,4 +1,6 @@
 theme: jekyll-theme-hacker
+
 plugins:
-  — jekyll-feed
+  - jekyll-feed
+
 
