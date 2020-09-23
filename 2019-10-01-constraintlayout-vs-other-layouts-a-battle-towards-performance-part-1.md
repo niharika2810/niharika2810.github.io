@@ -1,3 +1,7 @@
+---
+layout: default
+title : Constraint vs Other Layouts- A Battle towards performance Part-1
+---
 <div style="text-align:center">
 <h1> Constraint vs Other Layouts- A Battle towards performance Part-1
 </h1>
