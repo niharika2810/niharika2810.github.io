@@ -9,7 +9,7 @@ Blog by <a href="http://thedroidlady.com/">theDroidLady</a>
 </div>
 <br/>
 <div style="text-align:center">
-<img align="center" width="300" height="300" src="/Images/Article/process.gif">
+<img align="center" width="300" height="300" src="/Images/Article/rendering.png">
 </div>
 <br/>
 <br/>
@@ -24,6 +24,12 @@ If you look at the <b>image</b> below, it shows you the <b>steps</b> that go int
 1) The CPU takes the high-level object(<i>button, textView, etc…</i>) and turns it into a <b>display list</b> — a set of commands for drawing it.
 
 2) GPU (Graphics Processing Unit) is a hardware piece which takes these <b>high-level objects</b> through OpenGL-ES API and <b>turns it into pixels in a texture or on the screen</b>.
+
+<br/>
+<div style="text-align:center">
+<img align="center" width="300" height="300" src="/Images/Article/rendering.png">
+</div>
+<br/>
 
 >Once uploaded, the display list object is <b>cached</b>. That way, should we need to draw the display list again? Instead of creating it, we can just redraw the existing one- which is much cheaper probably like that not-so-quirky shirt hanging in the casual section.
 
@@ -46,6 +52,12 @@ For a complicated layout, sometimes a cost only arises the first time the system
 For instance, when your app recycles a complex list item in a [RecyclerView](https://developer.android.com/reference/androidx/recyclerview/widget/RecyclerView.html) object, the system needs to lay out all of the objects. In another example, trivial changes can propagate up the chain towards the parent until they reach an object that doesn’t affect the size of the parent.
 
 ### Double taxation
+
+<br/>
+<div style="text-align:center">
+<img align="center" width="300" height="300" src="/Images/Article/rendering.png">
+</div>
+<br/>
 
 Typically, the framework executes the [layout](https://developer.android.com/guide/topics/ui/declaring-layout.html) or measure stage in a single pass and quite quickly.
 
