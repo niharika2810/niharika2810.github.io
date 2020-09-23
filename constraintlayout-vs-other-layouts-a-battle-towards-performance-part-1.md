@@ -45,7 +45,7 @@ For instance, when your app recycles a complex list item in a [RecyclerView](htt
 
 <br/>
 <div style="text-align:center">
-<img align="center" width="300" height="300" src="/Images/Article/rendering.png">
+<img align="center" width="400" height="400" src="/Images/Article/process.gif">
 </div>
 <br/>
 
@@ -54,9 +54,13 @@ Typically, the framework executes the [layout](https://developer.android.com/gui
 However, with some more complicated layout cases, the framework may have to iterate multiple times on parts of the hierarchy that require multiple passes to resolve before ultimately positioning the elements.
 
 Having to perform more than one layout-and-measure iteration is what we call double taxation.
+
+<br/>
 <div style="text-align:center">
-<img align="center" width="300" height="300" src="/Images/Article/heirarchy.jpeg">
+<img align="center" width="400" height="400" src="/Images/Article/heirarchy.jpeg">
 </div>
+<br/>
+
 For example, when you use the [RelativeLayout](https://developer.android.com/reference/android/widget/RelativeLayout.html) container, which allows you to position [View](https://developer.android.com/reference/android/view/View.html) objects with respect to the positions of other View objects, the framework performs the following actions:
 
 1) It executes a layout-and-measure pass, during which the framework calculates each child object’s position and size, based on each child’s request.
