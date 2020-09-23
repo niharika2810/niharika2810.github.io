@@ -1,13 +1,11 @@
----
-layout: default
-title : Constraint vs Other Layouts- A Battle towards performance Part-1
----
-
+<div style="text-align:center">
+<h1> Constraint vs Other Layouts- A Battle towards performance Part-1
+</h1>
 Blog by <a href="http://thedroidlady.com/">theDroidLady</a>
 </div>
 <br/>
 <div style="text-align:center">
-<img align="center" width="300" height="300" src="/Images/Article/rendering.png">
+<img align="center" width="700" height="300" src="/Images/Article/rendering.png">
 </div>
 <br/>
 <br/>
@@ -17,17 +15,11 @@ Now, would you rather just buy the items listed there because the store tells yo
 
 <b>Choosing a layout</b> for your app and website is also a similar process. But before we head to that, it’s important that we understand how our UI is created.
 
-If you look at the <b>image</b> below, it shows you the <b>steps</b> that go into creating a UI.
+If you look at the <b>image</b> above, it shows you the <b>steps</b> that go into creating a UI.
 
 1) The CPU takes the high-level object(<i>button, textView, etc…</i>) and turns it into a <b>display list</b> — a set of commands for drawing it.
 
 2) GPU (Graphics Processing Unit) is a hardware piece which takes these <b>high-level objects</b> through OpenGL-ES API and <b>turns it into pixels in a texture or on the screen</b>.
-
-<br/>
-<div style="text-align:center">
-<img align="center" width="300" height="300" src="/Images/Article/rendering.png">
-</div>
-<br/>
 
 >Once uploaded, the display list object is <b>cached</b>. That way, should we need to draw the display list again? Instead of creating it, we can just redraw the existing one- which is much cheaper probably like that not-so-quirky shirt hanging in the casual section.
 
