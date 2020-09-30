@@ -48,7 +48,7 @@ Before the analysis, it's important for you to know about <b>WindowManager.BadTo
 
 Lets, Look at the WindowManagerService.java file.
 <div style="text-align:center">
-<img align="center" width="300" height="300" src="/Images/Article/window_token.png">
+<img align="center" width="500" height="500" src="/Images/Article/window_token.png">
 </div>
 WindowManagerService (WMS) is a system service that manages the windows on Android.
 
