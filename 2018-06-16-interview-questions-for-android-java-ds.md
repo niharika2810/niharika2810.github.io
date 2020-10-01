@@ -350,6 +350,38 @@ Also, you will restrict yourself to those answers only. Try and learn more deepl
 
 * Rx vs Coroutines. Which one you prefer and when?
 
+* Difference between MVP and MVVM?
+
+* Explain SOLID principles?
+
+* Difference between const and val
+
+* When is onPause() called without onStop() being called?
+
+* Dagger vs Koin?
+
+* Any 5 RxJava operatrs. How subscribeOn and observeOn works?
+
+* Headless Fragments.
+
+* Workmanager, type of requests, methods, minimum interval before a job repeat itself.
+
+* Workmanager vs JobScheduler.
+
+* Why ConstraintLayout? Tell some properties which I find worth.
+
+* How SharedPreferences work internally?
+
+* Why use suspend function in Kotlin Coroutines?
+
+* Explain Coroutine LifecycleScope.
+
+* What is Kotlin Flow?
+
+* Kotlin Flow vs RxJava.
+
+* Room vs Realm? Why not Realm?
+
 >You will be given assignments as your first/last round. They just want to know how you follow the standards. Some ask for UI thing, other ask for architectural patterns. Just check your methods and play well with the logic.That’s all.
 
 
