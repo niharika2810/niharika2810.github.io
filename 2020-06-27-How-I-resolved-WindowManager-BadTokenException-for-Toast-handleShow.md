@@ -104,6 +104,20 @@ Now, you are all good to use your Toast :
 ToastHandler.INSTANCE.showToast(this, "Hi,I am Toast", Toast.LENGTH_LONG)
 ```
 
+<br/>Also, If you forget to use it, Let the Android Lint help you :-) 
+
+This lint replaces `Toast.makeText` with `ToastHandler.getToastInstance`.
+```diff
+- Toast.makeText(this, "Hi, I am Toast", Toast.LENGTH_SHORT).show()
++ ToastHandler.getToastInstance(this, "Hi, I am Toast", Toast.LENGTH_SHORT).show()
+```
+
+Here's a small GIF showing how this will look in the IDE.
+
+![lint](https://user-images.githubusercontent.com/22273871/94834413-fa0b0e00-042d-11eb-8dda-26087568176e.gif)
+
+Please refer the demo for usage.
+
 You can find the [source code](https://github.com/niharika2810/ToastHandler) here.
 
 Happy Coding !!
