@@ -100,8 +100,14 @@ implementation 'com.toastfix:toastcompatwrapper:{latest_version}'
 
 Now, you are all good to use your Toast :
 
+Java
+```java
+ToastHandler.showToast(this, "Hello,I am Toast", Toast.LENGTH_SHORT);
 ```
-ToastHandler.INSTANCE.showToast(this, "Hi,I am Toast", Toast.LENGTH_LONG)
+
+Kotlin
+```kotlin
+ToastHandler.showToast(this, "Hello,I am Toast", Toast.LENGTH_SHORT)
 ```
 
 <br/>Also, If you forget to use it, Let the Android Lint help you :-) 
