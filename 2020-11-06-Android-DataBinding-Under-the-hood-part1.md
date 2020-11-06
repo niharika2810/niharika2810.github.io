@@ -60,7 +60,7 @@ android {
 
 Now, just use binding instance and you will get the view references in camel casing just the way a coding standard says. :-)
 
-c) DataBinding: With ViewBinding, you can’t use it to bind layouts with data in XML (No binding expressions, no BindingAdapters nor two-way binding with ViewBinding). For that we use DataBinding. Just the same way, add this your app build.gradle:
+c) <b>DataBinding</b>: With ViewBinding, you can’t use it to bind layouts with data in XML (No binding expressions, no BindingAdapters nor two-way binding with ViewBinding). For that we use DataBinding. Just the same way, add this your app build.gradle:
 
 ```
 android {
@@ -83,6 +83,9 @@ From the above, We can deduce that:
 
 I am using both in my project according to the requirements.
 
+---
+
+<br/>
 # ViewBinding
 
 ### Under the hood:
