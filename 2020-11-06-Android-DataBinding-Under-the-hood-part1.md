@@ -141,13 +141,13 @@ Now, we know how to enable this in our module. Let me show you a basic sample:
 
 ### Now, What about the other tags??????
 
-* <data>: A container for variables used inside the layout file. You will be using the variables defined inside to work with various attributes in your layout like for setting the data in your views or if you want some import statement for some expression:
+* data: A container for variables used inside the layout file. You will be using the variables defined inside to work with various attributes in your layout like for setting the data in your views or if you want some import statement for some expression:
 
 ```
 <import type="android.view.View" />
 ```
 
-* <variable>: describes a property that may be used within this layout.
+* variable: describes a property that may be used within this layout.
 
 > Android studio provides <b>automatic conversion from regular data binding layout</b> by clicking <b>alt+enter</b> on root element. Later, you will get an option to convert to data binding layout and if you click enter, it automatically adds <layout> and <data> tags.
 
