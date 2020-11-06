@@ -19,7 +19,7 @@ For contact tracing, we had two options to go with: <b>Bluetooth or GPS</b>.
 
 ### Bluetooth vs GPS:
 
-<b>Bluetooth<.b> was chosen because it is able to classify close contacts with a significantly <b>lower false-positive</b> rate than GPS.
+<b>Bluetooth<b> was chosen because it is able to classify close contacts with a significantly <b>lower false-positive</b> rate than GPS.
 
 Given that GPS accuracy decreases in indoor environments, entire shopping malls or skyscrapers would be within the margin of error of a single GPS point.
 <div style="text-align:center">
