@@ -7,7 +7,7 @@ Blog by <a href="http://thedroidlady.com/">theDroidLady</a>
 </div>
 <br/>
 <div style="text-align:center">
-<img align="center" width="500" height="500" src="/Images/Article/data_binding.jpg">
+<img align="center" width="500" height="300" src="/Images/Article/data_binding.jpg">
 </div>
 <br/>
 <br/>
@@ -96,7 +96,9 @@ If you look at the source code, View Binding is very easy to understand. It will
 
 A few days back, I looked at the source code for <b>How DataBinding works under the hood</b> and thought of sharing my learnings and understanding through this article.
 
-## Implementation
+# DataBinding
+
+### Implementation
 
 DataBinding internally uses [Annotation processor](https://medium.com/@aitorvs/annotation-processing-in-android-studio-7042ccb83024) to generate bindings and set other properties.
 
