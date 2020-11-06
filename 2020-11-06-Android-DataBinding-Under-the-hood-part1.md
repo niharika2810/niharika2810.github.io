@@ -11,7 +11,8 @@ Blog by <a href="http://thedroidlady.com/">theDroidLady</a>
 </div>
 <br/>
 <br/>
-## Introduction
+
+# Introduction
 
 From the [Android Developer docs](https://medium.com/androiddevelopers/layouts-attributes-and-you-9e5a4b4fe32c),
 
