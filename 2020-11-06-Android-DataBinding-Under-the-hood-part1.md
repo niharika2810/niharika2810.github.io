@@ -45,8 +45,6 @@ Well, there are some known issues while using them:
 
 * There are <b>no checks</b> against invalid lookups. We won’t get any error if the id, we just referenced in our class, is not actually there in our layout due to synthetic properties exposing a global namespace of ids which are unrelated to the layout.
 
->"Tell me and I forget, teach me and I may remember, involve me and I learn."
-
 b) <b>View Binding</b>: It generates a binding class for each XML layout file present in that module. An instance of a binding class contains direct references to all views that have an ID in the corresponding layout.
 
 Add this in your app build.gradle:
