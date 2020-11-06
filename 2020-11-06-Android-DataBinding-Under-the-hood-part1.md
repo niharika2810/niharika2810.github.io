@@ -94,9 +94,10 @@ If you look at the source code, View Binding is very easy to understand. It will
 
 > Inflate method inside the binding class contains a <b>bind</b> method which eventually calls <b>findViewById</b> for each view to bind. With providing specific id to each view, it ensures the type-safety and annotations like @Nullable or @NonNull helps in providing null-safe types.
 
-A few days back, I looked at the source code for <b>How DataBinding works under the hood</b> and thought of sharing my learnings and understanding through this article.
 
 # DataBinding
+
+A few days back, I looked at the source code for <b>How DataBinding works under the hood</b> and thought of sharing my learnings and understanding through this article.
 
 ### Implementation
 
