@@ -7,7 +7,7 @@ Blog by <a href="http://thedroidlady.com/">theDroidLady</a>
 </div>
 <br/>
 <div style="text-align:center">
-<img align="center" width="400" height="300" src="/Images/Article/data_binding.jpg">
+<img align="center" width="500" height="500" src="/Images/Article/data_binding.jpg">
 </div>
 <br/>
 <br/>
