@@ -26,6 +26,7 @@ Well, I am sure if you are reading this article, you have already set your mind 
 <img align="center" width="500" height="300" src="/Images/Article/happy_emoji.gif">
 </div>
 
+
 ## Click Events & Data Update
 
 Let's say I have a textView and a button in my XML. On button click, I want to update my text. Here comes the role of [ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel) (If you are working with [MVVM](https://www.raywenderlich.com/34-design-patterns-by-tutorials-mvvm#:~:text=Model%2DView%2DViewModel%20(MVVM,re%20typically%20subclasses%20of%20UIView%20), you are already aware of it.), where we write all our business logic. This is my XML:
