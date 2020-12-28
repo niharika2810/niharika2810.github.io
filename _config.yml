@@ -1,8 +1,8 @@
-remote_theme: pmarsceill/just-the-docs
+theme: jekyll-theme-hacker
 
 plugins:
-  - jekyll-remote-theme
+  - jekyll-feed
 
 
 gems:
-  - jekyll-remote-theme
+  - jekyll-feed
