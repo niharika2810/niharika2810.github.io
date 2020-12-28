@@ -1,4 +1,4 @@
-theme: minimal-mistakes-jekyll
+remote_theme: pmarsceill/just-the-docs
 
 plugins:
   - jekyll-feed
