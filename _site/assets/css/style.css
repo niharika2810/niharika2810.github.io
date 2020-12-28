@@ -2,7 +2,7 @@
 */
 .highlight table td { padding: 5px; }
 
-.highlight table pre { margin: 0; }
+.highlight table pre { margin: 100; }
 
 .highlight, .highlight .w { color: #d0d0d0; }
 
@@ -52,7 +52,7 @@
 
 .highlight .ss { color: #90a959; }
 
-body { margin: 0; padding: 0; background: #151515 url("../images/bkg.png") 0 0; color: #eaeaea; font-size: 16px; line-height: 1.5; font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace; }
+body { margin: 100; padding: 100; background: #151515 0 0; color: #eaeaea; font-size: 16px; line-height: 1.5; font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace; }
 
 /* General & 'Reset' Stuff */
 .container { width: 90%; max-width: 600px; margin: 0 auto; }
