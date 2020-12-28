@@ -1,8 +1,8 @@
 remote_theme: pmarsceill/just-the-docs
 
 plugins:
-  - jekyll-feed
+  - jekyll-remote-theme
 
 
 gems:
-  - jekyll-feed
+  - jekyll-remote-theme
