@@ -23,7 +23,7 @@ In this article, let's talk about the magic happening behind the background data
 Well, I am sure if you are reading this article, you have already set your mind to know the magic, implementation and the players behind the scene. So let’s get started and deep dive into these aspects.
 
 <div style="text-align:center">
-<img align="center" width="300" height="300" src="/Images/Article/happy_emoji.gif">
+<img align="center" width="400" height="200" src="/Images/Article/happy_emoji.gif">
 </div>
 
 <br/>
