@@ -1,7 +1,7 @@
 <div style="text-align:center">
 <h1> Android Data Binding: Under the Hood (Part 2)
 </h1>
-<h3> Let's talk about the magic happening behind the dynamic data updates and click actions when we use data binding for our vie
+<h3> Let's talk about the magic happening behind the dynamic data updates and click actions when we use data binding for our views
 </h3>
 Blog by <a href="http://thedroidlady.com/">theDroidLady</a>
 </div>
