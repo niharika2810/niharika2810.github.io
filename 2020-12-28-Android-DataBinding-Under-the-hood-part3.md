@@ -72,8 +72,6 @@ class MainViewModel : ViewModel() {
 }
 ```
 
-<br/>
-<br/>
 
 In Kotlin, you can write your binding adapters as [extension functions](https://www.programiz.com/kotlin-programming/extension-functions#:~:text=Basically,%20an%20extension%20function%20is,already%20available%20in%20String%20class) as well. In that case, you won't need to add a parameter for the view.
 
@@ -94,8 +92,6 @@ public @interface BindingAdapter {
 }
 ```
 
-<br/>
-<br/>
 
 To use in your XML, you just need to use this attribute `countText` like this:
 
@@ -108,15 +104,13 @@ To use in your XML, you just need to use this attribute `countText` like this:
 />
 ```
 
-<br/>
-<br/>
 
 > For an attribute named `countText`, the library automatically tries to find the setter for our view attribute that accepts compatible types as the argument. The namespace of the attribute isn't considered, only the attribute name and type are used when searching for a method.
 
 We have some predefined binding adapters provided by the framework (Do check this out in your project today):
 
 <div style="text-align:center">
-<img align="center" width="500" height="300" src="/Images/Article/data_binding_three_two.png">
+<img align="center" width="500" height="500" src="/Images/Article/data_binding_three_two.png">
 </div>
 
 <br/>
@@ -142,8 +136,6 @@ if ((dirtyFlags & 0x7L) != 0) {
 
 So during the initialization, it sets the initial text according to the default value passed to our method. And, whenever the count is incremented(by clicking the button), LiveDataListener calls the `onFieldChange()` method updating mDirtyFlags value the same way, calling executeBindings() to rebind the views the latest value.
 
-<br/>
-
 > This time a new count has been passed to countText() method, we will see the view updated accordingly.
 
 Here, You can see that with [DataBinding](https://developer.android.com/topic/libraries/data-binding), we moved almost everything related to our XML/views in just a few easy steps.
@@ -152,10 +144,10 @@ For reference, you can find my DataBinding sample [here](https://github.com/niha
 
 ## Resources:
 
-* https://academy.realm.io/posts/droidkaigi-kevin-pelgrims-data-real-world-data-binding/
-* https://viblo.asia/p/understanding-data-bindings-generated-code-and-how-does-android-data-binding-compiler-work-Ljy5Vd1yZra
-* https://medium.com/@jencisov/androids-data-binding-s-baseobservable-class-and-bindable-annotation-in-kotlin-1a5c6682a3c1
-* https://developer.android.com/topic/libraries/data-binding/binding-adapters
+* [Link 1](https://academy.realm.io/posts/droidkaigi-kevin-pelgrims-data-real-world-data-binding/)
+* [Link 2](https://viblo.asia/p/understanding-data-bindings-generated-code-and-how-does-android-data-binding-compiler-work-Ljy5Vd1yZra)
+* [Link 3](https://medium.com/@jencisov/androids-data-binding-s-baseobservable-class-and-bindable-annotation-in-kotlin-1a5c6682a3c1)
+* [Link 3](https://developer.android.com/topic/libraries/data-binding/binding-adapters)
 
 This is pretty much about the internals. I hope you learned something from this series and now I am pretty sure that if someone asks you about DataBinding magic, you will surely be able to answer all the queries and also, it will be easier for you to work with DataBinding but of course, after understanding the use-cases and the requirements.
 
