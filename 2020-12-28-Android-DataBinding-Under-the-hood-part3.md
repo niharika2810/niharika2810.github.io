@@ -110,7 +110,7 @@ To use in your XML, you just need to use this attribute `countText` like this:
 We have some predefined binding adapters provided by the framework (Do check this out in your project today):
 
 <div style="text-align:center">
-<img align="center" width="500" height="400" src="/Images/Article/data_binding_three_two.png">
+<img align="center" width="500" height="300" src="/Images/Article/data_binding_three_two.png">
 </div>
 
 <br/>
